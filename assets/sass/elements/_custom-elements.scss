@@ -1,0 +1,35 @@
+.contact-box {
+	margin: 2.6em 0 0;
+	@include media-breakpoint-up(lg) {
+		margin: 5.6em 0 0;
+	}
+	h2 {
+		margin-bottom: 0.55em;
+	}
+}
+.contact-page-box {
+	max-width: 100%;
+	@include media-breakpoint-up(lg) {
+		max-width: 65%;
+		margin: 0 auto;  
+	}
+	h2 {
+		margin-bottom: 0.95em;
+	}
+	&-link a {
+		text-decoration: underline;
+	}
+}
+.documentation-box {
+	margin: 0 0 2em;
+	@include media-breakpoint-up(lg) {
+		margin: 0 10% 4.375em;
+	}
+	h2 {
+		margin-top: 1.35em;
+		margin-bottom: 1.0em;
+	}
+	p {
+		margin-bottom: 1.94em;
+	}
+}

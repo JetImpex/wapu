@@ -1,0 +1,44 @@
+.share-btns {
+	&__list {
+		float: none;
+		padding: 16px 0 15px 0;
+		@include media-breakpoint-up(lg) {
+			padding: 16px 0 15px 5px;
+		}
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 0;
+		margin-right: 10px;
+		@include media-breakpoint-up(md) {
+			margin-right: 0;
+			margin-right: 19px;
+		}
+		.single-post & {
+			margin-right: 10px;
+			@include media-breakpoint-up(md) {
+				margin-right: 24px;
+			}
+			margin-left: 0;
+		}
+		i {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: block;
+		width: auto;
+		height: auto;
+		text-align: center;
+		text-decoration: none;
+		i {
+			color: $color__link;
+			@include transition(all 0.32s ease);
+		}
+		&:hover i {
+			color: $color__link-hover;
+			@include transition(all 0.28s ease);
+		}
+	}
+}

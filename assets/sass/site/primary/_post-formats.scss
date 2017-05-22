@@ -1,0 +1,141 @@
+.post {
+	/* Video */
+	&-type-archive-video-tutorials {
+		.wapu-video-item {
+			text-align: center;
+			margin-bottom: 2.5em;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 4em;
+			}
+			.entry-title {
+				margin: 0.7em 0 0.2em 0;
+			}
+			.short_description {
+				p {
+					margin-bottom: 0;
+					@include font-size(0.875);
+				}
+			}
+		}
+	}
+	/* Faq archive */
+	&-type-archive-faq {
+		.faq-term {
+			margin-bottom: 3em;
+		}
+		.faq-terms {
+			dd {
+				margin-bottom: 9px;
+			}
+			.faq-term__title {
+				margin-bottom: 0px;
+			}
+			.faq-post {
+				&__content {
+					margin-left: 0;
+				}
+				&__title {
+					@include transition(all 0.3s ease);
+					&:hover {
+						color: $color__link-hover;
+					}
+				}
+			}
+			.faq-posts {
+				margin-top: 7px;
+				.faq-post__title {
+					font-family: $font__headings;
+					@include font-size(1);
+					font-weight: 400;
+				}
+				.faq-post__content {
+					p {
+						@include font-size(0.875);
+						margin: 0;
+					}
+				}
+				dt {
+					position: relative;
+					border-top: 1px solid $color__separator;
+					padding: 7px 25px 0 0;
+					&:first-child {
+						border: none;
+					}
+					&:after {
+						position: absolute;
+						right: 0;
+						top: 15px;
+						display: block;
+						@include nucleo-icon();
+						content: '\e902';
+						@include font-size(0.75);
+						@include transition(all 0.3s ease);
+					}
+					&.faq-active {
+						color: $color__link-hover;
+						&:after {
+							transform: rotate(-180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Knowledge base, How to */
+	&-type-archive-knowledge-base,
+	&-type-archive-how-to {
+		.page-title {
+			margin-top: 0.54em;
+		}
+		.wapu-terms {
+			.wapu-term {
+				&__title {
+					margin: 2.2em 0 1.275em;
+				}
+			}
+			.wapu-posts {
+				margin: 1.275em 0 2.05em; 
+				list-style: none;
+				padding-left: 0;
+				position: relative;
+				li {
+					position: relative;
+					padding-left: 18px;
+					margin: 8px 0;
+					a {
+						color: $color__link-hover;
+						&:hover {
+							color: $color__link;
+						} 
+					}
+					&:before {
+						position: absolute;
+						content: "";
+						width: 7px;
+						height: 7px;
+						left: 0;
+						top: 10px;
+						border-radius: 100%;
+						background-color: $color__points;
+					}
+				}
+			}
+			.wapu-term__actions {
+				margin: 1.25em 0 3.45em;
+				a {
+					@include btn();
+				}
+			}
+		}
+	}
+
+	&-type-archive-video-tutorials,
+	&-type-archive-faq,
+	&-type-archive-knowledge-base,
+	&-type-archive-how-to {
+		.page-title {
+			text-align: center;
+		}
+	}
+
+}

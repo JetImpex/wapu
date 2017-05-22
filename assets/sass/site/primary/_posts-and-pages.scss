@@ -1,0 +1,249 @@
+.sticky {
+	display: block;
+}
+
+.site-content_wrap {
+	margin-bottom: 30px;
+	.home & {
+		margin-bottom: 0;
+	}
+	@include media-breakpoint-up(md) {
+		margin-bottom: 60px;
+	}
+}
+
+.page {
+	.entry-title {
+		text-align: center;
+		margin-top: 1.7em;
+		margin-bottom: 0.95em;
+	}
+}
+
+
+.single, .blog, .search, .archive {
+	#primary, #primary-sidebar {
+		margin-top: 2.125em;
+		@include media-breakpoint-up(md) {
+			margin-top: 4.375em;
+		}
+	}
+
+	&.post-type-archive-video-tutorials,
+	&.post-type-archive-faq,
+	&.post-type-archive-knowledge-base,
+	&.post-type-archive-how-to {
+		#primary {
+			margin-top: 2.6em;
+		}
+	}
+}
+
+.search.search-results {
+	.page-header .page-title {
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	.entry-header .entry-title {
+		text-align: left;
+		margin-bottom: 0.5em;
+		a {
+			color: $color__link;
+			&:hover {
+				color: $color__link-hover;
+			}
+		}
+	}
+	.entry-summary {
+		margin-top: 0.5em;
+	}
+}
+
+
+.posted-on .updated:not(.published){
+	display: none;
+}
+
+.single .posted-by,
+.group-blog .posted-by {
+	display: block;
+	@include media-breakpoint-up(md) {
+		display: inline;
+	}
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+	.home & {
+		margin: 1.5em 0 0;
+		@include media-breakpoint-up(md) {
+			margin: 3.8em 0 0;
+		}
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.hentry {
+	margin: 0 0 2.7em;
+	.blog &, .archive &, .search &, .search-results & {
+		margin: 0 0 2em;
+		@include media-breakpoint-up(md) {
+			margin: 0 0 4.3em;
+		}
+	}
+	a {
+		color: $color__link-hover;
+		&:hover {
+			color: $color__link;
+		}
+	}
+}
+
+.site-main{
+	&:after {
+		.has_sidebar & {
+			width: 1px;
+			height: calc(100% - 4.3em);
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -$grid-gutter-width/2;
+			background: $color__separator;
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+}
+
+.post {
+	&__cats {
+		text-transform: capitalize;
+		font-family: $font__headings;
+		font-weight: bold;
+		color: $color__link-hover;
+		a {
+			color: inherit;
+			&:hover {
+				color: $color__text-main;
+			}
+		}
+		span{
+			font-family: $font__main;
+			font-weight: normal;
+		}		
+	}
+	&__tags {
+		font-family: $font__main;
+		font-weight: normal;
+		a {
+			color: $color__link-hover;
+			font-weight: normal;
+			&:hover {
+				color: $color__link;
+			}
+		}
+		span{
+			font-family: $font__main;
+			font-weight: normal;
+		}
+	}
+}
+.entry-meta {
+	margin: 1.857em 0 2.714em;
+	a {
+		color: $color__link;
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
+}
+.entry {
+	&-meta, 
+	&-footer {
+		@include font-size(0.875);
+		text-transform: capitalize;
+		i {
+			margin-right: 9px;
+			top: 2px;
+			position: relative;
+		}
+		span {
+			position: relative;
+			margin-right: 10px;
+		}
+	}
+}
+
+.entry-header {
+	.blog &, .search-results & {
+		margin-bottom: 1.438em;
+		figure.post-thumbnail {
+			margin: 0 0 1.313em 0; /* Extra wide images within figure tags dont overflow the content area. */
+		}
+		.entry-title {
+			margin-top: 3px;
+			margin-bottom: 0.5em;
+			a {
+				color: $color__link;
+				&:hover {
+					color: $color__link-hover;
+				}
+			}
+		}
+		.entry-content {
+			margin-top: 0.9em;
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.post__tags {
+			display: inline-block;
+		}
+		.entry-meta {
+			margin-top: 1.5em;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.entry-footer {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	@include media-breakpoint-up(lg) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	@include font-size(0.875);
+	text-transform: capitalize;
+	.post__tags {
+		order: 0;
+		flex: 0 1 auto;
+		@include media-breakpoint-up(lg) {
+			flex: 0 1 70%;
+		}
+		align-self: auto;
+	}
+	.share-btns__list {
+		order: 0;
+		flex: 0 1 auto;
+		@include media-breakpoint-up(lg) {
+			.blog &, .archive &, .seatrch & {
+				flex: 0 1 auto;
+			}
+			flex: 0 1 25%;
+		}
+		align-self: auto;
+	}
+}

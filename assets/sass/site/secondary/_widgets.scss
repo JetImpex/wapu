@@ -1,0 +1,62 @@
+.widget {
+	margin: 0 0 1.5em;
+	.header-area & {
+		margin-bottom: 0;
+	}
+	&-title {
+		margin: 1.775px 0 1.4em;
+	}
+	.footer-area & {
+		margin: 0;
+		padding: 2.2em 0;
+		@include media-breakpoint-up(md) {
+			padding: 5.8em 0 5.6em;
+		}
+	}
+	.link_box {
+		text-align: center;
+		h4 {
+			margin-top: 0;
+			margin-bottom: 1.16em;
+		}
+		.btn.btn-primary {
+			min-width: 200px;
+			margin: 5px 0;
+			padding: 16px 20px 19px;
+			order: 1;
+			flex: 0 1 auto;
+			align-self: auto;
+			@include media-breakpoint-up(sm) {
+				margin: 0 5px;
+			}
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: center;
+			@include media-breakpoint-up(sm) {
+				flex-direction: row;
+			}
+		}
+	}
+	.primary-sidebar-area & {
+		padding-left: 0;
+		@include media-breakpoint-up(md) {
+			padding-left: $grid-gutter-width;
+		}
+		ul, ol {
+			margin: 1.5em 0;
+		}
+	}
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+
+	.primary-sidebar-area {
+		padding-left: $grid-gutter-width;
+	}
+}

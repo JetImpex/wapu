@@ -1,0 +1,41 @@
+.breadcrumbs {
+	position: relative;
+	padding: 1.35em 0;
+	text-transform: none;
+	border-top: 1px solid $color__background-pre;
+	&__title {
+		display: none;
+		.page-title {
+			margin: 0;
+		}
+	}
+	&__items {
+		float: left;
+		@include font-size(0.75);
+	}
+	&__browse {
+		float: left;
+		margin-right: .5em;
+	}
+	&__wrap {
+		float: left;
+		margin: 0;
+	}
+	&__item {
+		float: left;
+		&-sep {
+			margin: 0 .55em;
+			color: $color__separator;
+		}
+		&-link, &-link:visited {
+			color: $color__link-hover;
+			text-decoration: none;
+			&:hover {
+				color: $color__link;
+			}
+		}
+	}
+	&__item-target {
+		color: $color__link;
+	}
+}

@@ -1,0 +1,60 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	position: relative;
+	quotes: "" "";
+	font-weight: 600;
+	background: $color__background-pre;
+	font-family: $font__pre;
+	padding: 3.5em 1.5em 1.5em;
+	@include media-breakpoint-up(md) {
+		padding: $pre_indents;
+	}
+	&:before {
+		@include nucleo-icon();
+		content: "\eb16";
+		position: absolute;
+		@include font-size(1.125);
+		top: 25px;
+		left: 25px;
+		@include media-breakpoint-up(md) {
+			top: 15px;
+			left: 25px;
+		}
+	}
+	p{
+		margin: 0; 
+	}
+}
+
+hr {
+	background-color: $color__separator;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 2em 0; /* Extra wide images within figure tags dont overflow the content area. */
+}
+
+@import "tables";

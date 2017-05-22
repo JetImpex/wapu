@@ -1,0 +1,7 @@
+.btn.btn-primary{
+	@include btn;
+}
+
+.btn.large-button {
+	padding: $button__indents-large
+}

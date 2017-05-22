@@ -1,0 +1,35 @@
+.wpcf7 {
+	p {
+		margin-bottom: 0.87em;
+	}
+	textarea {
+		height: 179px;
+		resize: none;
+	}
+	.wpcf7-not-valid-tip {
+		@include font-size(0.75);
+	}
+	div.wpcf7-validation-errors,
+	div.wpcf7-response-output {
+		margin: 1em 0;
+		border-radius: $button__radius;
+		@include font-size(0.875);
+	}
+	label {
+		.label-text {
+			font-family: $font__main;
+			@include font-size(1);
+			font-weight: 600;
+			margin-bottom: 3px;
+			display: inline-block;
+		}
+	}
+	.wpcf7-submit {
+		padding: 12px 28px 17px;
+		margin-top: 9px;
+	}
+	.ajax-loader.is-active {
+		margin: 22px 0 0 14px;
+		color: $color__link-hover;
+	}
+}

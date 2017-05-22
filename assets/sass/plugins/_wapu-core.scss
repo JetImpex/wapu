@@ -1,0 +1,36 @@
+/* Wapu rating */
+.wapu {
+	&-post-rating {
+		text-align: center;
+		margin: 1.2em auto;
+		&__title {
+			@include font-size(1.375);
+		}
+		&__buttons {
+		}
+		&__btn {
+			width: 66px;
+			height: 66px;
+			border-radius: 50%;
+			padding: 0;
+			position: relative;
+			text-indent: -9999px;
+			margin: 0 3px;
+			&:before {
+				text-indent: 0;
+				@include nucleo-icon();
+				position: absolute;
+				@include font-size(1.25);
+				top: 23px;
+				left: 24px;
+			}
+			&.btn-like:before {
+				top: 19px;
+				content: '\ed62';
+			}
+			&.btn-dislike:before {
+				content: '\ed61';
+			}
+		}
+	}
+}

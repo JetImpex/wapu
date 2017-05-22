@@ -1,0 +1,64 @@
+ul, ol {
+	margin: 1.875em 0 2.75em;	
+	li{
+		position: relative;
+	}
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+	li {
+		margin: 8px 0;
+	}
+	.hentry & {
+		li {
+			position: relative;
+			padding-left: 18px;
+			margin: 8px 0;
+			strong {
+				font-weight: 600;
+			}
+			&:before {
+				position: absolute;
+				content: "";
+				width: 7px;
+				height: 7px;
+				left: 0;
+				top: 10px;
+				border-radius: 100%;
+				background-color: $color__points;
+			}
+		}
+	}
+}
+
+ol {
+	counter-reset: item;
+	list-style: none;
+	padding-left: 0;
+	> li {
+		padding-left: 25px;
+		&:before {
+			content: counter(item, decimal-leading-zero) ". ";
+			counter-increment: item;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.375em;
+}

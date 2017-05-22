@@ -1,0 +1,69 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headings;
+	font-weight: 700;
+	clear: both;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 1.225em;
+	margin-bottom: 1.25em;
+	@include media-breakpoint-up(md) {
+		font-size: 50px;
+	}
+}
+
+h2 {
+	font-size: 26px;
+	line-height: 1.225em;
+	@include media-breakpoint-up(md) {
+		font-size: 40px;
+	}
+	.page & {
+		margin-top: 1.1em;
+		margin-bottom: 0.45em;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 1.2em;
+	@include media-breakpoint-up(md) {
+		font-size: 34px;
+	}
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 1.286em;
+	@include media-breakpoint-up(md) {
+		font-size: 28px;
+	}
+
+}
+
+h5 {
+	font-size: 22px;
+	line-height: 1.2em;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.invert {
+	h1, h2, h3, h4, h5, h6, p {
+		color: $color__invert-main;
+	}
+}
+
+.single {
+	h2 {
+		margin: 0.325em 0 0.650em
+	}
+	h3, h4, h5, h6 {
+		margin: 1.16em 0;
+	}
+}
