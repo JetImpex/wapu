@@ -7,13 +7,6 @@
 		width: 100%;
 		content: '';
 	}
-	.cherry-search__label {
-		.cherry_search_categories {
-			position: absolute;
-			right: 20px;
-			top: 10px;
-		}
-	}
 	&__field[type='search'] {
 		box-sizing: border-box;
 		width: calc(100% - 50px);

@@ -60,3 +60,68 @@
 		padding-left: $grid-gutter-width;
 	}
 }
+
+/* submit-ticket */
+.submit-ticket {
+	&__title {
+		margin-top: 0;
+		margin-bottom: 13px;
+	}
+	&__content {
+		max-width: 100%;
+		margin: 0px auto 17px;
+		@include media-breakpoint-up(md) {
+			max-width: 60%;
+			margin: 0px auto 17px;
+		}
+	}
+}
+.providers-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-between;
+	align-items: center;
+	color: $color__text-main;
+	.providers-list__item-wrap {
+		max-width: 185px;
+		min-height: 185px;
+		margin: 1em; 
+		text-align: center;
+		border: 1px solid $color__separator;
+		border-radius: $border__radius;
+		a{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: space-around;
+			align-items: center;
+			color: $color__text-main;
+			text-decoration: none;
+			padding: 9px 9px 30px;
+		}
+		@include transition(all 0.45s ease);
+		span, img {
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+		}
+		img {
+			margin-bottom: 9px;
+		}
+		span {
+			@include font-size(0.75);
+		}
+		&:hover {
+			border-color: transparent;
+			-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+			box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+			@include transition(all 0.32s ease);
+		}
+	}
+	.blurb_description {
+		margin: 1.33em 0;
+	}
+}
