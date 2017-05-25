@@ -10,15 +10,12 @@
 
 <section class="error-404 not-found">
 	 <header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'PAGE 404', 'wapu' ); ?></h1>
+		<figure class="img-404"></figure>
 	</header> <!-- .page-header -->
-
 	<div class="page-content">
-		<p><?php /* esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wapu' ); */ ?></p>
-
-		<?php
-			get_search_form();
-		?>
-
+		<h2 class="page-title"><?php esc_html_e( 'Page Not Found', 'wapu' ); ?></h2>
+		<p><?php esc_html_e( 'Map where your photos were taken and discover local points of interest. 
+There’s also a flip-out.', 'wapu' ); ?></p>
+		<a href="<?php echo esc_url( 'http://192.168.9.82/2017/4.April/wapu/' ); ?>" class="btn btn-primary large-button"> <?php esc_html_e( 'Go Home', 'wapu' ) ?></a>
 	</div><!-- .page-content -->
 </section><!-- .error-404 -->

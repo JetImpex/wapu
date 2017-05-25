@@ -247,3 +247,39 @@
 		align-self: auto;
 	}
 }
+
+/* 404 */
+.error404 {
+	.img-404 {
+		width: 100%;
+		height: 205px;
+		margin: 0 auto;
+		background: url('assets/images/404_imgsmall.png') no-repeat center center;
+		background-size: contain;
+		@include media-breakpoint-up(md) {
+			width: 100%;
+			height: 355px;
+			background: url('assets/images/404_img.png') no-repeat 61% center;
+		}
+	}
+	.page-header, .page-content {
+		text-align: center;
+		.page-title {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 53px;
+		}
+	}
+	.page-content {
+		margin: 0 auto;
+		max-width: 100%;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(md) {
+			max-width: 50%;
+		}
+	}
+	.page-header {
+		padding: 58px 0 7px;
+	}
+}

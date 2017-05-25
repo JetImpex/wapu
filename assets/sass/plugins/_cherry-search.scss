@@ -1,4 +1,5 @@
 .cherry-search-wrapper .cherry-search {
+	position: relative;
 	.header-area & {
 		width: 100%;
 		@include media-breakpoint-up(lg) {
@@ -13,7 +14,6 @@
 			margin: 0 auto;
 		}
 	}
-	position: relative;
 	&__label {
 		flex: 1 1 auto;
 		position: relative;
@@ -22,6 +22,77 @@
 			top: 20px;
 			left: 22px;
 			color: $color_icon-search;
+		}
+		.cherry_search_categories {
+			position: absolute;
+			right: 20px;
+			top: 14px;
+			border-left: 1px solid $color__border_cherry_search;
+			select.cherry_search_categories {
+				display: none;
+			}
+			.chosen-container {
+				.chosen-single, .chosen-drop {
+					border-radius: 0;
+					border: none;
+					box-shadow: none;
+					background-image: none;
+					background-color: transparent;
+				}
+				.chosen-single {
+					line-height: 1.7em;
+					color: $color__link;
+					&:hover, .chosen-with-drop & {
+						color: $color__link-hover;
+					}
+					div b {
+						background-image: none;
+						position: relative;
+						&:after {
+							position: absolute;
+							right: 8px;
+							top: 8px;
+							display: block;
+							@include nucleo-icon();
+							content: '\e902';
+							@include font-size(0.6);
+							@include transition(all 0.3s ease);
+							color: $color__border_cherry_search;
+						}
+					}
+				}
+				.chosen-drop {
+					width: 95px;
+					top: 165%;
+					border-radius: $border__radius;
+					background-color: $color__invert-main;
+					-webkit-box-shadow: 0 0 15px 0 rgba(80,106,172,0.19);
+					box-shadow: 0 0 15px 0 rgba(80,106,172,0.19);
+					.chosen-search input[type='text'] {
+						border-radius: $border__radius;
+						border: 1px solid $color__border_cherry_search;
+					}
+				}
+				&.chosen-with-drop {
+					.chosen-single {
+						color: $color__link-hover;
+						div b:after {
+							top: 6px;
+							transform: rotate(-180deg);
+						}
+					}
+				}
+				.chosen-results li {
+					&.highlighted {
+						background-color: rgba($color__link-hover, 1);
+						background-image: none;
+						border-radius: $border__radius;
+					}
+					&:before {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 	form.cherry-search__form {
@@ -33,6 +104,7 @@
 		}
 		input.cherry-search__field[type='search'] {
 			width: calc(100% - 10px);
+			padding-right: 100px;
 			margin-bottom: 0;
 			border: 3px solid $color__border_cherry_search;
 			background-color: white;
