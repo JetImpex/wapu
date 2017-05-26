@@ -28,22 +28,24 @@
 				) ); ?>
 		</div><!-- .entry-content -->
 		<div class="entry-meta">
-			<?php 
-				wapu_entry_meta(); 
-				wapu_get_post_tags(); 
+			<?php
+				wapu_entry_meta();
+				wapu_get_post_tags();
 			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<footer class="entry-footer">
-		<?php 
+		<?php
 			wapu()->utility()->attributes->get_button( array(
 					'class' => 'btn btn-primary',
 					'text'  => esc_html__( 'Read More', 'wapu' ),
 					'html'  => '<a href="%1$s" %3$s>%4$s</a>',
 					'echo'  => true,
 				) );
-			wapu_share_buttons(); 
+			wapu_share_buttons();
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<?php do_action( 'wapu_after_post' ); ?>
