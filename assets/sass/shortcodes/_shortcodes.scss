@@ -398,6 +398,10 @@ body .wapu-popup {
 			line-height: 0;
 			text-align: center;
 			cursor: pointer;
+			@include media-breakpoint-down(sm) {
+				right: 20px;
+				top: 20px;
+			}
 			&:hover {
 				i {
 					color: $color__link-hover;
