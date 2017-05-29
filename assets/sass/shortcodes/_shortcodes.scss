@@ -391,18 +391,24 @@ body .wapu-popup {
 		box-shadow: 0 10px 89px 5px rgba(80,106,172,0.18);
 		.wapu-close {
 			position: absolute;
-			right: 41px;
-			top: 39px;
-			width: 12px;
-			height: 12px;
+			right: -20px;
+			top: -18px;
+			width: 40px;
+			height: 40px;
 			line-height: 0;
 			text-align: center;
 			cursor: pointer;
+			background-color: $button_text_color;
+			border: 3px solid $color__link;
+			overflow: hidden;
+			border-radius: 50%;
+			@include transition(all 0.3s ease);
 			@include media-breakpoint-down(sm) {
-				right: 20px;
-				top: 20px;
+				right: -20px;
+				top: -20px;
 			}
 			&:hover {
+			border-color: $color__link-hover;
 				i {
 					color: $color__link-hover;
 					@include transition(all 0.3s ease);
@@ -410,7 +416,8 @@ body .wapu-popup {
 			}
 			i {
 				color: $color__link;
-				@include font-size(0.75);
+				line-height: 34px;
+				@include font-size(1);
 				@include transition(all 0.3s ease);
 			}
 		}

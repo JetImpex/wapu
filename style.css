@@ -3441,25 +3441,34 @@ body .wapu-popup {
     box-shadow: 0 10px 89px 5px rgba(80, 106, 172, 0.18); }
     body .wapu-popup__content .wapu-close {
       position: absolute;
-      right: 41px;
-      top: 39px;
-      width: 12px;
-      height: 12px;
+      right: -20px;
+      top: -18px;
+      width: 40px;
+      height: 40px;
       line-height: 0;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #fff;
+      border: 3px solid #42527b;
+      overflow: hidden;
+      border-radius: 50%;
+      -webkit-transition: all 0.3s ease;
+              transition: all 0.3s ease; }
       @media (max-width: 767px) {
         body .wapu-popup__content .wapu-close {
-          right: 20px;
-          top: 20px; } }
-      body .wapu-popup__content .wapu-close:hover i {
-        color: #00b4ff;
-        -webkit-transition: all 0.3s ease;
-                transition: all 0.3s ease; }
+          right: -20px;
+          top: -20px; } }
+      body .wapu-popup__content .wapu-close:hover {
+        border-color: #00b4ff; }
+        body .wapu-popup__content .wapu-close:hover i {
+          color: #00b4ff;
+          -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease; }
       body .wapu-popup__content .wapu-close i {
         color: #42527b;
-        font-size: 12px;
-        font-size: 0.75rem;
+        line-height: 34px;
+        font-size: 16px;
+        font-size: 1rem;
         -webkit-transition: all 0.3s ease;
                 transition: all 0.3s ease; }
   body .wapu-popup__data h5 {
