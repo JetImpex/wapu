@@ -1,0 +1,53 @@
+.copy-to-clipboard {
+	position: relative;
+	&:before {
+		position: absolute;
+		font-size: 12px;
+		line-height: 1.4em;
+		padding: 5px 8px;
+		pointer-events: none;
+		color: $color__tooltip;
+		background: $color__tooltip-bg;
+		bottom: 100%;
+		width: 120px;
+		text-align: center;
+		content: attr(data-default-label);
+		left: 50%;
+		margin-left: -60px;
+		margin-bottom: 8px;
+		box-sizing: border-box;
+	}
+	&:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 5px 0 5px;
+		border-color: $color__tooltip-bg transparent transparent transparent;
+		position: absolute;
+		left: 50%;
+		bottom: 100%;
+		margin-left: -5px;
+		margin-bottom: 3px;
+	}
+	&:after,
+	&:before {
+		transition: all 100ms ease-in;
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY( -5px );
+	}
+	&.copied {
+		&:before {
+			content: attr(data-success-label);
+		}
+	}
+	&:hover {
+		&:after,
+		&:before {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY( 0 );
+		}
+	}
+}
