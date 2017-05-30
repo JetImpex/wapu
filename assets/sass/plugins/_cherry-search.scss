@@ -29,8 +29,11 @@
 		left: calc(100% - 215px);
 		top: 14px;
 		border-left: 1px solid $color__border_cherry_search;
+		@include media-breakpoint-up(sm) {
+			left: calc(100% - 309px);
+		}
 		@include media-breakpoint-up(md) {
-			left: calc(100% - 255px);
+			left: calc(100% - 350px);
 		}
 		@include media-breakpoint-down(xs) {
 			top: 0;
@@ -58,7 +61,7 @@
 			.chosen-single {
 				line-height: 1.7em;
 				padding-left: 14px;
-				width: 110px;
+				width: 200px;
 				@include media-breakpoint-down(xs) {
 					width: 100%;
 				}
@@ -83,7 +86,7 @@
 				}
 			}
 			.chosen-drop {
-				width: 114px;
+				width: 208px;
 				top: 165%;
 				@include media-breakpoint-down(xs) {
 					width: calc(100% + 6px);
@@ -138,7 +141,7 @@
 		}
 		input.cherry-search__field[type='search'] {
 			width: calc(100% - 10px);
-			padding-right: 120px;
+			padding-right: 210px;
 			@include media-breakpoint-down(xs) {
 				width: 100%;
 				padding-right: 15px;

@@ -20,6 +20,24 @@ add_filter( 'wapu_core/shortcodes/docs_search/messages', 'wapu_core_theme_search
 // Cherry search negative message
 add_filter( 'cherry_search-negative_search_message', 'wapu_search_negative_search_message' );
 
+// Department ID related class to body
+add_filter( 'body_class', 'wapu_add_blog_id_class' );
+
+/**
+ * Add blog ID class
+ *
+ * @since  1.0.2
+ * @return array
+ */
+function wapu_add_blog_id_class( $classes ) {
+
+	if ( is_multisite() ) {
+		$classes[] = 'dept-' . get_current_blog_id();
+	}
+
+	return $classes;
+}
+
 
 // Cherry search info content primary
 /*add_filter( 'cherry_search_info_content_primary', 'wapu_search_info_content_primary' );

@@ -19,10 +19,16 @@
 		margin-bottom: 0.95em;
 	}
 }
+.blog-banner {
+	margin: 0 0 2.3em;
+	@include media-breakpoint-up(md) {
+		margin: 0 0 3.3em;
+	}
+}
 
 
 .single, .blog, .search, .archive {
-	#primary, #primary-sidebar {
+	#primary, #primary-sidebar, #blog-sidebar {
 		margin-top: 2.125em;
 		@include media-breakpoint-up(md) {
 			margin-top: 4.375em;
@@ -138,7 +144,7 @@
 		span{
 			font-family: $font__main;
 			font-weight: normal;
-		}		
+		}
 	}
 	&__tags {
 		font-family: $font__main;
@@ -166,7 +172,7 @@
 	}
 }
 .entry {
-	&-meta, 
+	&-meta,
 	&-footer {
 		@include font-size(0.875);
 		text-transform: capitalize;

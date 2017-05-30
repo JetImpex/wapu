@@ -13,10 +13,10 @@
 		.site-branding,
 		.main-navigation {
 			order: 0;
-		}		
+		}
 		.site-branding {
 			flex: 0 1 auto;
-			margin: 20px $grid-gutter-width/2 18px; 
+			margin: 35px $grid-gutter-width/2 18px;
 			@include media-breakpoint-up(md) {
 				flex: 0 1 50%;
 			}
@@ -24,9 +24,20 @@
 				flex: 0 1 30%;
 			}
 		}
+		.site-description {
+			text-align: right;
+			color: $color__link;
+			text-transform: uppercase;
+			line-height: 1;
+			font-size: 20px;
+			margin: 0 6px 0 0;
+			.dept-1 & {
+				font-size: 15px;
+			}
+		}
 		.main-navigation {
 			flex: 1 1 auto;
-			margin: 15px $grid-gutter-width/2; 
+			margin: 15px $grid-gutter-width/2;
 		}
 	}
 }

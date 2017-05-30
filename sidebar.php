@@ -6,11 +6,6 @@
  *
  * @package Wapuula
  */
-
-if ( ! is_active_sidebar( 'primary-sidebar' ) ) {
-	return;
-}
-
 $layout = wapu_layout_class( 'sidebar' );
 
 if ( ! $layout ) {
@@ -20,5 +15,11 @@ if ( ! $layout ) {
 ?>
 
 <aside class="widget-area <?php echo $layout; ?>">
-	<?php do_action( 'wapu_render_widget_area', 'primary-sidebar' ); ?>
+	<?php
+		if ( is_single() || is_archive() || is_home() ) {
+			do_action( 'wapu_render_widget_area', 'blog-sidebar' );
+		} else {
+			do_action( 'wapu_render_widget_area', 'primary-sidebar' );
+		}
+	?>
 </aside><!-- #secondary -->

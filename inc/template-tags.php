@@ -109,6 +109,7 @@ function wapu_site_description() {
 	}
 
 	$description = get_bloginfo( 'description', 'display' );
+	$description = apply_filters( 'wapu_tagline', $description );
 
 	if ( ! ( $description || is_customize_preview() ) ) {
 		return;

@@ -21,11 +21,11 @@
 				@include nucleo-icon();
 				position: absolute;
 				top: 28px;
-				left: 16px; 
+				left: 16px;
 				@include font-size(1.2);
 				@include media-breakpoint-up(xl) {
 					top: 40px;
-					left: 40px; 
+					left: 40px;
 					@include font-size(1.75);
 				}
 			}
@@ -69,7 +69,7 @@
 .blurb {
 	text-align: center;
 	&__title {
-		margin: 0 0 10px; 
+		margin: 0 0 10px;
 	}
 	&__text {
 		@include font-size(0.875);
@@ -124,13 +124,13 @@
 			flex: 0 1 auto;
 			align-self: auto;
 		}
-		i { 
+		i {
 			display: block;
 			@include font-size(2.75);
 			position: relative;
 			width: 108px;
 			height: 108px;
-			border-radius: 50%; 
+			border-radius: 50%;
 			margin: 15px;
 			transform: scale(1);
 			background-size: 200% auto;
@@ -157,7 +157,7 @@
 				top: 0;
 				right: 0;
 				bottom: 0;
-				border-radius: 50%; 
+				border-radius: 50%;
 				transform: scale(0.94);
 				background-color: white;
 				z-index: -1;
@@ -240,7 +240,7 @@
 		&:hover {
 			i {
 				transform: translateY(-10px);
-				transition: all 300ms cubic-bezier(0.360, 0.150, 0.000, 0.920); 
+				transition: all 300ms cubic-bezier(0.360, 0.150, 0.000, 0.920);
 				@include media-breakpoint-up(md) {
 					transform: translateY(-20px);
 				}
@@ -248,7 +248,7 @@
 			.blurb__link {
 				opacity: 1;
 				transform: translateY(10px);
-				transition: all 320ms cubic-bezier(0.360, 0.150, 0.000, 0.920); 
+				transition: all 320ms cubic-bezier(0.360, 0.150, 0.000, 0.920);
 				@include media-breakpoint-up(md) {
 					transform: translateY(16px);
 				}
@@ -265,7 +265,7 @@
 			margin-bottom: 21px;
 		}
 		.blurb__text, .blurb__link {
-			margin: 0; 
+			margin: 0;
 			color: $color__link;
 		}
 		.blurb__link {
@@ -281,7 +281,7 @@
 			margin-bottom: 7px;
 			transition: all 450ms cubic-bezier(0.365, 0.115, 0.000, 0.990);
 		}
-		i { 
+		i {
 			@include font-size(2.75);
 			text-align: center;
 			transition: all 450ms cubic-bezier(0.365, 0.115, 0.000, 0.990);
@@ -308,7 +308,7 @@
 // Docs form shortcode
 .docs-search.documentation_search {
 	max-width: 100%;
-	margin: 0 auto; 
+	margin: 0 auto;
 	@include media-breakpoint-up(md) {
 		max-width: 418px;
 	}
@@ -382,42 +382,66 @@
 		}
 	}
 }
+
+.docs-search-results {
+	text-align: center;
+	&__text {
+		margin-bottom: 1.94em;
+	}
+	&__actions {
+		.btn, .button {
+			margin: 0 5px 5px;
+		}
+	}
+}
+
 // Wapu popup
 body .wapu-popup {
 	background-color: rgba($color__background-footer, 0.8);
 	&__content {
 		padding: 36px 40px;
+		overflow: auto;
+		@include media-breakpoint-up(xl) {
+			overflow: visible;
+		}
 		-webkit-box-shadow: 0 10px 89px 5px rgba(80,106,172,0.18);
 		box-shadow: 0 10px 89px 5px rgba(80,106,172,0.18);
 		.wapu-close {
 			position: absolute;
-			right: -20px;
-			top: -18px;
-			width: 40px;
-			height: 40px;
+			right: 10px;
+			top: 7px;
+			width: 30px;
+			height: 30px;
 			line-height: 0;
 			text-align: center;
 			cursor: pointer;
 			background-color: $button_text_color;
-			border: 3px solid $color__link;
+			border: 2px solid $color__link;
 			overflow: hidden;
 			border-radius: 50%;
 			@include transition(all 0.3s ease);
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-up(xl) {
+				border: 3px solid $color__link;
 				right: -20px;
-				top: -20px;
+				top: -18px;
+				width: 40px;
+				height: 40px;
 			}
 			&:hover {
 			border-color: $color__link-hover;
 				i {
-					color: $color__link-hover;
+					color: $color__link-hover;transform: rotateZ(90deg);
 					@include transition(all 0.3s ease);
 				}
 			}
 			i {
 				color: $color__link;
-				line-height: 34px;
-				@include font-size(1);
+				line-height: 26px;
+				@include font-size(0.875);
+				@include media-breakpoint-up(xl) {
+					@include font-size(1);
+					line-height: 34px;
+				}
 				@include transition(all 0.3s ease);
 			}
 		}

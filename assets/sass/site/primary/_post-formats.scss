@@ -31,6 +31,46 @@
 				margin-bottom: 0px;
 			}
 			.faq-post {
+				&__inner {
+					ul {
+						margin: 15px 0;
+						li {
+							position: relative;
+							padding-left: 18px;
+							margin: 8px 0;
+							@include font-size(0.875);
+							strong {
+								font-weight: 600;
+							}
+							&:before {
+								position: absolute;
+								content: "";
+								width: 7px;
+								height: 7px;
+								left: 0;
+								top: 7px;
+								border-radius: 100%;
+								background-color: $color__points;
+							}
+						}
+					}
+					a {
+						color: $color__link-hover;
+						&:hover {
+							color: $color__link;
+						}
+					}
+					p {
+						strong {
+							margin-top: 0.85em;
+							position: relative;
+							display: inline-block;
+						}
+						img{ 
+							margin-top: 15px;
+						}
+					}
+				}
 				&__content {
 					margin-left: 0;
 				}
