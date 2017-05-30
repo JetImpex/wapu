@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Wapuula team
 Author URI: http://wapuula.com
 Description: wapuula.com theme
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wapu
@@ -3628,6 +3628,10 @@ body .wapu-popup {
         padding-left: 3.125rem; } }
     .primary-sidebar-area .widget ul, .primary-sidebar-area .widget ol, .blog-sidebar-area .widget ul, .blog-sidebar-area .widget ol {
       margin: 1.5em 0; }
+      .primary-sidebar-area .widget ul ul, .primary-sidebar-area .widget ul ol, .primary-sidebar-area .widget ol ul, .primary-sidebar-area .widget ol ol, .blog-sidebar-area .widget ul ul, .blog-sidebar-area .widget ul ol, .blog-sidebar-area .widget ol ul, .blog-sidebar-area .widget ol ol {
+        margin: 0.2em 0 0.2em 0.7em; }
+        .primary-sidebar-area .widget ul ul li, .primary-sidebar-area .widget ul ol li, .primary-sidebar-area .widget ol ul li, .primary-sidebar-area .widget ol ol li, .blog-sidebar-area .widget ul ul li, .blog-sidebar-area .widget ul ol li, .blog-sidebar-area .widget ol ul li, .blog-sidebar-area .widget ol ol li {
+          margin: 0.2em 0; }
   .widget select {
     max-width: 100%; }
   .widget .primary-sidebar-area,
@@ -4117,11 +4121,11 @@ body .wapu-popup {
   .post-type-archive-faq .faq-term {
     margin-bottom: 3em; }
   .post-type-archive-faq .faq-terms dd {
-    margin-bottom: 9px; }
+    margin-bottom: 16px; }
   .post-type-archive-faq .faq-terms .faq-term__title {
     margin-bottom: 0px; }
   .post-type-archive-faq .faq-terms .faq-post__inner ul {
-    margin: 15px 0; }
+    margin: 5px 0; }
     .post-type-archive-faq .faq-terms .faq-post__inner ul li {
       position: relative;
       padding-left: 18px;
@@ -4162,7 +4166,7 @@ body .wapu-popup {
       font-family: "Muli", sans-serif;
       font-size: 16px;
       font-size: 1rem;
-      font-weight: 400; }
+      font-weight: 600; }
     .post-type-archive-faq .faq-terms .faq-posts .faq-post__content p {
       font-size: 14px;
       font-size: 0.875rem;
@@ -4170,13 +4174,13 @@ body .wapu-popup {
     .post-type-archive-faq .faq-terms .faq-posts dt {
       position: relative;
       border-top: 1px solid #e8e8f6;
-      padding: 7px 25px 0 0; }
+      padding: 15px 25px 0 0; }
       .post-type-archive-faq .faq-terms .faq-posts dt:first-child {
         border: none; }
       .post-type-archive-faq .faq-terms .faq-posts dt:after {
         position: absolute;
         right: 0;
-        top: 15px;
+        top: 23px;
         display: block;
         font-family: 'Nucleo Mini';
         font-weight: normal;
@@ -4204,7 +4208,10 @@ body .wapu-popup {
         -webkit-transition: all 0.3s ease;
                 transition: all 0.3s ease; }
       .post-type-archive-faq .faq-terms .faq-posts dt.faq-active {
-        color: #00b4ff; }
+        color: #00b4ff;
+        padding: 15px 25px 9px 0;
+        -webkit-transition: all 0.15s ease;
+                transition: all 0.15s ease; }
         .post-type-archive-faq .faq-terms .faq-posts dt.faq-active:after {
           -webkit-transform: rotate(-180deg);
               -ms-transform: rotate(-180deg);

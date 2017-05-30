@@ -25,7 +25,7 @@
 		}
 		.faq-terms {
 			dd {
-				margin-bottom: 9px;
+				margin-bottom: 16px;
 			}
 			.faq-term__title {
 				margin-bottom: 0px;
@@ -33,7 +33,7 @@
 			.faq-post {
 				&__inner {
 					ul {
-						margin: 15px 0;
+						margin: 5px 0;
 						li {
 							position: relative;
 							padding-left: 18px;
@@ -86,7 +86,7 @@
 				.faq-post__title {
 					font-family: $font__headings;
 					@include font-size(1);
-					font-weight: 400;
+					font-weight: 600;
 				}
 				.faq-post__content {
 					p {
@@ -97,14 +97,14 @@
 				dt {
 					position: relative;
 					border-top: 1px solid $color__separator;
-					padding: 7px 25px 0 0;
+					padding: 15px 25px 0 0;
 					&:first-child {
 						border: none;
 					}
 					&:after {
 						position: absolute;
 						right: 0;
-						top: 15px;
+						top: 23px;
 						display: block;
 						@include nucleo-icon();
 						content: '\e902';
@@ -113,6 +113,8 @@
 					}
 					&.faq-active {
 						color: $color__link-hover;
+						padding: 15px 25px 9px 0;
+						@include transition(all 0.15s ease);
 						&:after {
 							transform: rotate(-180deg);
 						}

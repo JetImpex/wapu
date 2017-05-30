@@ -50,6 +50,12 @@
 		}
 		ul, ol {
 			margin: 1.5em 0;
+			ul, ol {
+				margin: 0.2em 0 0.2em 0.7em;
+				li {
+					margin: 0.2em 0;
+				}
+			}
 		}
 	}
 	/* Make sure select elements fit in widgets. */
