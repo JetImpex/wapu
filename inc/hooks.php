@@ -23,6 +23,21 @@ add_filter( 'cherry_search-negative_search_message', 'wapu_search_negative_searc
 // Department ID related class to body
 add_filter( 'body_class', 'wapu_add_blog_id_class' );
 
+// Changes "All categories" text in search-form
+add_filter( 'cherry_search-select_placeholder', 'wapu_search_select_placeholder' );
+
+/**
+ * Cherry search negative message
+ * @param $array
+ * @return $array
+ */
+function wapu_search_select_placeholder() {
+	$select_placeholder = sprintf( 
+		esc_html__( 'All Categories', 'wapu' ) 
+	);
+	return $select_placeholder;
+}
+
 /**
  * Add blog ID class
  *

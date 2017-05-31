@@ -45,7 +45,7 @@
 	}
 }
 
-.search.search-results {
+.search.search-results, .archive.category {
 	.page-header .page-title {
 		margin-top: 0;
 		margin-bottom: 1em;
@@ -97,7 +97,7 @@
 
 .hentry {
 	margin: 0 0 2.7em;
-	.blog &, .archive &, .search &, .search-results & {
+	.blog &, .archive &, .search &, .search-results &, .archive.category & {
 		margin: 0 0 2em;
 		@include media-breakpoint-up(md) {
 			margin: 0 0 4.3em;
@@ -189,7 +189,7 @@
 }
 
 .entry-header {
-	.blog &, .search-results & {
+	.blog &, .search-results &, .archive.category & {
 		margin-bottom: 1.438em;
 		figure.post-thumbnail {
 			margin: 0 0 1.313em 0; /* Extra wide images within figure tags dont overflow the content area. */

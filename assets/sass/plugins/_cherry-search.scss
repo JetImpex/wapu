@@ -48,6 +48,7 @@
 			display: none;
 		}
 		.chosen-container {
+			@include font-size(0.875);
 			@include media-breakpoint-down(xs) {
 				width: 100% !important;
 			}
@@ -66,9 +67,6 @@
 					width: 100%;
 				}
 				color: $color__link;
-				&:hover, .chosen-with-drop & {
-					color: $color__link-hover;
-				}
 				div b {
 					background-image: none;
 					position: relative;
@@ -80,18 +78,31 @@
 						@include nucleo-icon();
 						content: '\e902';
 						@include font-size(0.6);
-						@include transition(all 0.3s ease);
 						color: $color__border_cherry_search;
 					}
 				}
 			}
 			.chosen-drop {
 				width: 208px;
-				top: 165%;
+				top: 180%;
+				padding: 5px 2px 1px 2px;
+				::-webkit-scrollbar {
+					width: 8px;
+					border-radius: $border__radius;
+					background-color: $color__background-pre;
+				}
+
+				::-webkit-scrollbar-track {
+					border-radius: $border__radius;
+				}
+
+				::-webkit-scrollbar-thumb {
+					border-radius: $border__radius;
+					background-color: $color__border_cherry_search;
+				}
 				@include media-breakpoint-down(xs) {
 					width: calc(100% + 6px);
 					top: 130%;
-					padding: 3px;
 					border: 3px solid $color__border_cherry_search;
 					margin: 0 -3px;
 				}
@@ -105,18 +116,15 @@
 				}
 			}
 			&.chosen-with-drop {
-				.chosen-single {
-					color: $color__link-hover;
-
-					div b:after {
-						top: 6px;
-						transform: rotate(-180deg);
-					}
+				.chosen-single div b:after {
+					top: 6px;
+					transform: rotate(-180deg);
 				}
 			}
 			.chosen-results li {
 				background-image: none;
 				border-radius: $border__radius;
+				margin-right: 5px;
 				@include transition(all 0.3s ease);
 				&.highlighted {
 					background-color: rgba($color__link-hover, 1);
