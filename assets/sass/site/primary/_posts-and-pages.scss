@@ -26,6 +26,10 @@
 	}
 }
 
+.single p img {
+	-webkit-box-shadow: 0 0 25px 1px #d1d1e2;
+	box-shadow: 0 0 25px 1px #d1d1e2;
+}
 
 .single, .blog, .search, .archive {
 	#primary, #primary-sidebar, #blog-sidebar {

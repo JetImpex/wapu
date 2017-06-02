@@ -9,13 +9,13 @@ while ( have_posts() ) : the_post();
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php
-				wapu()->utility()->meta_data->get_terms( array(
-					'type'      => 'video-tutorials_category',
+				/*wapu()->utility()->meta_data->get_terms( array(
+					'type'      => 'how-to_category',
 					'delimiter' => '<span>, </span>',
 					'before'    => '<div class="post__cats">',
 					'after'     => '</div>',
 					'echo'      => true,
-				) );
+				) );*/
 			?>
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		</header><!-- .entry-header -->

@@ -123,61 +123,84 @@
 			}
 		}
 	}
-	/* Knowledge base, How to */
-	&-type-archive-knowledge-base,
-	&-type-archive-how-to {
-		.page-title {
-			margin-top: 0.54em;
-		}
-		.wapu-terms {
-			.wapu-term {
-				&__title {
-					margin: 2.2em 0 1.275em;
-				}
-			}
-			.wapu-posts {
-				margin: 1.275em 0 2.05em; 
-				list-style: none;
-				padding-left: 0;
-				position: relative;
-				li {
-					position: relative;
-					padding-left: 18px;
-					margin: 8px 0;
-					a {
-						color: $color__link-hover;
-						&:hover {
-							color: $color__link;
-						} 
-					}
-					&:before {
-						position: absolute;
-						content: "";
-						width: 7px;
-						height: 7px;
-						left: 0;
-						top: 10px;
-						border-radius: 100%;
-						background-color: $color__points;
-					}
-				}
-			}
-			.wapu-term__actions {
-				margin: 1.25em 0 3.45em;
-				a {
-					@include btn();
-				}
-			}
-		}
-	}
-
 	&-type-archive-video-tutorials,
 	&-type-archive-faq,
 	&-type-archive-knowledge-base,
 	&-type-archive-how-to {
 		.page-title {
 			text-align: center;
+			margin-top: 0.64em;
 		}
 	}
 
+}
+
+.single {
+	&-video-tutorials,
+	&-faq,
+	&-knowledge-base,
+	&-how-to {
+		.entry-content {
+			margin-top: 0;
+		}
+	}
+}
+
+/* Knowledge base, How to */
+.post-type-archive-knowledge-base,
+.post-type-archive-how-to,
+.tax-knowledge-base_category,
+.tax-how-to_category {
+	.wapu-terms, .wapu_posts_wrap {
+		.wapu-term, .wapu-post {
+			&__title {
+				margin: .8em 0 1.275em;
+			}
+		}
+		.wapu-posts {
+			margin: 1.275em 0 1.05em; 
+			list-style: none;
+			padding-left: 0;
+			position: relative;
+			li {
+				position: relative;
+				padding-left: 18px;
+				margin: 8px 0;
+				a {
+					color: $color__link-hover;
+					&:hover {
+						color: $color__link;
+					} 
+				}
+				&:before {
+					position: absolute;
+					content: "";
+					width: 7px;
+					height: 7px;
+					left: 0;
+					top: 10px;
+					border-radius: 100%;
+					background-color: $color__points;
+				}
+			}
+		}
+		.wapu-term__actions {
+			margin: 1.25em 0 1.45em;
+			a {
+			}
+		}
+	}
+}
+.tax-knowledge-base_category,
+.tax-how-to_category {
+	#primary {
+		margin-top: 2.6em;
+	}
+	.wapu-terms, .wapu_posts_wrap {
+		.wapu-term, .wapu-post {
+			&__title {
+				margin: .54em 0 1.85em;
+			}
+		}
+	}
 }
