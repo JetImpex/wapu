@@ -4,12 +4,6 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	& + p {
-		margin-bottom: 0.7em;
-	}
-}
-
 h1 {
 	font-size: 30px;
 	line-height: 1.225em;
@@ -70,6 +64,6 @@ h6 {
 		margin: 0.325em 0 0.650em
 	}
 	h3, h4, h5, h6 {
-		margin: 1.16em 0;
+		margin: 1.8em 0 1.16em;
 	}
 }
