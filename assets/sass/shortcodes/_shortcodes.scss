@@ -333,6 +333,7 @@
 			order: 0;
 			width: 100%;
 			margin-bottom: 10px;
+			background-color: white;
 			@include media-breakpoint-up(md) {
 				width: calc(100% - 104px);
 				margin-bottom: 0;
