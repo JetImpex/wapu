@@ -118,6 +118,16 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 		}
 
 		/**
+		 * Get theme version
+		 *
+		 * @return string
+		 */
+		public function get_version() {
+			$theme = wp_get_theme();
+			return $theme->get( 'Version' );
+		}
+
+		/**
 		 * Returns core instance
 		 *
 		 * @return Cherry_Core
@@ -193,7 +203,7 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 
 		/**
 		 * Returns utility instance
-		 * 
+		 *
 		 * @return object
 		 */
 		function utility() {
@@ -236,7 +246,7 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 		public function enqueue_assets() {
 
 			wp_enqueue_style( 'wapu-fonts', $this->fonts_url() );
-			wp_enqueue_style( 'wapu-style', get_stylesheet_uri() );
+			wp_enqueue_style( 'wapu-style', get_stylesheet_uri(), false, $this->get_version() );
 			wp_enqueue_style( 'nucleo-mini', $this->assets_url() . '/css/nucleo-mini.css' );
 
 			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
