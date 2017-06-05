@@ -32,8 +32,8 @@ add_filter( 'cherry_search-select_placeholder', 'wapu_search_select_placeholder'
  * @return $array
  */
 function wapu_search_select_placeholder() {
-	$select_placeholder = sprintf( 
-		esc_html__( 'All Categories', 'wapu' ) 
+	$select_placeholder = sprintf(
+		esc_html__( 'All Categories', 'wapu' )
 	);
 	return $select_placeholder;
 }
@@ -118,7 +118,7 @@ function wapu_search_negative_search_message() {
 		esc_html__( 'submit a ticket', 'wapu' ),
 		esc_html__( 'please use a', 'wapu' ),
 		esc_html__( 'knowledge base', 'wapu' ),
-		esc_url( 'http://192.168.9.82/2017/4.April/wapu/support/knowledge-base/' ),
+		esc_url( home_url( '/support/knowledge-base/' ) ),
 		esc_html__( 'Results not found. ', 'wapu' )
 	);
 	return $negative_search;
