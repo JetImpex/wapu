@@ -247,12 +247,12 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 
 			wp_enqueue_style( 'wapu-fonts', $this->fonts_url() );
 			wp_enqueue_style( 'wapu-style', get_stylesheet_uri(), false, $this->get_version() );
-			wp_enqueue_style( 'nucleo-mini', $this->assets_url() . '/css/nucleo-mini.css' );
+			wp_enqueue_style( 'nucleo-mini', $this->assets_url() . 'css/nucleo-mini.css' );
 
-			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
-			wp_enqueue_script( 'wapu-navigation', $this->assets_url() . 'js/navigation.js', array(), '1.0.0', true );
-			wp_enqueue_script( 'wapu-skip-link-focus-fix', $this->assets_url() . 'js/skip-link-focus-fix.js', array(), '1.0.0', true );
-			wp_enqueue_script( 'wapu-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array(), '1.0.0', true );
+			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), $this->get_version(), true );
+			wp_enqueue_script( 'wapu-navigation', $this->assets_url() . 'js/navigation.js', array(), $this->get_version(), true );
+			wp_enqueue_script( 'wapu-skip-link-focus-fix', $this->assets_url() . 'js/skip-link-focus-fix.js', array(), $this->get_version(), true );
+			wp_enqueue_script( 'wapu-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array(), $this->get_version(), true );
 
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
