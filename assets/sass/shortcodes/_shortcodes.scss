@@ -2,10 +2,13 @@
 .notice {
 	border-radius: $border__radius;
 	border: 2px solid;
-	margin: 2em 0;
+	margin: 2em 0 2.8em;
+	& + .notice {
+		margin-bottom: 2em;
+	}
 	padding: 1.5em 2em 1.5em 3em;
 	@include media-breakpoint-up(xl) {
-		padding: 33px 128px 33px 95px;
+		padding: 33px 128px 50px 95px;
 	};
 	&.type {
 		&-info, &-success, &-warning, &-error {
@@ -334,8 +337,9 @@
 			width: 100%;
 			margin-bottom: 10px;
 			background-color: white;
+			color: $color__text-main;
 			@include media-breakpoint-up(md) {
-				width: calc(100% - 104px);
+				width: calc(100% - 114px);
 				margin-bottom: 0;
 			}
 			&.error {

@@ -1,5 +1,5 @@
 ul, ol {
-	margin: 1.875em 0 2.75em;	
+	margin: 1.875em 0 2.75em;
 	li{
 		position: relative;
 	}
@@ -38,13 +38,14 @@ ol {
 	list-style: none;
 	padding-left: 0;
 	> li {
-		padding-left: 25px;
+		padding-left: 20px;
 		&:before {
-			content: counter(item, decimal-leading-zero) ". ";
+			content: counter(item, decimal) ". ";
 			counter-increment: item;
 			position: absolute;
 			top: 0;
 			left: 0;
+			font-weight: 600;
 		}
 	}
 }
