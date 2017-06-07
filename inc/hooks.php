@@ -26,6 +26,23 @@ add_filter( 'body_class', 'wapu_add_blog_id_class' );
 // Changes "All categories" text in search-form
 add_filter( 'cherry_search-select_placeholder', 'wapu_search_select_placeholder' );
 
+add_filter( 'post_class', 'wapu_post_classes' );
+
+/**
+ * Additional classes for posts.
+ *
+ * @param  array $classes Default classes.
+ * @return array
+ */
+function wapu_post_classes( $classes ) {
+
+	if ( ! is_singular() ) {
+		$classes[] = has_post_thumbnail() ? 'has-thumb' : 'no-thumb';
+	}
+
+	return $classes;
+}
+
 /**
  * Cherry search negative message
  * @param $array
