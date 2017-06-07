@@ -198,6 +198,52 @@
 			margin-bottom: 32px;
 		}
 	}
+	&-image {
+		margin: 1em 0;
+		@include media-breakpoint-up(xl) {
+			margin: 2em 0;
+		}
+		.blurb__link {
+			padding: 15px 15px 30px;
+			border: 1px solid $color__separator;
+			border-radius: $border__radius;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: center;
+			color: $color__text-main;
+			@include transition(all 0.45s ease);
+			@include media-breakpoint-up(xl) {
+				padding: 13px 15px;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: flex-start;
+			}
+			&:hover {
+				border-color: transparent;
+				-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+				box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+				@include transition(all 0.32s ease);
+				i {
+					@include transition(all 0.3s ease);
+					&:before {
+						-webkit-text-fill-color: transparent;
+						color: white;
+						background-image: -webkit-linear-gradient(-45deg, white 0%,white 40%,white 57%);
+						@include transition(all 0.3s ease);
+					}
+					&:after {
+						opacity: 0.1;
+						transform: scale(0.82);
+						transition: all 270ms cubic-bezier(0.570, 0.035, 0.000, 0.955);
+					}
+				}
+
+			}
+		}
+	}
 	&-boxed-description {
 		margin: 2em 0;
 		text-align: center;
