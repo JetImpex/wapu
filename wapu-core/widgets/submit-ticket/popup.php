@@ -23,7 +23,7 @@
 			}
 
 			printf(
-				'<div class="providers-list__item-wrap"><a href="%1$s" class="providers-list__item">
+				'<div class="providers-list__item-wrap"><a href="%1$s" target="_blank" class="providers-list__item">
 					%2$s
 					<span class="providers-list__item-label">%3$s</span>
 				</a></div>',

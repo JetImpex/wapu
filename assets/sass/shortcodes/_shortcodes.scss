@@ -8,7 +8,7 @@
 	}
 	padding: 1.5em 2em 1.5em 3em;
 	@include media-breakpoint-up(xl) {
-		padding: 33px 128px 50px 95px;
+		padding: 33px 128px 33px 95px;
 	};
 	&.type {
 		&-info, &-success, &-warning, &-error {
@@ -409,7 +409,7 @@
 			.wapu-loader {
 				width: 16px;
 				height: 16px;
-				margin: 0 3px;
+				margin: 0 8px;
 				border-top: 3px solid rgba(255,255,255,0.65);
 				border-right: 3px solid rgba(255,255,255,0.65);
 				border-bottom: 3px solid rgba(255,255,255,0.65);
@@ -435,14 +435,63 @@
 }
 
 .docs-search-results {
-	text-align: center;
-	&__text {
-		margin-bottom: 1.94em;
+	text-align: left;
+	margin-top: 35px;
+	margin-bottom: 15px;
+	&__title {
+		margin: 0 0 0.5em; 
+		@include font-size(1.125);
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: center;
+		padding: 10px 15px;
+		border-radius:$border__radius;
+		border: 1px solid $color__separator;
+		background-color: $color__invert-main;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+		&-text {
+			text-align: center;
+			word-break: break-word;
+			@include font-size(0.875);
+			order: 0;
+			flex: 0 1 100%;
+			align-self: auto;
+			@include media-breakpoint-up(md) {
+				flex: 0 1 calc(100% - 120px);
+				text-align: left;
+			}
+		}
 	}
 	&__actions {
+		@include font-size(0.875);
+		order: 0;
+		flex: 0 1 100%;
+		align-self: auto;
+		margin-top: 15px;
+		@include media-breakpoint-up(md) {
+			flex: 0 1 90px;
+			margin-top: 0;
+		}
 		.btn, .button {
 			margin: 0 5px 5px;
 		}
+	}
+	&__delimiter {
+		height: 16px;
+		width: 1px;
+		position: relative;
+		display: inline-block;
+		background-color: $color__separator;
+		transform: translateY(3px);
+		margin: 0 5px;
 	}
 }
 

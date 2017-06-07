@@ -1,5 +1,8 @@
 p {
 	margin: 0 0 2em;
+	.single .entry-content & {
+		margin: 0 0 1em
+	}
 }
 
 p strong {

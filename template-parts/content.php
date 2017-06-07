@@ -11,13 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<figure class="post-thumbnail">
-		<?php the_post_thumbnail( '__tm-thumb-l', array(
-				'class' => 'post-thumbnail__img wp-post-image',
-				'alt'   => get_the_title(),
-			) );
-		?>
-		</figure><!-- .post-thumbnail -->
+		<?php  if ( has_post_thumbnail() ) { ?>
+			<figure class="post-thumbnail">
+			<?php the_post_thumbnail( '__tm-thumb-l', array(
+					'class' => 'post-thumbnail__img wp-post-image',
+					'alt'   => get_the_title(),
+				) ); ?>
+
+			</figure><!-- .post-thumbnail -->
+		<?php } ?>
 		<?php wapu_get_post_category(); ?>
 		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 		<div class="entry-content">

@@ -30,12 +30,29 @@
 	}
 }
 
+.search-no-results {
+	.page-content {
+		margin-bottom: 30px;
+	}
+	.no-results.not-found {
+		padding-bottom: 50px;
+		.page-title {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.single.single-post .entry-title {
+	margin-top: 13px;
+	margin-bottom: 25px;
+}
+
 .single .entry-content {
 	p, ul, ol {
 		img {
-			border-radius: 5px;
-			-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
-			box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+			-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
+			box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
 			margin-top: 1.75em; 
 			margin-bottom: 2.75em;
 		}

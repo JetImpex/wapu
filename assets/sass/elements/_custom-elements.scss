@@ -23,7 +23,10 @@
 .documentation-box {
 	margin: 0 0 2em;
 	margin-bottom: 70px;
-	padding: 30px 140px 80px;
+	padding: 30px 0 50px;
+	@include media-breakpoint-up(lg) {
+		padding: 30px 140px 50px;
+	}
 	position: relative;
 	&:after {
 		content: '';

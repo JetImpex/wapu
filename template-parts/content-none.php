@@ -22,9 +22,9 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wapu' ); ?></p>
+			<p><?php printf( wp_kses( __( 'Results not found. Check your spelling & try again. If you still have a question, please use a <a href="%1$s">knowledge base</a>.', 'wapu' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( home_url( '/support/knowledge-base/' ) ) ); ?></p>
 			<?php
-				get_search_form();
+				//get_search_form();
 
 		else : ?>
 
