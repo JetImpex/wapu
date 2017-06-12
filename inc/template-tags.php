@@ -131,7 +131,8 @@ function wapu_breadcrumbs() {
 		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_on_front'     => false,
-		'separator' => '&#124;',
+		'separator'         => '&#124;',
+		'path_type'         => 'minified',
 		'labels'            => array(
 			'browse' => '',
 		),
@@ -263,13 +264,37 @@ if ( ! function_exists( 'wapu_get_post_category' ) ) :
  */
 function wapu_get_post_category() {
 	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
+	if ( 'post' !== get_post_type() ) {
+		return;
+	}
+
+	$result_format = '<div class="post__cats">%1$s</div>';
+
+	if ( ! is_multisite() || is_main_site() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( '<span>' . esc_html__( ', ', 'wapu' ) . '</span>' );
 		if ( $categories_list && wapu_categorized_blog() ) {
-			printf( '<div class="post__cats">' . esc_html__( '%1$s', 'wapu' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+			printf( $result_format, esc_html( $categories_list ) );
 		}
+		return;
 	}
+
+	$parents = get_post_meta( get_the_id(), 'parent_cat', true );
+
+	if ( empty( $parents ) ) {
+		return;
+	}
+
+	$sep             = '';
+	$categories_list = '';
+
+	foreach ( $parents as $link => $name ) {
+		$categories_list .= $sep . sprintf( '<a href="%1$s" rel="category tag">%2$s</a>', esc_url( $link ), $name );
+		$sep              = '<span>, </span>';
+	}
+
+	printf( $result_format, $categories_list );
+
 }
 endif;
 
