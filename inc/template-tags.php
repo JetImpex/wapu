@@ -274,7 +274,7 @@ function wapu_get_post_category() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( '<span>' . esc_html__( ', ', 'wapu' ) . '</span>' );
 		if ( $categories_list && wapu_categorized_blog() ) {
-			printf( $result_format, esc_html( $categories_list ) );
+			printf( $result_format, wp_kses_post( $categories_list ) );
 		}
 		return;
 	}
