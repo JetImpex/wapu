@@ -131,7 +131,8 @@ function wapu_breadcrumbs() {
 		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_on_front'     => false,
-		'separator' => '&#124;',
+		'separator'         => '&#124;',
+		'path_type'         => 'minified',
 		'labels'            => array(
 			'browse' => '',
 		),
