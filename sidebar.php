@@ -16,7 +16,7 @@ if ( ! $layout ) {
 
 <aside class="widget-area <?php echo $layout; ?>">
 	<?php
-		if ( is_single() || is_archive() || is_home() ) {
+		if ( ( is_single() || is_archive() || is_home() ) && 'post' === get_post_type() ) {
 			do_action( 'wapu_render_widget_area', 'blog-sidebar' );
 		} else {
 			do_action( 'wapu_render_widget_area', 'primary-sidebar' );
