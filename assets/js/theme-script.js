@@ -76,7 +76,9 @@
 			var footerHeight = $("footer#colophon").outerHeight();
 			if (vwptHeight > bodyHeight) {
 				$("footer#colophon").css("position","fixed").css("bottom",0).css("width", '100%');
+				$(".site-content_wrap").css( 'margin-bottom', '425px');
 				$(".footer-area-wrap").css("position","fixed").css("bottom", footerHeight).css("width", '100%');
+				
 			}
 		},
 
