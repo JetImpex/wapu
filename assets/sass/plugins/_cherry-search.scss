@@ -310,6 +310,7 @@
 				line-height: 28px;
 				width: 100%;
 				@include nucleo-icon();
+				padding: 2px 0;
 			}
 		}
 		&.cherry-search__prev-button:after {

@@ -16,6 +16,7 @@
 			this.responsiveMenuInit( this );
 			this.stickyFooter( this );
 			this.cherrySearchInputIconHide( this );
+			this.to_top_init( this );
 			//this.wapuStickySidebar( this );
 
 		},
@@ -115,6 +116,13 @@
 				clotting:        clotting
 			});
 
+		},
+		to_top_init: function ( self ) {
+			if ( $.isFunction( jQuery.fn.UItoTop ) ) {
+				$().UItoTop({
+					scrollSpeed: 600
+				});
+			}
 		},
 
 	}

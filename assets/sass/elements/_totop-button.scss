@@ -1,0 +1,30 @@
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	right: -999em;
+	overflow: hidden;
+	width: 42px;
+	height: 42px;
+	z-index: 999;
+	text-align: center;
+	background: white;
+	border-radius: $button__radius;
+	-webkit-box-shadow: 0 0 19px 0 rgba(80,106,172,0.3);
+	box-shadow: 0 0 19px 0 rgba(80,106,172,0.3);
+	&:before{
+		@include nucleo-icon();
+		width: 100%;
+		line-height: 42px;
+		font-size: 18px;
+		content: "\e905";
+	}
+	&:focus {
+		outline: 0;
+	}
+	@include media-breakpoint-up(md) {
+		right: 20px;
+		bottom: 80px;
+	}
+}

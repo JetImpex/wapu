@@ -253,6 +253,7 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 			wp_enqueue_script( 'wapu-navigation', $this->assets_url() . 'js/navigation.js', array(), $this->get_version(), true );
 			wp_enqueue_script( 'wapu-skip-link-focus-fix', $this->assets_url() . 'js/skip-link-focus-fix.js', array(), $this->get_version(), true );
 			wp_enqueue_script( 'wapu-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array(), $this->get_version(), true );
+			wp_enqueue_script( 'jquery-totop', $this->assets_url() . 'js/jquery.ui.totop.min.js', array(), $this->get_version(), true );
 
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
