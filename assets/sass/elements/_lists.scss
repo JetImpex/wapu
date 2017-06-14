@@ -39,6 +39,9 @@ ol {
 	padding-left: 0;
 	> li {
 		padding-left: 20px;
+		&:nth-child(n+10) {
+			padding-left: 27px;
+		}
 		&:before {
 			content: counter(item, decimal) ". ";
 			counter-increment: item;
