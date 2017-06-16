@@ -127,12 +127,14 @@ function wapu_site_description() {
  */
 function wapu_breadcrumbs() {
 
+	$path_type = ( is_singular( 'post' ) ) ? 'minified' : 'full';
+
 	$breadcrumbs_settings = apply_filters( 'wapu_breadcrumbs_settings', array(
 		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_on_front'     => false,
 		'separator'         => '&#124;',
-		'path_type'         => 'minified',
+		'path_type'         => $path_type,
 		'labels'            => array(
 			'browse' => '',
 		),
