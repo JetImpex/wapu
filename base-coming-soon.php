@@ -1,20 +1,13 @@
-<?php
-/**
- * Base page structure.
- *
- * @package Wapuula
- */
-?>
-<?php get_header(); ?>
-	<?php wapu_breadcrumbs(); ?>
+<?php get_header('coming-soon'); ?>
 	<div class="site-content_wrap container">
 		<div class="row">
 			<div id="primary" class="<?php echo wapu_layout_class( 'content' ); ?>">
 				<main id="main" class="site-main" role="main">
-					<?php include wapu_template_path(); ?>
+					<div class="coming-soon__content">
+						<?php include wapu_template_path(); ?>
+					</div>
 				</main><!-- #main -->
 			</div><!-- #primary -->
-			<?php get_sidebar(); // Loads the sidebar.php template.  ?>
 		</div><!-- .row -->
 	</div><!-- .container -->
-<?php get_footer(); ?>
+<?php get_footer('coming-soon'); ?>

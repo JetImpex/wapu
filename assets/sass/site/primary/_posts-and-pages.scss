@@ -321,3 +321,45 @@
 		padding: 58px 0 7px;
 	}
 }
+
+//Coming-soon
+.coming-soon {
+	height: 100%;
+	background: url('assets/images/bg-coming-soon.jpg') no-repeat right bottom;
+	background-size: cover;
+	margin-top: 0 !important;
+	body {
+		background: transparent;
+		height: 100%;
+		text-align: center;
+		#page {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100%;
+		}
+	}
+	.site-content_wrap.container {
+		margin-bottom: 0 !important;
+	}
+	&__content {
+		max-width: 600px;
+		margin-top: 0 auto;
+		h1 {
+			font-weight: bold;
+			@include font-size(3.125);
+			margin-top: 0;
+			margin-bottom: 18px;
+			@include media-breakpoint-down(sm) {
+				@include font-size(1.725);
+			}
+		}
+	}
+	&__menu-container {
+		margin-top: 66px;
+		@include font-size(0.875);
+		a {
+			margin: 0 3px;
+		}
+	}
+}
