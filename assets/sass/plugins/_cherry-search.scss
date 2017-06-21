@@ -44,8 +44,14 @@
 			margin-bottom: 10px;
 			border-radius: $border__radius;
 		}
-		select.cherry_search_categories {
-			display: none;
+		select#cherry_search_categories {
+			-moz-appearance: none !important;
+			-webkit-appearance: none !important;
+			appearance: none !important;
+			border: none;
+			width: 100%;
+			padding-left: 5px;
+			background-color: white;
 		}
 		.chosen-container {
 			@include font-size(0.875);
