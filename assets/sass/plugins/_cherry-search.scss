@@ -121,6 +121,9 @@
 					border-radius: $border__radius;
 					border: 1px solid $color__border_cherry_search;
 				}
+				.chosen-results {
+					max-height: 251px;
+				}
 			}
 			&.chosen-with-drop {
 				.chosen-single div b:after {
