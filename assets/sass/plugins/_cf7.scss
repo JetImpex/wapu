@@ -9,12 +9,6 @@
 	.wpcf7-not-valid-tip {
 		@include font-size(0.75);
 	}
-	div.wpcf7-validation-errors,
-	div.wpcf7-response-output {
-		margin: 1em 0;
-		border-radius: $button__radius;
-		@include font-size(0.875);
-	}
 	label {
 		.label-text {
 			font-family: $font__main;
@@ -31,5 +25,25 @@
 	.ajax-loader.is-active {
 		margin: 22px 0 0 14px;
 		color: $color__link-hover;
+	}
+	div.wpcf7-validation-errors,
+	div.wpcf7-mail-sent-ng,
+	div.wpcf7-mail-sent-ok,
+	div.wpcf7-response-output {
+		margin: 1.5em 0;
+		border-radius: $button__radius;
+		@include font-size(0.875);
+		border: none;
+		padding: 0.5em 1.2em;
+		color: $color__invert-main;
+	}
+	.wpcf7-validation-errors {
+		background-color: darken( $color__warning, 11% );
+	}
+	.wpcf7-mail-sent-ng {
+		background-color: lighten( $color__error, 10% );
+	}
+	.wpcf7-mail-sent-ok {
+		background-color: $color__info;
 	}
 }

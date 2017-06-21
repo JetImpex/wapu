@@ -58,6 +58,14 @@
 		}
 	}
 }
+.single .post-thumbnail img{
+	-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
+	box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
+}
+
+.single .site-main .noshadow {
+	box-shadow: none;
+}
 
 .single, .blog, .search, .archive {
 	#primary, #primary-sidebar, #blog-sidebar {
