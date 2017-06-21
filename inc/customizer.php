@@ -18,6 +18,13 @@ function wapu_get_customizer_options() {
 				'field'           => 'image',
 				'type'            => 'control',
 			),
+			'linked_logo' => array(
+				'title'    => esc_html__( 'Linked Logo', 'tattoized' ),
+				'section'  => 'title_tagline',
+				'default'  => true,
+				'field'    => 'checkbox',
+				'type'     => 'control',
+			),
 			'retina_header_logo_url' => array(
 				'title'           => esc_html__( 'Retina Logo Upload', 'wapu' ),
 				'description'     => esc_html__( 'Upload logo for retina-ready devices', 'wapu' ),

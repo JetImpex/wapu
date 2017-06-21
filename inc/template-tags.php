@@ -15,13 +15,23 @@
  */
 function wapu_header_logo() {
 
-	$logo     = get_bloginfo( 'name' );
-	$logo_url = wapu_get_mod( 'header_logo_url' );
+	$logo        = get_bloginfo( 'name' );
+	$logo_url    = wapu_get_mod( 'header_logo_url' );
+	$linked_logo = wapu_get_mod( 'linked_logo' );
 
-	$format = apply_filters(
-		'wapu_header_logo_format',
-		'<div class="site-logo"><a class="site-logo__link" href="%1$s" rel="home">%2$s</a></div>'
-	);
+	if ( $linked_logo ) {
+		$format = apply_filters(
+			'wapu_header_logo_format',
+			'<div class="site-logo"><a class="site-logo__link" href="%2$s" rel="home">%1$s</a></div>',
+			$linked_logo
+		);
+	} else {
+		$format = apply_filters(
+			'wapu_header_logo_format',
+			'<div class="site-logo">%1$s</div>',
+			$linked_logo
+		);
+	}
 
 	if ( is_multisite() ) {
 		$home_url = esc_url( network_home_url( '/' ) );
@@ -30,7 +40,7 @@ function wapu_header_logo() {
 	}
 
 	if ( ! $logo_url ) {
-		printf( $format, $home_url, $logo );
+		printf( $format, $logo, $home_url );
 		return;
 	}
 
@@ -58,7 +68,7 @@ function wapu_header_logo() {
 
 	$image = sprintf( $format_image, esc_url( $logo_url ), esc_attr( $logo ), $retina_logo, $atts );
 
-	printf( $format, $home_url, $image );
+	printf( $format, $image, $home_url );
 }
 
 /**
