@@ -17,7 +17,7 @@
 		<?php echo $posts; ?>
 
 		<div class="wapu-term__actions">
-			<a href="<?php echo get_term_link( $term, $taxonomy ); ?>"><?php esc_html_e( 'More', 'wapu-core' ); ?></a>
+			<a href="<?php echo get_term_link( $term, $taxonomy ); ?>"><?php esc_html_e( 'View All', 'wapu-core' ); ?></a>
 		</div>
 	</div>
 </div>
