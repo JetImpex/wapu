@@ -39,6 +39,15 @@
 						);
 					?>
 				<?php endif; ?>
+				<?php if ( has_nav_menu( 'social' ) ) : ?>
+					<?php
+						wapu_nav_menu(
+							'social',
+							'<div id="social-list" class="social-list social-list--header">%s</div>',
+							true
+						);
+					?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</header><!-- #masthead -->

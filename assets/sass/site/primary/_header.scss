@@ -1,27 +1,67 @@
 .site-header {
+	border-bottom: 1px solid $color__separator;
 	.header-container__flex {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-content: space-around;
-		align-items: center;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
 		margin-right: -$grid-gutter-width/2;
 		margin-left: -$grid-gutter-width/2;
+		@include media-breakpoint-down(md) {
+			flex-wrap: wrap; 
+			justify-content: space-between;
+		}
 		.site-branding,
-		.main-navigation {
+		.main-navigation,
+		.social-list--header {
 			order: 0;
 		}
-		.site-branding {
-			flex: 0 1 auto;
-			margin: 35px $grid-gutter-width/2 18px;
-			@include media-breakpoint-up(md) {
-				flex: 0 1 50%;
+
+		@include media-breakpoint-down(sm) {
+			.social-list--header{
+				position: relative;
+				&:before {
+					position: absolute;
+					width: 4000px;
+					left: 50%;
+					margin-left: -2000px;
+					height: 1px;
+					content: "";
+					background-color: $color__separator;
+				}
 			}
-			@include media-breakpoint-up(lg) {
-				flex: 0 1 30%;
+		}
+		@include media-breakpoint-down(md) {
+			.site-branding,
+			.main-navigation {
+				flex: 0 1 auto;
+			}
+			.main-navigation {
+				order: 1;
+				flex: 0 1 100%;
+				&:before {
+					position: absolute;
+					width: 4000px;
+					left: 50%;
+					margin-left: -2000px;
+					height: 1px;
+					content: "";
+					background-color: $color__separator;
+				}
+			}
+		}
+		.site-branding {
+			flex: 0 0 auto;
+			margin: 0 $grid-gutter-width/2 0;
+			.site-logo {
+				border-left: 1px solid $color__separator;
+				border-right: 1px solid $color__separator;
+				width: auto;
+				position: relative;
+				display: inline-block;
+				padding: 21px 24px 10px;
 			}
 		}
 		.site-description {
@@ -35,9 +75,13 @@
 				font-size: 15px;
 			}
 		}
+		.social-list--header {
+			flex: 0 0 auto;
+			margin: 0 $grid-gutter-width/2;
+		}
 		.main-navigation {
-			flex: 1 1 auto;
-			margin: 15px $grid-gutter-width/2;
+			flex: 0 1 auto;
+			margin: 0 $grid-gutter-width/2;
 		}
 	}
 }

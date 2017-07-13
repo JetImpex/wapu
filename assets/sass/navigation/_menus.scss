@@ -33,7 +33,7 @@
 				display: flex;
 				flex-direction: row;
 				flex-wrap: nowrap;
-				justify-content: flex-end;
+				justify-content: flex-start;
 				align-content: flex-start;
 				align-items: flex-start;
 			}
@@ -144,11 +144,14 @@
 		display: block;
 		text-decoration: none;
 		@include font-size(0.875);
-		padding: 15px 0;
+		@include media-breakpoint-down(md) {
+			padding: 13px 0 10px;
+		}
 		@include media-breakpoint-down(xs) {
 			color: $color__invert-main;
 			padding: 0;
-		}			
+		}
+		padding: 15px 0;
 	}
 
 	@include media-breakpoint-up(sm) {
@@ -416,7 +419,7 @@ body.mobile-menu-visible {
 	padding: 0;
 	border-width: 0;
 	left: -45px;
-	top: 27px;
+	top: 17px;
 	background-color: $color__background-sub-menu;
 	background-image: none; 
 
@@ -438,7 +441,7 @@ body.mobile-menu-visible {
 
 body.admin-bar {
 	.mobile-menu-toggle-button {
-		top: 72px;
+		top: 62px;
 	}
 
 	.mobile-menu {

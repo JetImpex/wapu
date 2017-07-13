@@ -14,7 +14,7 @@ function wapu_get_customizer_options() {
 				'title'           => esc_html__( 'Logo Upload', 'wapu' ),
 				'description'     => esc_html__( 'Upload logo image', 'wapu' ),
 				'section'         => 'title_tagline',
-				'default'         => '%s/assets/images/logo.jpg',
+				'default'         => '%s/assets/images/logo.png',
 				'field'           => 'image',
 				'type'            => 'control',
 			),

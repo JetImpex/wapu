@@ -1,23 +1,29 @@
 .site-footer {
 	background-color: $color__background-footer;
-	color: white;
-	padding: 1.286em 0 1.429em;
+	color: $color__text-footer;
+	padding: 1.585em 0 1.729em;
 	@include font-size(0.875);
 	.footer-conatiner__flex {
 		display: flex;
 		flex-direction: column;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		justify-content: center;
-		align-content: stretch;
+		align-content: center;
 		align-items: center;
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
 			align-items: flex-start;
 		}
 		.footer-menu, .site-info {
 			order: 0;
 			flex: 0 1 auto;
 			align-self: auto;
+			@include media-breakpoint-down(sm) {
+				margin-top: 15px;
+				text-align: center;
+			}
 		}
 		.footer-menu {
 			list-style: none;
@@ -25,18 +31,35 @@
 			margin: 0;
 			display: flex;
 			flex-wrap: wrap;
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+			}
 		}
-		.site-info, .footer-menu li {
-			margin: 0 10px 0 0;
+		.footer-menu li {
+			margin: 0 5px;
+			@include media-breakpoint-up(md) {
+				margin: 0 26px 0 0;
+			}
 		}
 	}
 	a {
-		color: $color__link-footer;
+		color: white;
 		&:hover {
-			color: white;
+			color: $color__link-footer;
+		}
+	}
+	.footer-menu {
+		.current-menu-item a {
+			color: $color__link-footer;
 		}
 	}
 }
 .footer-area-wrap {
 	background-color: $color__background-footer-area-wrap;
+	background-image: url("assets/images/pattern_blue.jpg");
+	background-position: left top;
+	background-repeat: repeat;
+	background-attachment: fixed;
 }
