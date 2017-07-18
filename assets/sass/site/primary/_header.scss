@@ -43,9 +43,8 @@
 				flex: 0 1 100%;
 				&:before {
 					position: absolute;
-					width: 4000px;
-					left: 50%;
-					margin-left: -2000px;
+					width: 100%;
+					left: 0;
 					height: 1px;
 					content: "";
 					background-color: $color__separator;

@@ -142,6 +142,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "plugins/cf7";
 
 /*--------------------------------------------------------------
-# Cuastom elements
+# Gist plugin
+--------------------------------------------------------------*/
+@import "plugins/gist";
+
+/*--------------------------------------------------------------
+# Custom elements
 --------------------------------------------------------------*/
 @import "elements/custom-elements";

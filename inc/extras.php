@@ -117,6 +117,6 @@ function wapu_is_header_sidebar_visible() {
 		&& wapu_core()->is_core_page() ) {
 		$is_visible = true;
 	}
-
+	
 	return $is_visible;
 }

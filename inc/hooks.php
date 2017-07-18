@@ -28,6 +28,14 @@ add_filter( 'cherry_search-select_placeholder', 'wapu_search_select_placeholder'
 
 add_filter( 'post_class', 'wapu_post_classes' );
 
+//Adds svg to media library
+add_filter('upload_mimes', 'cc_mime_types');
+
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+
 /**
  * Additional classes for posts.
  *
@@ -51,7 +59,7 @@ function wapu_post_classes( $classes ) {
 function wapu_search_select_placeholder() {
 	$select_placeholder = sprintf(
 		esc_html__( 'All Categories', 'wapu' )
-	);
+		);
 	return $select_placeholder;
 }
 
@@ -137,7 +145,7 @@ function wapu_search_negative_search_message() {
 		esc_html__( 'knowledge base', 'wapu' ),
 		esc_url( home_url( '/support/knowledge-base/' ) ),
 		esc_html__( 'Results not found. ', 'wapu' )
-	);
+		);
 	return $negative_search;
 }
 
