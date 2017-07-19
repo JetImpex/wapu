@@ -9,7 +9,7 @@
 		<?php $this->html( $font_icon, '<i class="nc-icon-outline %s"></i>' ); ?>
 		<div class="blurb_description">
 			<?php
-				$this->html( $title, '<h4 class="blurb__title">%s</h4d>' );
+				$this->html( $title, '<h4 class="blurb__title">%s</h4>' );
 				$this->html( $text, '<div class="blurb__text">%s</div>' );
 			?>
 		</div>
