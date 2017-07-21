@@ -1,0 +1,79 @@
+form.mc4wp-form {
+	position: relative;
+	box-sizing: border-box;
+	padding: 19px 21px 19px 28px;
+	@include media-breakpoint-down(sm) {
+		padding: 19px 15px;
+	}
+	border-radius: $border__radius;
+	background-color: $color__background-footer; 
+	border: 1px solid $color__mailchimp-border;
+	.mc4wp-form-fields {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: stretch;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+		h6 {
+			font-weight: 600;
+			margin: 0;
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 14px;
+			}
+		}
+		p {
+			margin: 0;
+			position: relative;
+			order: 0;
+			flex: 0 1 66%;
+			align-self: auto;
+			@include media-breakpoint-down(sm) {
+				flex: 0 1 100%;
+				text-align: center;
+			}
+			input[type='submit'] {
+				position: absolute;
+				padding: 13px 20px 16px;
+				top: 0;
+				right: 0; 
+				border: none;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				@include media-breakpoint-down(sm) {
+					position: relative;
+					border-radius: 5px;
+					margin-top: 12px;
+				}
+				background-size: 200% auto;
+				background-image: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 51%, $color_gradient_1 100%);
+				transition: all 520ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+				&:hover {
+					color: white;
+					background-position: right center; 
+					transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+				}
+			}
+			input[type='email'] {
+				padding: 10px 125px 11px 15px;
+				@include media-breakpoint-down(sm) {
+					padding: 10px 15px 11px 15px;
+				}
+				background-color: $color__mailchimp-input-bg;
+				border: 1px solid $color__mailchimp-border;
+				color: $color__mailchimp-input;
+				&::-webkit-input-placeholder { color: $color__mailchimp-input; }
+				&::-moz-placeholder { color: $color__mailchimp-input; }
+				&:-moz-placeholder { color: $color__mailchimp-input; }
+				&:-ms-input-placeholder { color: $color__mailchimp-input; }
+			}
+		}
+	}
+}

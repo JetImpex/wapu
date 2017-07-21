@@ -68,7 +68,13 @@
 							top: 0;
 							@include font-size(3);
 							position: relative;
-							margin: 10px auto 15px; 
+							margin: 10px auto 15px;
+							&:before {
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+								color: $color_gradient_1;
+								background-image: -webkit-linear-gradient(45deg, $color_gradient_1 0%,$color_gradient_1 29%,$color_gradient_2 67%);
+							}
 							@include media-breakpoint-up(md) {
 								position: absolute;
 								margin: 0; 

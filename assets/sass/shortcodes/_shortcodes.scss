@@ -317,7 +317,7 @@
 		.blurb__link {
 			padding: 45px 15px 30px;
 			@include media-breakpoint-up(md) {
-				padding: 42px 15px;
+				padding: 48px 15px 42px;
 			}
 			border: 1px solid $color__separator;
 			border-radius: $border__radius;
@@ -329,10 +329,17 @@
 			align-items: center;
 			color: $color__text-main;
 			@include transition(all 0.45s ease);
-			.blurb__img {
-				max-height: 58px;
-				width: auto;
-				margin-bottom: 12px;
+			i {
+				margin-bottom: 16px;
+				@include font-size(3);
+				&:before {
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					color: $color_gradient_1;
+					background-size: 200% auto;
+					background-image: linear-gradient(to right, $color_gradient_1 0%,$color_gradient_2 35%,$color_gradient_2 70%,$color__link 70%,$color__link 100%);
+					transition: all 520ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+				}
 			}
 			&:hover {
 				color: $color__link-hover;
@@ -343,10 +350,9 @@
 				i {
 					@include transition(all 0.3s ease);
 					&:before {
-						-webkit-text-fill-color: transparent;
-						color: $color__invert-main;
-						background-image: -webkit-linear-gradient(-45deg, $color__invert-main 0%,$color__invert-main 40%,$color__invert-main 57%);
-						@include transition(all 0.3s ease);
+						background-size: 340% auto;
+						background-position: right center; 
+						transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 					}
 					&:after {
 						opacity: 0.1;
@@ -526,7 +532,7 @@
 .main-footer-banners {
 	margin-bottom: 0;
 	@include media-breakpoint-up(md) {
-		margin-bottom: -236px;
+		margin-bottom: -239px;
 	}
 }
 
@@ -686,10 +692,10 @@ body .wapu-popup {
 	align-items: center;
 	opacity: 1;
 	&.popup-hidden {
-	top: auto;
-	height: 0;
-	opacity: 0;
-	transition: opacity 150ms linear;
+		top: auto;
+		height: 0;
+		opacity: 0;
+		transition: opacity 150ms linear;
 		.wapu-popup__content {
 			opacity: 0;
 			transform: translateY(30px);
@@ -752,7 +758,7 @@ body .wapu-popup {
 				height: 40px;
 			}
 			&:hover {
-			border-color: $color__link-hover;
+				border-color: $color__link-hover;
 				i {
 					color: $color__link-hover;transform: rotateZ(90deg);
 					@include transition(all 0.3s ease);

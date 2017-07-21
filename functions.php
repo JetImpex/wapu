@@ -248,6 +248,7 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 			wp_enqueue_style( 'wapu-fonts', $this->fonts_url() );
 			wp_enqueue_style( 'wapu-style', get_stylesheet_uri(), false, $this->get_version() );
 			wp_enqueue_style( 'nucleo-mini', $this->assets_url() . 'css/nucleo-mini.css' );
+			wp_enqueue_style( 'jetimpex', $this->assets_url() . 'css/jetimpex.css' );
 
 			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), $this->get_version(), true );
 			wp_enqueue_script( 'wapu-navigation', $this->assets_url() . 'js/navigation.js', array(), $this->get_version(), true );
@@ -314,6 +315,7 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 
 			require get_template_directory() . '/inc/classes/class-widget-area.php';
 			require get_template_directory() . '/inc/classes/class-wrapping.php';
+			require_once get_template_directory() . '/inc/widgets/about/class-about-widget.php';
 
 		}
 

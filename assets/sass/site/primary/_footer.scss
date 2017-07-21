@@ -61,8 +61,13 @@
 	background-image: url("assets/images/pattern_blue.jpg");
 	background-position: left top;
 	background-repeat: repeat;
-	background-attachment: fixed;
 }
 .footer-main-head-area {
-	padding-top: 180px;
+	padding-top: 60px;
+	@include media-breakpoint-up(md) {
+		padding-top: 184px;
+	}
+}
+.footer-main-area {
+	padding-top: 14px;
 }
