@@ -53,7 +53,7 @@
 	</header><!-- #masthead -->
 	<div class="header-area-wrap invert">
 		<div class="container"><?php
-			do_action( 'wapu_render_widget_area', 'home-header-main' );
+			do_action( 'wapu_render_widget_area', 'header-themes' );
 		?></div>
 	</div>
 	<div id="content" class="site-content">

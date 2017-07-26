@@ -337,8 +337,8 @@
 					-webkit-text-fill-color: transparent;
 					color: $color_gradient_1;
 					background-size: 200% auto;
-					background-image: linear-gradient(to right, $color_gradient_1 0%,$color_gradient_2 35%,$color_gradient_2 70%,$color__link 70%,$color__link 100%);
-					transition: all 520ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+					background-image: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 51%, $color_gradient_1 100%);
+					transition: all 580ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 				}
 			}
 			&:hover {
@@ -350,9 +350,9 @@
 				i {
 					@include transition(all 0.3s ease);
 					&:before {
-						background-size: 340% auto;
+						background-size: 200% auto;
 						background-position: right center; 
-						transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+						transition: all 470ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 					}
 					&:after {
 						opacity: 0.1;
@@ -365,6 +365,28 @@
 		}
 		img {
 			margin-bottom: 32px;
+		}
+	}
+	&-svgicon {
+		.blurb {
+			&__img {
+				width: auto;
+				@include media-breakpoint-up(lg) {
+					width: 276px;
+				}
+			}
+			&__title {
+				margin: 5px 0 12px;
+				@include media-breakpoint-up(lg) {
+					margin: 20px 0 12px;
+				}
+			}
+			&__text {
+				@include font-size(1);
+			}
+			&__link {
+				padding: 28px 0;
+			}
 		}
 	}
 	&-image {

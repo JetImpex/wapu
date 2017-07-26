@@ -13,6 +13,9 @@
 	}
 	@include media-breakpoint-up(md) {
 		margin-bottom: 60px;
+		.page-template-themes & {
+			margin-bottom: 3px;
+		}
 	}
 }
 

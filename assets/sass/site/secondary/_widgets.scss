@@ -198,9 +198,31 @@
 					@include font-size(0.875);
 					&:hover {
 						color: $color_icon;
-					}
+					} 
 				}
 			}
 		}
+	}
+}
+.title-box {
+	position: relative;
+	padding: 26px 20px 26px 47px;
+	@include media-breakpoint-up(md) {
+		padding: 36px 20px 44px 47px;
+	}
+	i {
+		@include font-size(2.25);
+		position: absolute;
+		left: 0;
+		top: 35px; 
+		&:before {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: $color_gradient_1;
+			background-image: -webkit-linear-gradient(45deg, $color_gradient_1 0%,$color_gradient_1 30%,$color_gradient_2 87%);
+		}
+	}
+	h3 {
+		margin: 0; 
 	}
 }

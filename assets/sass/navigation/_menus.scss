@@ -3,7 +3,8 @@
 	display: block;
 	clear: both;
 	width: 100%;
-	.menu-primary-container {
+	.menu-primary-container,
+	.menu-themes-container {
 		margin-top: 25px;
 		@include media-breakpoint-up(sm) {
 			margin-top: 0;
@@ -237,7 +238,7 @@
 			outline: none;
 		}
 	}
-	.primary-menu {
+	.primary-menu, .themes-menu {
 		> li {
 			> a,
 			> .menu-link-wrapper {

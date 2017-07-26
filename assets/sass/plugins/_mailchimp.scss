@@ -8,6 +8,21 @@ form.mc4wp-form {
 	border-radius: $border__radius;
 	background-color: $color__background-footer; 
 	border: 1px solid $color__mailchimp-border;
+	.mc4wp-response .mc4wp-alert.mc4wp-success p,
+	.mc4wp-alert.mc4wp-error p {
+		margin: 15px auto 0;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			margin: 15px 0 0 40%;
+			text-align: left;
+		}
+		@include media-breakpoint-up(lg) {
+			margin: 15px 0 0 34%;
+			text-align: left;
+		}
+		@include font-size(0.8125);
+		color: $color__invert-main;
+	}
 	.mc4wp-form-fields {
 		display: flex;
 		flex-direction: column;
@@ -35,6 +50,16 @@ form.mc4wp-form {
 			order: 0;
 			flex: 0 1 66%;
 			align-self: auto;
+			i {
+				position: absolute;
+				left: 14px;
+				top: 15px;
+				@include font-size(0.875);
+				color: $color__invert-main;
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
 			@include media-breakpoint-down(sm) {
 				flex: 0 1 100%;
 				text-align: center;
@@ -62,7 +87,7 @@ form.mc4wp-form {
 				}
 			}
 			input[type='email'] {
-				padding: 10px 125px 11px 15px;
+				padding: 10px 125px 11px 35px;
 				@include media-breakpoint-down(sm) {
 					padding: 10px 15px 11px 15px;
 				}

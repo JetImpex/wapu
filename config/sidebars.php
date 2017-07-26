@@ -48,6 +48,17 @@ return apply_filters( 'wapu_widget_area_default_settings', array(
 		'after_wrapper'  => '</div>',
 		'is_global'      => true,
 	),
+	'header-themes' => array(
+		'name'           => esc_html__( 'Header Area (themes page)', 'wapu' ),
+		'description'    => '',
+		'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'   => '</aside>',
+		'before_title'   => '<h5 class="widget-title">',
+		'after_title'    => '</h5>',
+		'before_wrapper' => '<div id="%1$s-area" %2$s>',
+		'after_wrapper'  => '</div>',
+		'is_global'      => true,
+	),
 	'header' => array(
 		'name'           => esc_html__( 'Header Area', 'wapu' ),
 		'description'    => '',

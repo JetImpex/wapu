@@ -86,6 +86,14 @@
 }
 .header-area-wrap {
 	background-color: $color__background-pre;
+	.page-template-themes & {
+		overflow: hidden;
+		background-color: $color__background-footer;
+	}
+}
+
+.page-template-themes aside {
+	margin-bottom: 0;
 }
 
 .widget-area.header-area {
