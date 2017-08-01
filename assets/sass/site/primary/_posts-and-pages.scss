@@ -235,11 +235,11 @@
 	.blog &, .search-results &, .archive.category & {
 		margin-bottom: 1.438em;
 		figure.post-thumbnail {
-			margin: 0 0 1.313em 0; /* Extra wide images within figure tags dont overflow the content area. */
+			margin: 0 0 0.75em 0; /* Extra wide images within figure tags dont overflow the content area. */
 		}
 		.entry-title {
-			margin-top: 3px;
-			margin-bottom: 0.5em;
+			margin-top: 0;
+			margin-bottom: 0.75em;
 			a {
 				color: $color__link;
 				&:hover {

@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 		<?php  if ( has_post_thumbnail() ) { ?>
 			<figure class="post-thumbnail">
 			<?php the_post_thumbnail( '__tm-thumb-l', array(
@@ -21,7 +22,6 @@
 			</figure><!-- .post-thumbnail -->
 		<?php } ?>
 		<?php wapu_get_post_category(); ?>
-		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 		<div class="entry-content">
 			<?php wapu()->utility()->attributes->get_content( array(
 					'length'       => 32,
