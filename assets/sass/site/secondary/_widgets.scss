@@ -214,7 +214,10 @@
 		@include font-size(2.25);
 		position: absolute;
 		left: 0;
-		top: 35px; 
+		top: 22px; 
+		@include media-breakpoint-up(md) {
+			top: 35px; 
+		}
 		&:before {
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;

@@ -1,5 +1,6 @@
 /* Basic */
-.main-navigation {
+.main-navigation,
+.support-navigation {
 	display: block;
 	clear: both;
 	width: 100%;
@@ -232,7 +233,8 @@
 }
 
 /* Skin Styles */
-.main-navigation {
+.main-navigation,
+.support-navigation {
 	a {
 		&:focus {
 			outline: none;
@@ -628,6 +630,47 @@ body.admin-bar {
 			&:before {
 				content: '\e904';
 				right: 0;
+			}
+		}
+	}
+}
+
+.support-navigation {
+	display: none;
+	@include media-breakpoint-up(lg) {
+		display: block;
+	}
+}
+
+.desktop-hidden {
+	display: block;
+	@include media-breakpoint-up(lg) {
+		display: none;
+	}
+}
+
+.support-navigation {
+	ul.support-menu {
+		margin: 0;
+		> li {
+			margin: 0;
+			> div > a {
+				position: relative;
+				display: block;
+				@include btn();
+				border-radius: 0;
+				min-width: 176px;
+				@include media-breakpoint-up(lg) {
+					padding: 24px 21px 30px 40px;
+				}
+				&:before {
+					@include nucleo-icon();
+					position: absolute;
+					content: '\ea7b';
+					left: 20px;
+					border-top: 10px;
+					@include font-size(0.875);
+				}
 			}
 		}
 	}

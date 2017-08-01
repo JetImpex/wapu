@@ -48,6 +48,15 @@
 						);
 					?>
 				<?php endif; ?>
+				<?php if ( has_nav_menu( 'support' ) ) : ?>
+					<?php
+						wapu_nav_menu(
+							'support',
+							'<nav id="site-navigation" class="support-navigation">%s</nav>',
+							true
+						);
+					?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</header><!-- #masthead -->

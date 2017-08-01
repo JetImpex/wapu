@@ -15,7 +15,8 @@
 		}
 		.site-branding,
 		.main-navigation,
-		.social-list--header {
+		.social-list--header,
+		.support-navigation {
 			order: 0;
 		}
 
@@ -35,7 +36,8 @@
 		}
 		@include media-breakpoint-down(md) {
 			.site-branding,
-			.main-navigation {
+			.main-navigation,
+			.support-navigation {
 				flex: 0 1 auto;
 			}
 			.main-navigation {
@@ -82,6 +84,11 @@
 			flex: 0 1 auto;
 			margin: 0 $grid-gutter-width/2;
 		}
+		.support-navigation {
+			flex: 0 1 180px;
+			margin: 0 $grid-gutter-width/2;
+		}
+
 	}
 }
 .header-area-wrap {
