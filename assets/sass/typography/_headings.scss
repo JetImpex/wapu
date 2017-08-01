@@ -67,3 +67,10 @@ h6 {
 		margin: 1.8em 0 1.16em;
 	}
 }
+
+.single.single-knowledge-base,
+.single.single-how-to {
+	.entry-content h6 {
+		font-weight: 400;
+	}
+}
