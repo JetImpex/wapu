@@ -125,6 +125,9 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	.page-template-themes & {
+		margin: 0;
+	}
 	.home & {
 		margin: 1.5em 0 0;
 		@include media-breakpoint-up(md) {

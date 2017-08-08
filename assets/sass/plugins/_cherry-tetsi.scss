@@ -1,0 +1,44 @@
+.tm-testi {
+	&__inner {
+		blockquote {
+			background: transparent;
+			padding: 0;
+			text-align: center; 
+			@include media-breakpoint-up(lg) {
+				padding: 0 10%;
+			}
+		}
+	}
+	&__title .tm-testi__title-main {
+		@include font-size(1.75);
+	}
+	&__item {
+		p {
+			font-family: $font__headings;
+			font-style: italic;
+			font-weight: 600;
+			@include font-size(1.25);
+			line-height: 28px;
+			margin-top: 4px;
+		}
+		cite {
+			@include font-size(1);
+			font-style: normal;
+			font-weight: 400;
+			color: $color__link-hover;
+			position: relative;
+			&:before {
+				width: 14px;
+				height: 1px;
+				position: relative;
+				display: inline-block;
+				content: '';
+				background-color: $color__link-hover;
+				margin: 0 10px 4px 0;
+			}
+		}
+		footer {
+			padding-top: 14px;
+		}
+	}
+}
