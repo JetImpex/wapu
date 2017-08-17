@@ -1,0 +1,30 @@
+
+.rev_slider .btn.btn-primary {
+	margin: 0 7px 8px;
+	@media (max-width: 1300px) {
+		padding: 7px 14px 11px;
+	}
+	i {
+		color: $color__invert-main;
+		@include font-size(0.875);
+		margin: 0 10px 0 0;
+		top: 1px;
+		position: relative;
+	}
+	&.btn-secondary {
+		@media (max-width: 1300px) {
+			padding: 5px 14px 9px;
+		}
+		padding: 10px 20px 15px;
+		background: transparent;
+		border: 2px solid $color__link-hover;
+	}
+	&:hover {
+		color: white;
+		background-position: right center; 
+		transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+		&.btn-secondary {
+			background: $color__link-hover;
+		}
+	}
+}

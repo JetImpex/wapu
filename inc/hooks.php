@@ -31,6 +31,16 @@ add_filter( 'post_class', 'wapu_post_classes' );
 //Adds svg to media library
 add_filter('upload_mimes', 'cc_mime_types');
 
+/*
+add_filter( 'jet_themes/post_type/required_taxonomies', 'custom_required_taxonomies' );
+
+function custom_required_taxonomies($args) {
+	$args['template-category'] = array(
+		'name'   => esc_html__( 'Catergory test', 'jet-elements' ),
+	);
+	return $args;
+}*/
+
 function cc_mime_types($mimes) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
