@@ -1,44 +1,62 @@
 
 .active-filters {
-	position: relative;
-	display: block;
-	margin: 20px 0;
-	padding: 14px 10px 14px 115px;
-	border-radius: $border__radius;
-	-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
-	box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
-	@include transition(all 0.3s ease);
-	&:empty {
-		display: none;
-	}
-	div {
-		padding: 2px 10px;
-		font-family: $font__main;
-		@include font-size(0.875);
-		font-weight: 400;
-		position: absolute;
-		padding-right: 5px;
-		line-height: 24px;
-		left: 10px;
-		top: 16px;
-		&:after {
-			content: ':';
-			position: absolute;
-			font-size: 16px;
-			color: blue;
+	&__content {
+		position: relative;
+		display: block;
+		margin: 20px 0;
+		padding: 14px 10px 14px 115px;
+		border-radius: $border__radius;
+		-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+		box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+		@include transition(all 0.3s ease);
+		&:empty {
+			display: none;
 		}
-	}
-	span {
-		padding: 2px 10px;
-		font-family: $font__main;
-		@include font-size(0.875);
-		line-height: 22px;
-		font-weight: 400;
-		color: $color__invert-main;
-		border-radius: $button__radius;
-		background-color: $color__link-hover;
-		display: inline-block;
-		margin: 3px 1px;
+		div {
+			padding: 2px 10px;
+			font-family: $font__main;
+			@include font-size(0.875);
+			font-weight: 400;
+			position: absolute;
+			padding-right: 5px;
+			line-height: 24px;
+			left: 10px;
+			top: 16px;
+			&:after {
+				content: ':';
+				position: absolute;
+				font-size: 16px;
+			}
+		}
+		span {
+			position: relative;
+			padding: 2px 30px 2px 10px;
+			font-family: $font__main;
+			@include font-size(0.875);
+			line-height: 22px;
+			font-weight: 400;
+			color: $color__invert-main;
+			border-radius: $button__radius;
+			background-color: $color__link-hover;
+			display: inline-block;
+			margin: 3px 1px;
+			cursor: pointer;
+			&:after {
+				@include nucleo-icon();
+				@include font-size(0.875);
+				content: '\ea2a';
+				position: absolute;
+				color: white;
+				right: 8px;
+				top: 6px;
+				@include transition(all 0.3s ease);
+			}
+			&:hover {
+				&:after {
+					opacity: .5;
+				}
+			}
+		}
 	}
 }
 .filters-wrap {

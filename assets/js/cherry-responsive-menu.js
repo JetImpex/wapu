@@ -6,6 +6,7 @@
 		this.defaultSettings = {
 			threshold: 544, // Minimal menu width, when this plugin activates
 			mainMenuSelector: '#primary-menu, #themes-menu',
+			supportMenuSelector: '#support-menu',
 			menuItemSelector: '.menu-item',
 			moreMenuContent:  '&middot;&middot;&middot;',
 			clotting: true,
@@ -23,6 +24,7 @@
 		this.$instance = $( element ).addClass( 'cherry-responsive-menu' );
 
 		this.$mainMenu = $( this.settings.mainMenuSelector, this.$instance );
+		this.$supportMenu = $( this.settings.supportMenuSelector, this.$instance );
 
 		this.$menuItems = $( '>' + this.settings.menuItemSelector, this.$mainMenu ).addClass( 'cherry-responsive-menu-item' );
 
@@ -89,12 +91,20 @@
 				this.$mainMenu.on( 'touchstart', '.menu-item', touchStartItem );
 				this.$mainMenu.on( 'touchend', '.menu-item', touchEndItem );
 
+				this.$supportMenu.on( 'touchstart', '.menu-item', touchStartItem );
+				this.$supportMenu.on( 'touchend', '.menu-item', touchEndItem );
+
 				$( document ).on( 'touchend', function( event ) {
 					$( '.menu-item-has-children', this.$mainMenu ).removeClass( 'menu-hover' );
+
+					$( '.menu-item-has-children', this.$supportMenu ).removeClass( 'menu-hover' );
 				} );
 			} else {
 				this.$mainMenu.on( 'mouseenter', '.menu-item', mouseEnterHandler );
 				this.$mainMenu.on( 'mouseleave', '.menu-item', mouseLeaveHandler );
+
+				this.$supportMenu.on( 'mouseenter', '.menu-item', mouseEnterHandler );
+				this.$supportMenu.on( 'mouseleave', '.menu-item', mouseLeaveHandler );
 			}
 
 			function touchStartItem( event ) {
@@ -195,6 +205,9 @@
 
 				self.$mainMenu.find( '.menu-item' ).removeClass( 'menu-hover' );
 				self.$mainMenu.find( '.sub-menu.left-side' ).removeClass( 'left-side' );
+
+				self.$supportMenu.find( '.menu-item' ).removeClass( 'menu-hover' );
+				self.$supportMenu.find( '.sub-menu.left-side' ).removeClass( 'left-side' );
 			} );
 
 		},

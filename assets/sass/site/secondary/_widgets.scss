@@ -147,39 +147,6 @@
 			margin-bottom: 7px;
 			color: $color__text-footer;
 		}
-		.social-menu {
-			li {
-				margin: 12px 0; 
-				a {
-					position: relative;
-					color: $color__text-footer;
-					padding-left: 30px;
-					@include font-size(0.875);
-					@include transition(all 0.3s ease);
-					strong {
-						font-weight: normal;
-					}
-					strong, span, i {
-						@include transition(all 0.3s ease);
-					}
-					i {
-						color: $color__invert-main;
-						position: absolute;
-						left: 0;
-						top: 2px;
-						@include font-size(1.125);
-					}
-					&:hover {
-						i, span {
-							color: $color_icon;
-						}
-						strong {
-							color: $color__invert-main;
-						}
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -204,6 +171,41 @@
 		}
 	}
 }
+
+.widget-social-menu {
+	li {
+		margin: 12px 0; 
+		a {
+			position: relative;
+			color: $color__text-footer;
+			padding-left: 30px;
+			@include font-size(0.875);
+			@include transition(all 0.3s ease);
+			strong {
+				font-weight: normal;
+			}
+			strong, span, i {
+				@include transition(all 0.3s ease);
+			}
+			i {
+				color: $color__invert-main;
+				position: absolute;
+				left: 0;
+				top: 2px;
+				@include font-size(1.125);
+			}
+			&:hover {
+				i, span {
+					color: $color_icon;
+				}
+				strong {
+					color: $color__invert-main;
+				}
+			}
+		}
+	}
+}
+
 .title-box {
 	position: relative;
 	padding: 26px 20px 26px 47px;
