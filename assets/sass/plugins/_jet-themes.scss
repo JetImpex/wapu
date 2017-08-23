@@ -59,9 +59,17 @@
 		}
 	}
 }
+.more-wrap {
+	text-align: center;
+	margin: 24px auto 40px;
+	.theme-more {
+		padding: 12px 31px 17px;
+	}
+}
 .filters-wrap {
 	margin-top: 20px;
 	.theme-filters {
+		position: relative;
 		@include media-breakpoint-down(md) {
 			background-color: white;
 			.theme-filters__back {
@@ -70,15 +78,28 @@
 		}
 		.theme-filter {
 			margin-right: 44px;
+			position: unset;
 			@include media-breakpoint-down(md) {
 				margin: 0 20px;
 			}
 			&__terms {
+				@include media-breakpoint-down(xl) {
+					width: 1150px;
+				}
+				@include media-breakpoint-down(lg) {
+					width: 890px;
+				}
+				@include media-breakpoint-down(md) {
+					width: 670px;
+				}
 				margin-top: 11px;
 				padding: 20px 19px;
 				border-radius: $border__radius;
 				-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
 				box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+			}
+			&__label {
+				position: relative;
 			}
 			&__item {
 				break-inside: avoid-column;
@@ -92,6 +113,7 @@
 				font-weight: 400;
 				border-radius: $button__radius;
 				color: $color__link;
+				position: relative;
 				@include transition(all 0.3s ease);
 				&:hover {
 					color: $color__invert-main;
@@ -114,6 +136,12 @@
 				@include font-size(0.8125);
 				transform: translateY(44%);
 				right: 2px;
+				@include media-breakpoint-down(sm) {
+					transform: rotateZ(-90deg);
+					right: 2px;
+					top: 5px;
+					display: block;
+				}
 			}
 			&:hover, &.is-active {
 				color: $color__link-hover;

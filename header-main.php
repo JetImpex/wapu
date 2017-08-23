@@ -52,7 +52,7 @@
 					<?php
 						wapu_nav_menu(
 							'support',
-							'<nav id="site-navigation" class="support-navigation">%s</nav>',
+							'<nav id="site-navigation" class="main-navigation support-navigation">%s</nav>',
 							true
 						);
 					?>

@@ -1,6 +1,6 @@
 .site-header {
 	border-bottom: 1px solid $color__separator;
-	.page-template-themes &, .page-template-main {
+	.page-template-themes &, .page-template-main & {
 		border-bottom: none;
 	}
 	.header-container__flex {

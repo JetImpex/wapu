@@ -1,4 +1,21 @@
 .tm-testi {
+	&__wrap {
+		.swiper-pagination.tm-testi-slider__pags.img-pagination {
+			padding-top: 43px;
+			padding-bottom: 38px;
+			.swiper-pagination-bullet {
+				opacity: 1;
+				@include transition(all 0.3s ease);
+				&:hover{
+					opacity: .55;
+				}
+				&-active {
+					opacity: .3;
+				}
+
+			}
+		}
+	}
 	&__inner {
 		blockquote {
 			background: transparent;
@@ -20,6 +37,10 @@
 			@include font-size(1.25);
 			line-height: 28px;
 			margin-top: 4px;
+			@include media-breakpoint-down(md) {
+				@include font-size(1);
+				line-height: 22px;
+			}
 		}
 		cite {
 			@include font-size(1);

@@ -1,9 +1,23 @@
+.top-products__title {
+	h4 {
+		margin-top: 43px;
+		margin-bottom: 13px;
+	}
+	h6 {
+		margin-top: 10px;
+		margin-bottom: 45px;
+	}
+}
 .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
 	padding: 0 !important;
 }
 .elementor {
-	.jet-carousel .jet-slick-dots li:before {
-		display: none;
+	.jet-carousel .jet-slick-dots {
+		margin-top: 45px;
+		margin-bottom: 35px;
+		li:before {
+			display: none;
+		}
 	}
 }
 .elementor-element .plugins_carousel.elementor-widget-jet-carousel .elementor-jet-carousel {
@@ -41,8 +55,8 @@
 }
 .banners_carousel .elementor-jet-carousel {
 	.jet-carousel-wrap {
-			max-width: 1920px;
-			margin: 0 auto;
+		max-width: 1920px;
+		margin: 0 auto;
 	}
 	.jet-carousel {
 		&__item {
