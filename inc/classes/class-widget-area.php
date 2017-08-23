@@ -35,6 +35,13 @@ if ( ! class_exists( 'Wapu_Widget_Area' ) ) {
 		public $active_sidebars = array();
 
 		/**
+		 * Maybe prevent widget rendering
+		 *
+		 * @var array
+		 */
+		private $prevent_render = array();
+
+		/**
 		 * Constructor.
 		 *
 		 * @since 1.0.0
@@ -42,7 +49,7 @@ if ( ! class_exists( 'Wapu_Widget_Area' ) ) {
 		 */
 		function __construct() {
 			add_action( 'widgets_init',            array( $this, 'register' ) );
-			add_action( 'wapu_render_widget_area', array( $this, 'render' ) );
+			add_action( 'wapu_render_widget_area', array( $this, 'render' ), 10 );
 		}
 
 		/**
@@ -73,6 +80,20 @@ if ( ! class_exists( 'Wapu_Widget_Area' ) ) {
 		}
 
 		/**
+		 * Prevent passed area_id from later rendering
+		 *
+		 * @param  [type] $area_id [description]
+		 * @return [type]          [description]
+		 */
+		public function prevent_render( $area_id ) {
+
+			if ( ! in_array( $area_id, $this->prevent_render ) ) {
+				$this->prevent_render[] = $area_id;
+			}
+
+		}
+
+		/**
 		 * Render widget areas.
 		 *
 		 * @since  1.0.0
@@ -80,6 +101,10 @@ if ( ! class_exists( 'Wapu_Widget_Area' ) ) {
 		 * @return void
 		 */
 		public function render( $area_id ) {
+
+			if ( in_array( $area_id, $this->prevent_render ) ) {
+				return;
+			}
 
 			if ( ! is_active_sidebar( $area_id ) ) {
 				$this->active_sidebars[ $area_id ] = false;
