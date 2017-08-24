@@ -10,8 +10,8 @@
 		justify-content: flex-start;
 		align-content: stretch;
 		align-items: stretch;
-		margin-right: -$grid-gutter-width/2;
-		margin-left: -$grid-gutter-width/2;
+		margin-right: 0;
+		margin-left: 0;
 		@include media-breakpoint-down(md) {
 			flex-wrap: wrap; 
 			justify-content: space-between;
@@ -58,7 +58,7 @@
 		}
 		.site-branding {
 			flex: 0 0 auto;
-			margin: 0 $grid-gutter-width/2 0;
+			margin: 0;
 			.site-logo {
 				border-left: 1px solid $color__separator;
 				border-right: 1px solid $color__separator;
@@ -81,15 +81,18 @@
 		}
 		.social-list--header {
 			flex: 0 0 auto;
-			margin: 0 $grid-gutter-width/2;
+			margin: 0;
 		}
 		.main-navigation {
 			flex: 0 1 auto;
-			margin: 0 $grid-gutter-width/2;
+			margin: 0;
 		}
 		.support-navigation {
 			flex: 0 1 180px;
-			margin: 0 $grid-gutter-width/2;
+			margin: 0;
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 0 23px;
+			}
 		}
 
 	}
