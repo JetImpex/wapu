@@ -55,6 +55,7 @@
 						}
 						strong {
 							@include font-size(1.75);
+							font-family: $font__headings;
 							line-height: 1em;
 							color: $color__invert-main;
 							margin-bottom: 2px;
