@@ -117,6 +117,19 @@ function wapu_is_header_sidebar_visible() {
 		&& wapu_core()->is_core_page() ) {
 		$is_visible = true;
 	}
-	
+
 	return $is_visible;
+}
+
+function wapu_need_rewrite() {
+
+	$rewrite = false;
+
+	if ( is_home() ) {
+		$rewrite = true;
+	} elseif ( 'post' === get_post_type() && is_archive() ) {
+		$rewrite = true;
+	}
+
+	return $rewrite;
 }

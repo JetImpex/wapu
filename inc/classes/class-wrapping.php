@@ -20,7 +20,7 @@ add_filter( 'wapu_wrap_base', 'wapu_wrap_base_cpts' );
  * @return string Path to the file.
  */
 function wapu_template_path() {
-	return Wapu_Wrapping::$main_template;
+	return apply_filters( 'wpau_wrapping/main_template', Wapu_Wrapping::$main_template );
 }
 
 /**
