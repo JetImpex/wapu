@@ -15,6 +15,7 @@
 	.jet-carousel .jet-slick-dots {
 		margin-top: 45px;
 		margin-bottom: 35px;
+		flex-wrap: wrap;
 		li:before {
 			display: none;
 		}

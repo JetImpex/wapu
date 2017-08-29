@@ -3,7 +3,7 @@
  * Default banner template
  */
 ?>
-<div class="blurb <?php echo $class; ?>" <?php echo $id; ?>>
+<div class="blurb blurb-svgicon <?php echo $class; ?>" <?php echo $id; ?>>
 	<?php $this->html( $link, '<div class="blurb__link"%2$s>', array( $target ) ); ?>
 		<?php echo $img_tag; ?>
 		<?php $this->html( $font_icon, '<i class="jetimpex-%s"></i>' ); ?>
