@@ -299,3 +299,26 @@ function wapu_render_cached_widget( $sidebar ) {
 	}
 }
 
+
+add_action( 'template_include', 'wapu_replace_blog_template', 98 );
+add_action( 'wpau_wrapping/main_template', 'wapu_set_blog_main_template' );
+
+function wapu_replace_blog_template( $template ) {
+
+	if ( wapu_need_rewrite() ) {
+		$template = locate_template( 'page-templates/pages.php' );
+	}
+
+	return $template;
+
+}
+
+function wapu_set_blog_main_template( $template ) {
+
+	if ( wapu_need_rewrite() ) {
+		$template = locate_template( 'index.php' );
+	}
+
+	return $template;
+
+}
