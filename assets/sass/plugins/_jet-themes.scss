@@ -68,6 +68,29 @@
 }
 .filters-wrap {
 	margin-top: 20px;
+	.filters-mobile-trigger {
+		position: relative;
+		margin-bottom: 10px;
+		padding: 7px 30px 7px 12px;
+		border-radius: $border__radius;
+		-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+		box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+		cursor: pointer;
+		@include transition(all 0.3s ease);
+		&:after {
+			@include nucleo-icon();
+			@include font-size(1.125);
+			content: '\e99b';
+			position: absolute;
+			color: inherit;
+			right: 12px;
+			top: 11px;
+		}
+		&:hover {
+			color: $color__link-hover;
+			@include transition(all 0.3s ease);
+		}
+	}
 	.theme-filters {
 		position: relative;
 		@include media-breakpoint-down(md) {
