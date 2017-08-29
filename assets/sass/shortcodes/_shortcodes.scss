@@ -451,8 +451,10 @@
 			}
 			&__title {
 				margin: 5px 0 12px;
+				padding: 0;
 				@include media-breakpoint-up(lg) {
 					margin: 20px 0 12px;
+					padding: 0 25px;
 				}
 			}
 			&__text {
