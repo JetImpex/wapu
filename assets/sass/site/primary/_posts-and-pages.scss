@@ -56,7 +56,7 @@
 		img {
 			-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
 			box-shadow: 0 10px 59px 0 rgba(80,106,172,0.30);
-			margin-top: 1.75em; 
+			margin-top: 1.75em;
 			margin-bottom: 2.75em;
 		}
 	}
@@ -125,14 +125,15 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
-	.page-template-themes & {
-		margin: 0;
-	}
 	.home & {
 		margin: 1.5em 0 0;
 		@include media-breakpoint-up(md) {
 			margin: 3.8em 0 0;
 		}
+	}
+	.page-template-themes &,
+	.home.page-template-themes & {
+		margin: 0;
 	}
 }
 
