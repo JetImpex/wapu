@@ -9,7 +9,8 @@ form.mc4wp-form {
 	background-color: $color__background-footer; 
 	border: 1px solid $color__mailchimp-border;
 	.mc4wp-response .mc4wp-alert.mc4wp-success p,
-	.mc4wp-alert.mc4wp-error p {
+	.mc4wp-response .mc4wp-alert.mc4wp-error p,
+	.mc4wp-response .mc4wp-alert.mc4wp-notice p {
 		margin: 15px auto 0;
 		text-align: center;
 		@include media-breakpoint-up(md) {
