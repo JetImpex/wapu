@@ -99,6 +99,16 @@ form.mc4wp-form {
 				&::-moz-placeholder { color: $color__mailchimp-input; }
 				&:-moz-placeholder { color: $color__mailchimp-input; }
 				&:-ms-input-placeholder { color: $color__mailchimp-input; }
+				&:-webkit-autofill,
+				&:-webkit-autofill:hover, 
+				&:-webkit-autofill:focus
+				&:-webkit-autofill {
+					background-color: $color__mailchimp-input-bg;
+					-webkit-text-fill-color: $color__mailchimp-input;
+					-webkit-box-shadow: 0 0 0px 1000px color__mailchimp-input-bg inset;
+					transition: background-color 5000s ease-in-out 0s;
+					color: $color__mailchimp-input;
+				}
 			}
 		}
 	}
