@@ -233,7 +233,7 @@ function wapu_clean_widgets_cache() {
 
 function wapu_start_widget_buffer( $sidebar ) {
 
-	if ( ! in_array( $sidebar, array( 'footer-main', 'footer-main-head' ) ) ){
+	if ( ! in_array( $sidebar, array( 'footer-main' ) ) ){
 		return;
 	}
 
@@ -251,7 +251,7 @@ function wapu_start_widget_buffer( $sidebar ) {
 
 function wapu_flush_widget_buffer( $sidebar ) {
 
-	if ( ! in_array( $sidebar, array( 'footer-main', 'footer-main-head' ) ) ){
+	if ( ! in_array( $sidebar, array( 'footer-main' ) ) ){
 		return;
 	}
 
@@ -279,7 +279,7 @@ function wapu_flush_widget_buffer( $sidebar ) {
 
 function wapu_render_cached_widget( $sidebar ) {
 
-	if ( ! in_array( $sidebar, array( 'footer-main', 'footer-main-head' ) ) ){
+	if ( ! in_array( $sidebar, array( 'footer-main' ) ) ){
 		return;
 	}
 
