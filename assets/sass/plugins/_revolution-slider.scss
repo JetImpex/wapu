@@ -1,3 +1,20 @@
+.themes-rev-slider {
+	position: relative;
+	&:after {
+		content: "";
+		top: 0;
+		left: 50%;
+		height: 100%;
+		width: 3200px;
+		margin-left: -1600px;
+		z-index: -1;
+		position: absolute;
+		background-color: $color__background-footer-area-wrap;
+		background-image: url("assets/images/pattern_blue.jpg");
+		background-position: left top;
+		background-repeat: repeat;
+	}
+}
 .rev_slider {
 	@include media-breakpoint-down(xs) {
 		.tparrows {
