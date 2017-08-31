@@ -65,8 +65,13 @@
 				width: auto;
 				position: relative;
 				display: inline-block;
-				padding: 21px 24px 12px;
+				padding: 21px 24px 19px;
 			}
+			.site-link__img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
 		}
 		.site-description {
 			text-align: right;

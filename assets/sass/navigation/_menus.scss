@@ -169,6 +169,7 @@
 		display: block;
 		text-decoration: none;
 		@include font-size(0.875);
+		line-height: 22px;
 		@include media-breakpoint-down(md) {
 			padding: 16px 25px 15px 0;
 		}
@@ -177,7 +178,7 @@
 			padding: 0;
 		}
 		//padding: 15px 0;
-		padding: 24px 19px 13px;
+		padding: 24px 19px;
 	}
 
 	@include media-breakpoint-up(sm) {
