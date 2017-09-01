@@ -208,18 +208,18 @@
 
 .title-box {
 	position: relative;
-	padding: 36px 20px 44px 47px;
+	padding: 36px 20px 36px 47px;
 	@include media-breakpoint-down(sm) {
-		padding: 22px 20px 26px 30px;
+		padding: 25px 20px 26px 30px;
 	}
 	i {
 		@include font-size(2.25);
 		position: absolute;
 		left: 0;
-		top: 35px; 
+		top: 50%;
+		transform: translateY(-50%);
 		@include media-breakpoint-down(sm) {
 			@include font-size(1.5);
-			top: 22px;
 		}
 		&:before {
 			-webkit-background-clip: text;
