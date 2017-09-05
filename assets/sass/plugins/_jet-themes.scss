@@ -1,27 +1,30 @@
-
+.jet-themes__wrapper {
+	h3 {
+		border-bottom: 1px solid #e7e7f5;
+		padding-bottom: 31px;
+		margin-bottom: 43px;
+	}
+}
 .active-filters {
 	&__content {
 		position: relative;
 		display: block;
 		margin: 20px 0;
-		padding: 14px 10px 14px 115px;
-		border-radius: $border__radius;
-		-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
-		box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+		padding: 0 0 0 95px;
 		@include transition(all 0.3s ease);
 		&:empty {
 			display: none;
 		}
 		div {
-			padding: 2px 10px;
+			padding: 2px 10px 2px 0;
 			font-family: $font__main;
 			@include font-size(0.875);
 			font-weight: 400;
 			position: absolute;
 			padding-right: 5px;
 			line-height: 24px;
-			left: 10px;
-			top: 16px;
+			left: 0;
+			top: 2px;
 			&:after {
 				content: ':';
 				position: absolute;
@@ -67,7 +70,8 @@
 	}
 }
 .filters-wrap {
-	margin-top: 20px;
+	margin-top: 23px;
+	margin-bottom: 17px;
 	.filters-mobile-trigger {
 		position: relative;
 		margin-bottom: 10px;
@@ -103,6 +107,9 @@
 			margin-right: 44px;
 			position: unset;
 			@include media-breakpoint-down(md) {
+				margin: 0 20px 0 0;
+			}
+			@media (max-width: 716px) {
 				margin: 0 20px;
 			}
 			&__terms {
@@ -115,21 +122,32 @@
 				@include media-breakpoint-down(md) {
 					width: 670px;
 				}
+				@include media-breakpoint-down(sm) {
+					width: 526px;
+				}
 				margin-top: 11px;
 				padding: 20px 19px;
 				border-radius: $border__radius;
 				-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
 				box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+
+				&[data-tax="color"] {
+					width: 260px;
+					columns: 4;
+					left: auto;
+					right: auto;
+				}
+
 			}
 			&__label {
 				position: relative;
 			}
 			&__item {
 				break-inside: avoid-column;
-				display: inline-block;
 				width: 100%;
 				background-image: none;
 				padding: 2px 10px;
+				box-sizing: border-box;
 				font-family: $font__main;
 				@include font-size(0.875);
 				line-height: 24px;
@@ -138,6 +156,56 @@
 				color: $color__link;
 				position: relative;
 				@include transition(all 0.3s ease);
+				&[data-tax="color"] {
+					width: 40px;
+					height: 40px;
+					box-sizing: border-box;
+					margin: 5px;
+					border-radius: 3px;
+					box-shadow: 0 0 0 1px $color__separator inset, 0 0 0 6px #fff inset;
+					overflow: hidden;
+					text-indent: -999px;
+					&[data-value="black"] {
+						background: black;
+					}
+					&[data-value="blue"] {
+						background: blue;
+					}
+					&[data-value="brown"] {
+						background: brown;
+					}
+					&[data-value="cyan"] {
+						background: cyan;
+					}
+					&[data-value="green"] {
+						background: green;
+					}
+					&[data-value="grey"] {
+						background: grey;
+					}
+					&[data-value="orange"] {
+						background: orange;
+					}
+					&[data-value="pink"] {
+						background: pink;
+					}
+					&[data-value="purple"] {
+						background: purple;
+					}
+					&[data-value="red"] {
+						background: red;
+					}
+					&[data-value="white"] {
+						background: white;
+					}
+					&[data-value="yellow"] {
+						background: yellow;
+					}
+					&:hover,
+					&.active-filter {
+						box-shadow: 0 0 0 2px $color__link-hover inset, 0 0 0 6px #fff inset;
+					}
+				}
 				&:hover {
 					color: $color__invert-main;
 					background-color: rgba($color__link-hover, 1);
@@ -203,10 +271,10 @@
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
-			justify-content: center;
+			justify-content: flex-start;
 			align-content: stretch;
 			align-items: center;
-			margin: 25px; 
+			margin: 25px;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -238,7 +306,8 @@
 			.theme-item__title {
 				margin-bottom: 18px;
 				margin-top: 24px;
-				line-height: 30px;
+				line-height: 32px;
+				margin-top: 12px;
 				transition-delay: 0.22s;
 				@include media-breakpoint-down(sm) {
 					@include font-size(1);
@@ -283,7 +352,7 @@
 				}
 				&:hover {
 					color: white;
-					background-position: right center; 
+					background-position: right center;
 					transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 					&.btn-secondary {
 						background: $color__link-hover;

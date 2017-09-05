@@ -28,6 +28,7 @@
 	}
 }
 .elementor-element .plugins_carousel.elementor-widget-jet-carousel .elementor-jet-carousel {
+
 	.elementor-column-wrap.elementor-element-populated {
 		padding: 0;
 	}
@@ -37,7 +38,7 @@
 		}
 		&__content {
 			margin-top: 14px;
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				text-align: center;
 			}
 		}
