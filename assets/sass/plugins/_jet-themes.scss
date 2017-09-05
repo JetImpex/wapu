@@ -130,6 +130,14 @@
 				border-radius: $border__radius;
 				-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
 				box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
+
+				&[data-tax="color"] {
+					width: 260px;
+					columns: 4;
+					left: auto;
+					right: auto;
+				}
+
 			}
 			&__label {
 				position: relative;
@@ -148,6 +156,56 @@
 				color: $color__link;
 				position: relative;
 				@include transition(all 0.3s ease);
+				&[data-tax="color"] {
+					width: 40px;
+					height: 40px;
+					box-sizing: border-box;
+					margin: 5px;
+					border-radius: 3px;
+					box-shadow: 0 0 0 1px $color__separator inset, 0 0 0 6px #fff inset;
+					overflow: hidden;
+					text-indent: -999px;
+					&[data-value="black"] {
+						background: black;
+					}
+					&[data-value="blue"] {
+						background: blue;
+					}
+					&[data-value="brown"] {
+						background: brown;
+					}
+					&[data-value="cyan"] {
+						background: cyan;
+					}
+					&[data-value="green"] {
+						background: green;
+					}
+					&[data-value="grey"] {
+						background: grey;
+					}
+					&[data-value="orange"] {
+						background: orange;
+					}
+					&[data-value="pink"] {
+						background: pink;
+					}
+					&[data-value="purple"] {
+						background: purple;
+					}
+					&[data-value="red"] {
+						background: red;
+					}
+					&[data-value="white"] {
+						background: white;
+					}
+					&[data-value="yellow"] {
+						background: yellow;
+					}
+					&:hover,
+					&.active-filter {
+						box-shadow: 0 0 0 2px $color__link-hover inset, 0 0 0 6px #fff inset;
+					}
+				}
 				&:hover {
 					color: $color__invert-main;
 					background-color: rgba($color__link-hover, 1);
@@ -216,7 +274,7 @@
 			justify-content: flex-start;
 			align-content: stretch;
 			align-items: center;
-			margin: 25px; 
+			margin: 25px;
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -294,7 +352,7 @@
 				}
 				&:hover {
 					color: white;
-					background-position: right center; 
+					background-position: right center;
 					transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 					&.btn-secondary {
 						background: $color__link-hover;
