@@ -452,9 +452,11 @@
 			&__title {
 				margin: 5px 0 12px;
 				padding: 0;
-				@include media-breakpoint-up(lg) {
+				@include font-size(1.25);
+				@include media-breakpoint-up(xl) {
 					margin: 20px 0 12px;
 					padding: 0 25px;
+					@include font-size(1.75);
 				}
 			}
 			&__text {
