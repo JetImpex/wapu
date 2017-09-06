@@ -153,16 +153,55 @@
 .tax-how-to_category {
 	.wapu-terms, .wapu_posts_wrap {
 		.wapu-term, .wapu-post {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: stretch;
+			align-items: flex-start;
+
 			&__title {
-				margin: .8em 0 1.275em;
+				margin: .8em 0 1.05em;
+				order: 0;
+				flex: 0 1 auto;
+				align-self: auto;
+			}
+			.wapu-posts {
+				order: 1;
+				flex: 0 1 100%;
+				align-self: auto;
+			}
+			&__actions {
+				order: 0;
+				flex: 0 1 auto;
+				align-self: auto;
+				margin: 14px 0;
+				a {
+					@include font-size(0.875);
+					color: $color__link-hover;
+					text-decoration: underline;
+					&:hover {
+						color: $color__link;
+					}
+				}
+				@include media-breakpoint-down(sm) {
+					margin: 0.8em 0 1.45em;
+					order: 2;
+				}
 			}
 		}
 		.wapu-posts {
-			margin: 1.275em 0 1.05em; 
+			//margin: 1.05em 0 1.05em; 
+			margin: 0 0 35px; 
+			@include media-breakpoint-down(sm) {
+				margin: 0; 
+			}
 			list-style: none;
 			padding-left: 0;
 			position: relative;
-			li {
+			border-radius: $border__radius;
+			border: 1px solid $color__border_cherry_search;
+			/*li {
 				position: relative;
 				padding-left: 18px;
 				margin: 8px 0;
@@ -182,25 +221,62 @@
 					border-radius: 100%;
 					background-color: $color__points;
 				}
-			}
-		}
-		.wapu-term__actions {
-			margin: 1.25em 0 1.45em;
-			a {
+				}*/
+				li {
+					position: relative;
+					margin: 0;
+					border-top: 1px solid $color__border_cherry_search;
+					&:first-child {
+						border-top: none;
+						a {
+							border-top-right-radius: $border__radius;
+							border-top-left-radius: $border__radius;
+						}
+					}
+					&:last-child {
+						a {
+							border-bottom-right-radius: $border__radius;
+							border-bottom-left-radius: $border__radius;
+						}
+					}
+
+					a {
+						position: relative;
+						display: block;
+						width: 100%;
+						color: $color__link-hover;
+						padding: 7px 8px 10px 36px;
+						@include transition(all 0.89s ease);
+						&:hover {
+							color: $color__link;
+							background-color: $color__background-pre;
+							@include transition(all 0.35s ease);
+						} 
+						&:before {
+							position: absolute;
+							content: "\e928";
+							left: 16px;
+							top: 16px;
+							display: block;
+							@include nucleo-icon();
+							color: inherit;
+							@include font-size(0.625);
+						}
+					}
+				}
 			}
 		}
 	}
-}
-.tax-knowledge-base_category,
-.tax-how-to_category {
-	#primary {
-		margin-top: 2.6em;
-	}
-	.wapu-terms, .wapu_posts_wrap {
-		.wapu-term, .wapu-post {
-			&__title {
-				margin: .54em 0;
+	.tax-knowledge-base_category,
+	.tax-how-to_category {
+		#primary {
+			margin-top: 2.6em;
+		}
+		.wapu-terms, .wapu_posts_wrap {
+			.wapu-term, .wapu-post {
+				&__title {
+					margin: .54em 0;
+				}
 			}
 		}
 	}
-}

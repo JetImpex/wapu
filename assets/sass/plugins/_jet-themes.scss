@@ -280,6 +280,8 @@
 			bottom: 0;
 			right: 0;
 			@include media-breakpoint-down(sm) {
+				justify-content: center;
+				align-items: center;
 				padding: 10px;
 				margin: 10px;
 			}

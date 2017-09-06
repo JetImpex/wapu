@@ -70,17 +70,25 @@
 			padding-top: 40px;
 		}
 	}
+	.page-template-main & {
+		@include media-breakpoint-down(md) {
+			padding-top: 40px;
+		}
+	}
 	@include media-breakpoint-up(md) {
 		padding-top: 184px;
 	}
 }
 .footer-main-area {
 	padding-top: 14px;
-	.page-template-themes & {
-		padding-top: 38px;
+	.page-template-themes &,
+	.page-template-main & {
 		padding-bottom: 24px;
 		@include media-breakpoint-down(md) {
 			padding-bottom: 28px;
+		}
+		@include media-breakpoint-down(sm) {
+			padding-top: 5px;
 		}
 	}
 	aside:nth-child(3) {

@@ -28,12 +28,19 @@ form.mc4wp-form {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-content: stretch;
 		align-items: center;
-		@include media-breakpoint-up(md) {
+		/*@include media-breakpoint-up(md) {
 			flex-direction: row;
 			flex-wrap: nowrap;
+		}*/
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: stretch;
+			align-items: center;
 		}
 		h6 {
 			font-weight: 600;
@@ -41,8 +48,9 @@ form.mc4wp-form {
 			order: 0;
 			flex: 0 1 auto;
 			align-self: auto;
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				margin-bottom: 14px;
+				text-align: center;
 			}
 		}
 		p {
@@ -57,12 +65,13 @@ form.mc4wp-form {
 				top: 15px;
 				@include font-size(0.875);
 				color: $color__invert-main;
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(xs) {
 					display: none;
 				}
 			}
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				flex: 0 1 100%;
+				align-self: stretch;
 				text-align: center;
 			}
 			input[type='submit'] {
@@ -73,7 +82,7 @@ form.mc4wp-form {
 				border: none;
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(xs) {
 					position: relative;
 					border-radius: 5px;
 					margin-top: 12px;
@@ -89,7 +98,7 @@ form.mc4wp-form {
 			}
 			input[type='email'] {
 				padding: 10px 125px 11px 35px;
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(xs) {
 					padding: 10px 15px 11px 15px;
 				}
 				background-color: $color__mailchimp-input-bg;
