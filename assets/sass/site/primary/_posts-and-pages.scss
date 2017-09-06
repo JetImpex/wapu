@@ -6,15 +6,25 @@
 	overflow: hidden;
 }
 
+.page-template-themes,
+.page-template-main {
+	.footer-main-area aside {
+		margin-bottom: 0;
+	}
+} 
+
 .site-content_wrap {
 	margin-bottom: 30px;
-	.home & {
+	.page-template-main & {
 		margin-bottom: 0;
 	}
 	@include media-breakpoint-up(md) {
 		margin-bottom: 60px;
 		.page-template-themes & {
 			margin-bottom: 3px;
+		}
+		.page-template-main & {
+			margin-bottom: 0;
 		}
 	}
 }

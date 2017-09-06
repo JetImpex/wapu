@@ -140,6 +140,9 @@
 	&__logo {
 		margin-top: 7px;
 		margin-bottom: 16px;
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+		}
 	}
 	&__content {
 		p {
@@ -153,11 +156,18 @@
 .footer-main-area {
 	.widget-title {
 		margin-bottom: 24px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 16px;
+		}
 	}
 	.widget_nav_menu {
 		ul {
 			margin-top: 24px;
 			margin-bottom: 19px;
+			@include media-breakpoint-down(sm) {
+				margin-top: 0;
+				margin-bottom: 22px;
+			}
 			li {
 				margin: 8px 0;
 				a {
@@ -173,6 +183,11 @@
 }
 
 .widget-social-menu {
+	margin: 1.875em 0 1.75em;
+	@include media-breakpoint-down(sm) {
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
 	li {
 		margin: 12px 0; 
 		a {

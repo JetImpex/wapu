@@ -56,23 +56,6 @@
 				}
 			}
 		}
-		/*.site-branding {
-			flex: 0 0 auto;
-			margin: 0;
-			.site-logo {
-				border-left: 1px solid $color__separator;
-				border-right: 1px solid $color__separator;
-				width: auto;
-				position: relative;
-				display: inline-block;
-				padding: 21px 24px 19px;
-			}
-			.site-link__img {
-				display: inline-block;
-				vertical-align: middle;
-			}
-
-		}*/
 		.site-branding {
 			flex: 0 0 auto;
 			margin: 0;
@@ -119,6 +102,19 @@
 		.social-list--header {
 			flex: 0 0 auto;
 			margin: 0;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: stretch;
+			align-items: stretch;
+			.menu-social-menu-container {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				-ms-flex-item-align: center;
+				align-self: center;
+			}
 		}
 		.main-navigation {
 			flex: 0 1 auto;
@@ -140,10 +136,6 @@
 		overflow: hidden;
 		background-color: $color__background-footer;
 	}
-}
-
-.page-template-themes aside {
-	margin-bottom: 0;
 }
 
 .widget-area.header-area {
