@@ -21,7 +21,7 @@ while ( have_posts() ) : the_post();
 		</header><!-- .entry-header -->
 
 		<div class="entry-content"><?php
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title( '<h4 class="entry-title">', '</h4>' );
 
 			the_content();
 
@@ -31,7 +31,18 @@ while ( have_posts() ) : the_post();
 			) );
 
 		?></div><!-- .entry-content -->
-		<footer class="entry-footer"><?php
+
+		<?php wapu_get_post_tags(); ?>
+		<div class="entry-footer-meta">
+			<div class="entry-meta">
+				<?php wapu_entry_meta(); ?>
+			</div><!-- .entry-meta -->
+			<?php 
+				wapu_share_buttons(); 
+			?>
+		</div>
+		<footer class="entry-footer">
+		<?php
 			/**
 			 * This is required for like/dislike button!
 			 */
