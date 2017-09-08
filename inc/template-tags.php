@@ -33,7 +33,11 @@ function wapu_header_logo() {
 		);
 	}
 
-	$home_url = esc_url( home_url( '/' ) );
+	if ( is_multisite() ) {
+		$home_url = esc_url( network_home_url( '/' ) );
+	} else {
+		$home_url = esc_url( home_url( '/' ) );
+	}
 
 	if ( ! $logo_url ) {
 		printf( $format, $logo, $home_url );
