@@ -1,9 +1,14 @@
 .share-btns {
 	&__list {
 		float: none;
-		padding: 16px 0 15px 0;
+		padding: 0 0 15px 0;
 		@include media-breakpoint-up(lg) {
 			padding: 16px 0 15px 5px;
+		}
+		.entry-footer-meta & {
+			@include media-breakpoint-down(md) {
+				padding: 0 0 15px 0;
+			}
 		}
 	}
 	&__item {
@@ -13,12 +18,14 @@
 		margin-right: 10px;
 		@include media-breakpoint-up(md) {
 			margin-right: 0;
-			margin-right: 19px;
+			margin-left: 19px;
 		}
-		.single-post & {
-			margin-right: 10px;
-			@include media-breakpoint-up(md) {
-				margin-right: 24px;
+		.single-post &,
+		.entry-footer-meta & {
+			margin-right: 18px;
+			@include media-breakpoint-up(lg) {
+				margin-left: 18px;
+				margin-right: 0;
 			}
 			margin-left: 0;
 		}

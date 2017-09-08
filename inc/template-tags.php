@@ -217,12 +217,15 @@ function wapu_entry_meta() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$posted_by = sprintf(
+	/*$posted_by = sprintf(
 		esc_html_x( '%s', 'post author', 'wapu' ),
 		'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 	);
 
 	echo '<span class="posted-by"><i class="nc-icon-mini users_single-body"></i>' . $posted_by . '</span><span class="posted-on"><i class="nc-icon-mini ui-1_calendar-60"></i>' . $posted_on . '</span>'; // WPCS: XSS OK.
+	*/
+
+	echo '<span class="posted-on"><i class="nc-icon-mini ui-1_calendar-60"></i>' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;

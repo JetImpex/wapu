@@ -59,12 +59,15 @@ h6 {
 	}
 }
 
-.single .entry-content {
+.single .entry-content, .single-video-tutorials {
 	h2 {
 		margin: 0.325em 0 0.650em
 	}
 	h3, h4, h5, h6 {
 		margin: 1.8em 0 1.16em;
+	}
+	h4.entry-title {
+		margin: 0 0 1.16em;
 	}
 }
 

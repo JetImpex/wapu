@@ -11,21 +11,16 @@
 
 
 	<header class="entry-header">
-		<?php 
-			wapu_get_post_category(); 
-		?>
 		<?php wapu()->utility()->attributes->get_title( array(
 				'class' => 'entry-title',
-				'html'  => '<h2 %1$s>%4$s</h2>',
+				'html'  => '<h4 %1$s>%4$s</h4>',
 				'echo'  => true,
 			) );
 		?>
+		<?php 
+			wapu_get_post_category(); 
+		?>
 	</header><!-- .entry-header -->
-
-	<div class="entry-meta">
-		<?php wapu_entry_meta(); ?>
-	</div><!-- .entry-meta -->
-
 	<figure class="post-thumbnail">
 		<?php wapu()->utility()->media->get_image( array(
 				'size'        => 'post-thumbnail',
@@ -40,10 +35,12 @@
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
-
+	<?php wapu_get_post_tags(); ?>
 	<footer class="entry-footer">
+		<div class="entry-meta">
+			<?php wapu_entry_meta(); ?>
+		</div><!-- .entry-meta -->
 		<?php 
-			wapu_get_post_tags( 'loop' ); 
 			wapu_share_buttons(); 
 		?>
 	</footer><!-- .entry-footer -->
