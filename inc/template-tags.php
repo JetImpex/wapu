@@ -218,7 +218,7 @@ function wapu_entry_meta() {
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'wapu' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
 	/*$posted_by = sprintf(
