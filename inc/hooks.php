@@ -322,3 +322,15 @@ function wapu_set_blog_main_template( $template ) {
 	return $template;
 
 }
+
+add_filter( 'excerpt_length', 'wapu_excerpt_length', 999 );
+
+function wapu_excerpt_length( $length ) {
+	return 30;
+}
+
+add_filter( 'excerpt_more', 'wapu_excerpt_more' );
+
+function wapu_excerpt_more( $more ) {
+	return ' ...';
+}

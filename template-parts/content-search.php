@@ -16,11 +16,7 @@
 
 		<div class="content_wrapper">
 			<div class="entry-content">
-				<?php wapu()->utility()->attributes->get_content( array(
-						'length'       => 32,
-						'content_type' => 'post_excerpt',
-						'echo'         => true,
-					) ); ?>
+				<?php echo get_the_excerpt(); ?>
 			</div><!-- .entry-content -->
 			<div class="footer_wrapper">
 				<div class="entry-meta">
