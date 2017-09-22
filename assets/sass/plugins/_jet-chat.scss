@@ -1,0 +1,264 @@
+.jet-chat-wrap {
+	position: fixed;
+	right: 40px;
+	bottom: 55px;
+}
+
+.jet-chat {
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 18px 60px rgba( 80, 106, 72, .15 );
+	margin-bottom: 100px;
+	position: relative;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 400ms cubic-bezier(.21,1.13,.81,.99);
+	transform: translateY(30px);
+
+	&.chat-active {
+		pointer-events: auto;
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	&:after {
+		position: absolute;
+		bottom: -8px;
+		right: 42px;
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 8px 8px 0 8px;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	&__form {
+		padding: 30px;
+		&-title {
+			font-size: 20px;
+			line-height: 28px;
+			font-weight: 500;
+		}
+		&-text {
+			font-size: 14px;
+			line-height: 26px;
+		}
+		&-message {
+			padding-bottom: 20px;
+		}
+		&-row {
+			padding-bottom: 10px;
+		}
+		&-submit {
+			margin-top: 10px;
+			display: block;
+			width: 100%;
+			font-weight: 600;
+			background-color: #1ac8e1;
+			background-image: linear-gradient( to right, #1ac8e1 0%, #1de6ba 100% );
+		}
+		&-field {
+			&.jet-chat-error {
+				border-color: red;
+			}
+		}
+	}
+	&__heading {
+		background: $color__hover-jet-themes;
+		padding: 0 0 0 30px;
+		display: flex;
+		border-radius: 5px 5px 0 0;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 32px;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 500;
+		&:before {
+			content: '\ed9e';
+			font-family: 'Nucleo Outline';
+			font-size: 30px;
+			display: inline-block;
+			margin-right: 10px;
+			line-height: 32px;
+			height: 32px;
+			vertical-align: sub;
+			background-color: #1ac8e1;
+			background-image: linear-gradient( to right, #1ac8e1 0%, #1de6ba 100% );
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+}
+
+.jet-locales {
+	position: relative;
+	color: $color__text-footer;
+	font-size: 14px;
+	line-height: 36px;
+	&__img {
+		width: 25px;
+		margin: -4px 10px 0 0;
+		vertical-align: middle;
+	}
+	&__list {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		right: 10px;
+		margin: 0;
+		background: $color__hover-jet-themes;
+		visibility: hidden;
+		overflow: hidden;
+		height: 0;
+		.show-locales + & {
+			visibility: visible;
+			height: auto;
+		}
+	}
+	&__item {
+		padding: 0 0 0 20px;
+		cursor: pointer;
+		margin: 0;
+		transition: all 200ms linear;
+		&:hover,
+		&.active-locale {
+			background: #1a233a;
+			color: #fff;
+		}
+	}
+	&__trigger {
+		font-size: 14px;
+		line-height: 36px;
+		padding: 12px 30px 12px 20px;
+		background: none;
+		color: $color__text-footer;
+		&:after {
+			content: '\e93b';
+			font-size: 11px;
+			font-family: 'Nucleo Mini';
+			display: inline-block;
+			margin: 0 0 0 5px;
+		}
+		&.show-locales {
+			color: #fff;
+			&:after {
+				content: '\e93e';
+			}
+		}
+	}
+}
+
+.jet-chat-trigger {
+	background-color: #1ac8e1;
+	background-image: linear-gradient( to right, #1ac8e1 0%, #1de6ba 100% );
+	width: 72px;
+	height: 72px;
+	padding: 0;
+	text-align: center;
+	border-radius: 50%;
+	pointer-events: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-position: center center;
+	box-shadow: 0 0 0 24px rgba( 29, 230, 286, .2 ), 0 0 0 12px rgba( 29, 230, 286, .5 );
+	&:before {
+		color: #fff;
+		content: '\ed9e';
+		font-family: 'Nucleo Outline';
+		font-size: 30px;
+		display: block;
+	}
+	span {
+		position: absolute;
+		top: -60px;
+		min-width: 90px;
+		padding: 5px;
+		font-size: 14px;
+		line-height: 20px;
+		left: 50%;
+		margin-left: -45px;
+		background: $color__hover-jet-themes;
+		font-weight: 400;
+		color: #fff;
+		text-align: center;
+		pointer-events: none;
+		transition: all 150ms cubic-bezier(.21,1.13,.81,.99);
+		opacity: 0;
+		&:after {
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			margin-left: -5.5px;
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5.5px 5px 0 5.5px;
+			border-color: $color__hover-jet-themes transparent transparent transparent;
+		}
+	}
+	&:not(.chat-active):hover {
+		box-shadow: 0 0 0 20px rgba( 29, 230, 286, .2 ), 0 0 0 10px rgba( 29, 230, 286, .5 );
+		&:before {
+			animation: bounce 200ms 4 linear alternate;
+		}
+		span {
+			top: -70px;
+			opacity: 1;
+		}
+	}
+	&.chat-active {
+		box-shadow: 0 0 0 20px rgba( 29, 230, 286, .2 ), 0 0 0 10px rgba( 29, 230, 286, .5 );
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		span {
+			display: none;
+		}
+	}
+	&:hover {
+		background-position: center center;
+	}
+	&__wrap {
+		right: 14px;
+		width: 72px;
+		height: 72px;
+		border-radius: 36px;
+		bottom: 0;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: rotate( 0deg );
+	}
+	50% {
+		-webkit-transform: rotate( 5deg );
+	}
+	100% {
+		-webkit-transform: rotate( -5deg );
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: rotate( 0deg );
+	}
+	50% {
+		transform: rotate( 5deg );
+	}
+	100% {
+		transform: rotate( -5deg );
+	}
+}
