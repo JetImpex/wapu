@@ -20,5 +20,6 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'wapu_page_start' ); ?>
 <div id="page" class="site">
 	<div id="content" class="site-content">
