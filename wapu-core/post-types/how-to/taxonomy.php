@@ -22,4 +22,4 @@ while ( have_posts() ) {
 }
 
 do_action( 'wapu_core/taxonomy/' . $taxonomy . '/loop_end', $taxonomy );
-?></div><?php
+?></div>

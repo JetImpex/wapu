@@ -97,10 +97,6 @@ if ( ! class_exists( 'Wapu_About_Widget' ) ) {
 		 */
 		public function widget( $args, $instance ) {
 
-			if ( empty( $instance['media_id'] ) ) {
-				return;
-			}
-
 			if ( $this->get_cached_widget( $args ) ) {
 				return;
 			}
@@ -115,7 +111,7 @@ if ( ! class_exists( 'Wapu_About_Widget' ) ) {
 			$this->widget_start( $args, $instance );
 
 			$title     = ! empty( $instance['title'] ) ? $instance['title'] : $this->settings['title']['value'];
-			$media_id  = absint( $instance['media_id'] );
+			$media_id  = isset( $instance['media_id'] ) ? absint( $instance['media_id'] ) : 0;
 			$src       = wp_get_attachment_image_src( $media_id, 'medium' );
 			$site_name = esc_attr( get_bloginfo( 'name' ) );
 			$home_url  = esc_url( home_url( '/' ) );

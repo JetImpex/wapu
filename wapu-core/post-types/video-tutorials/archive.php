@@ -23,7 +23,7 @@ do_action( 'wapu_core/' . wapu_core_video_tutorials()->slug . '/archive/page_tit
 						<div class="short_description"><?php
 							if( has_excerpt() ){
 								the_excerpt();
-							} 
+							}
 						?></div>
 					</div>
 				</div>
@@ -31,4 +31,3 @@ do_action( 'wapu_core/' . wapu_core_video_tutorials()->slug . '/archive/page_tit
 		endwhile;
 	?>
 </div>
-<?php

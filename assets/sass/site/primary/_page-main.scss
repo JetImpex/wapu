@@ -2,7 +2,7 @@
 	.header-area-wrap {
 		overflow: hidden;
 		background-color: $color__background-footer-area-wrap;
-		background-image: url("assets/images/pattern_blue.jpg");
+		background-image: url("assets/images/pattern_blue.png");
 		background-position: left top;
 		background-repeat: repeat;
 		aside {
@@ -43,7 +43,7 @@
 						flex: 0 1 auto;
 						align-self: auto;
 						padding-left: 0;
-						margin: 0 25px 15px; 
+						margin: 0 25px 15px;
 						text-align: center;
 						@include media-breakpoint-up(md) {
 							margin: 8px 0;
@@ -78,7 +78,7 @@
 							}
 							@include media-breakpoint-up(md) {
 								position: absolute;
-								margin: 0; 
+								margin: 0;
 							}
 						}
 					}

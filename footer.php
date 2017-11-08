@@ -19,6 +19,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="footer-conatiner__flex">
+				<?php wapu_footer_logo(); ?>
+				<div class="site-info">
+					<?php printf( __( 'Copyright &copy; %s. All Rights Reserved', 'wapu' ), date( 'Y' ) ); ?>
+				</div><!-- .site-info -->
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<?php
 						wapu_nav_menu(
@@ -27,11 +31,7 @@
 							true
 						);
 					?>
-				<?php endif; ?>				
-				<div class="site-info">
-					<span class="sep"> &copy; </span>
-					<?php printf( esc_html__( '2017 Jetimpex', 'wapu' ), 'wapu' ); ?>
-				</div><!-- .site-info -->
+				<?php endif; ?>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

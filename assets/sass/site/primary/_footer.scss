@@ -10,6 +10,7 @@
 		justify-content: center;
 		align-content: center;
 		align-items: center;
+		font-size: 12px;
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
 			flex-wrap: nowrap;
@@ -19,7 +20,7 @@
 		.footer-menu, .site-info {
 			order: 0;
 			flex: 0 1 auto;
-			align-self: auto;
+			align-self: center;
 			@include media-breakpoint-down(sm) {
 				margin-top: 15px;
 				text-align: center;
@@ -40,14 +41,20 @@
 		.footer-menu li {
 			margin: 0 5px;
 			@include media-breakpoint-up(md) {
-				margin: 0 26px 0 0;
+				margin: 0 0 0 26px;
+			}
+			a {
+				color: $color__link-footer;
+				&:hover {
+					color: white;
+				}
 			}
 		}
 	}
 	a {
-		color: white;
+		color: $color__link-footer;
 		&:hover {
-			color: $color__link-footer;
+			color: white;
 		}
 	}
 	.footer-menu {
@@ -56,11 +63,24 @@
 		}
 	}
 }
+.site-info-wrap {
+	display: flex;
+	align-items: center;
+}
+.site-info {
+	padding: 0 0 0 20px;
+}
+.footer-logo {
+	img {
+		display: block;
+	}
+}
+
 .footer-area-wrap {
 	background-color: $color__background-footer-area-wrap;
-	background-image: url("assets/images/pattern_blue.jpg");
-	background-position: left top;
-	background-repeat: repeat;
+	//background-image: url("assets/images/pattern_blue.jpg");
+	//background-position: left top;
+	//background-repeat: repeat;
 }
 .footer-main-head-area {
 	padding-top: 60px;

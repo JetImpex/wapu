@@ -13,7 +13,7 @@
 		margin-right: 0;
 		margin-left: 0;
 		@include media-breakpoint-down(md) {
-			flex-wrap: wrap; 
+			flex-wrap: wrap;
 			justify-content: space-between;
 		}
 		.site-branding,
@@ -66,12 +66,10 @@
 			align-content: stretch;
 			align-items: stretch;
 			.site-logo {
-				border-left: 1px solid $color__separator;
-				border-right: 1px solid $color__separator;
 				width: auto;
 				position: relative;
 				//padding: 21px 24px 19px;
-				padding: 0 24px;
+				padding: 0 25px 0 0;
 				display: flex;
 				@include media-breakpoint-down(xs) {
 					padding: 15px 24px;
@@ -87,7 +85,7 @@
 				display: inline-block;
 				vertical-align: middle;
 			}
-		} 
+		}
 		.site-description {
 			text-align: right;
 			color: $color__link;
