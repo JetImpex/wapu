@@ -27,7 +27,7 @@
 			var $sticky = $('.primary-sidebar-area');
 			var $stickyrStopper = $('.footer-area-wrap');
 
-			if ( !!$sticky.offset() ) { 
+			if ( !!$sticky.offset() ) {
 
 				var generalSidebarHeight = $sticky.outerHeight();
 				var stickyTop = $sticky.offset().top;
@@ -52,7 +52,7 @@
 					}
 				});
 			}
-			
+
 		},*/
 
 		cherrySearchInputIconHide: function( self ) {
@@ -79,7 +79,7 @@
 				$("footer#colophon").css("position","fixed").css("bottom",0).css("width", '100%');
 				$(".site-content_wrap").css( 'margin-bottom', '425px');
 				$(".footer-area-wrap").css("position","fixed").css("bottom", footerHeight).css("width", '100%');
-				
+
 			}
 		},
 
@@ -118,11 +118,11 @@
 
 		},
 		to_top_init: function ( self ) {
-			if ( $.isFunction( jQuery.fn.UItoTop ) ) {
+			/*if ( $.isFunction( jQuery.fn.UItoTop ) ) {
 				$().UItoTop({
 					scrollSpeed: 600
 				});
-			}
+			}*/
 		},
 
 	}
