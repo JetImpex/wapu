@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Wapuula team
 Author URI: http://wapuula.com
 Description: wapuula.com theme
-Version: 2.1.4.7
+Version: 3.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wapu
@@ -140,6 +140,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Plugin cherry-esti
 --------------------------------------------------------------*/
 @import "plugins/cherry-tetsi";
+
+/*--------------------------------------------------------------
+# Plugin EDD
+--------------------------------------------------------------*/
+@import "plugins/edd";
 
 
 /*--------------------------------------------------------------

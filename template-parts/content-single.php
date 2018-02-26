@@ -12,13 +12,13 @@
 
 	<header class="entry-header">
 		<?php wapu()->utility()->attributes->get_title( array(
-				'class' => 'entry-title',
-				'html'  => '<h4 %1$s>%4$s</h4>',
+				'class' => 'entry-title h4',
+				'html'  => '<h1 %1$s>%4$s</h1>',
 				'echo'  => true,
 			) );
 		?>
-		<?php 
-			wapu_get_post_category(); 
+		<?php
+			wapu_get_post_category();
 		?>
 	</header><!-- .entry-header -->
 	<figure class="post-thumbnail">
@@ -40,8 +40,8 @@
 		<div class="entry-meta">
 			<?php wapu_entry_meta(); ?>
 		</div><!-- .entry-meta -->
-		<?php 
-			wapu_share_buttons(); 
+		<?php
+			wapu_share_buttons();
 		?>
 	</footer><!-- .entry-footer -->
 

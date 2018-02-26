@@ -13,6 +13,7 @@ input[type='time'],
 input[type='datetime'],
 input[type='datetime-local'],
 input[type='color'],
+select,
 textarea {
 	width: 100%;
 	@include font-size(0.875);
