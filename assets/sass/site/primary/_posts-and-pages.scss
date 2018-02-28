@@ -11,7 +11,7 @@
 	.footer-main-area aside {
 		margin-bottom: 0;
 	}
-} 
+}
 
 .site-content_wrap {
 	margin-bottom: 30px;
@@ -59,6 +59,10 @@
 .single.single-post .entry-title {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+h1.entry-title {
+	font-size: 28px;
 }
 
 .single .entry-content {
@@ -225,7 +229,7 @@
 }
 .entry-meta {
 	margin: 1.857em 0 2.714em;
-	.single & {	
+	.single & {
 		margin: 1.25em 0;
 	}
 	a {

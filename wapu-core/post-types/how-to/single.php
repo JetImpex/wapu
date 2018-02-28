@@ -21,7 +21,7 @@ while ( have_posts() ) : the_post();
 		</header><!-- .entry-header -->
 
 		<div class="entry-content"><?php
-			the_title( '<h4 class="entry-title">', '</h4>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 
 			the_content();
 
@@ -37,8 +37,8 @@ while ( have_posts() ) : the_post();
 			<div class="entry-meta">
 				<?php wapu_entry_meta(); ?>
 			</div><!-- .entry-meta -->
-			<?php 
-				wapu_share_buttons(); 
+			<?php
+				wapu_share_buttons();
 			?>
 		</div>
 		<footer class="entry-footer">

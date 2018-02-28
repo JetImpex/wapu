@@ -244,9 +244,10 @@
 			background-image: -webkit-linear-gradient(45deg, $color_gradient_1 0%,$color_gradient_1 30%,$color_gradient_2 87%);
 		}
 	}
-	h3 {
+	h1 {
 		margin: 0;
 		white-space: nowrap;
+		font-size: 34px;
 		@include media-breakpoint-down(sm) {
 			@include font-size(1.125);
 		}

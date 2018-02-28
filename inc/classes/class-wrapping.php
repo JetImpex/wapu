@@ -95,7 +95,6 @@ if ( ! class_exists( 'Wapu_Wrapping' ) ) {
 		 */
 		public function __toString() {
 			$this->templates = apply_filters( 'wapu_wrap_' . $this->slug, $this->templates );
-
 			return locate_template( $this->templates );
 		}
 
@@ -133,6 +132,14 @@ function wapu_wrap_base_cpts( $templates ) {
 
 	if ( $post_type && ( 'page' !== $post_type ) ) {
 		array_unshift( $templates, 'base-' . $post_type . '.php' );
+	}
+
+	if ( $post_type && ( 'page' !== $post_type ) && is_singular() ) {
+		array_unshift( $templates, 'base-single-' . $post_type . '.php' );
+	}
+
+	if ( $post_type && ( 'page' !== $post_type ) && is_post_type_archive() ) {
+		array_unshift( $templates, 'base-archive-' . $post_type . '.php' );
 	}
 
 	// Return modified array with base-$cpt.php at the front of the queue.

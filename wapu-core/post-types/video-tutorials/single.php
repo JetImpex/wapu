@@ -17,7 +17,7 @@ while ( have_posts() ) : the_post();
 					'echo'      => true,
 				) );*/
 			?>
-			<?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-video"><?php
@@ -39,8 +39,8 @@ while ( have_posts() ) : the_post();
 			<div class="entry-meta">
 				<?php wapu_entry_meta(); ?>
 			</div><!-- .entry-meta -->
-			<?php 
-				wapu_share_buttons(); 
+			<?php
+				wapu_share_buttons();
 			?>
 		</div>
 		<div class="wapu-rating-wrapper"><?php

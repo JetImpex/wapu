@@ -9,7 +9,7 @@ while ( have_posts() ) : the_post();
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<div class="entry-content"><?php
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 
 			the_content();
 
