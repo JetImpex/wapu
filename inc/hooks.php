@@ -334,3 +334,10 @@ add_filter( 'excerpt_more', 'wapu_excerpt_more' );
 function wapu_excerpt_more( $more ) {
 	return ' ...';
 }
+
+add_action( 'wapu-core/single-download/sharing', 'wapu_download_sharing' );
+
+function wapu_download_sharing() {
+	echo 'Share:';
+	wapu_share_buttons();
+}

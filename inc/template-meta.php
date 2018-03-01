@@ -13,6 +13,13 @@
  */
 function wapu_share_buttons( $context = 'loop', $args = array(), $config = array() ) {
 
+	$cached = get_post_meta( get_the_ID(), '_post_' . $context . '_sharing', true );
+
+	if ( $cached ) {
+		echo $cached;
+		return;
+	}
+
 	if ( 'loop' == $context ) {
 		$meta = 'blog_post_share_buttons';
 	} else {
@@ -52,6 +59,11 @@ function wapu_share_buttons( $context = 'loop', $args = array(), $config = array
 			'icon'      => 'nc-icon-mini social_logo-google-plus',
 			'name'      => esc_html__( 'Google+', 'wapu' ),
 			'share_url' => 'https://plus.google.com/share?url=%3$s',
+		),
+		'pinterest' => array(
+			'icon'      => 'nc-icon-mini social_logo-pinterest',
+			'name'      => esc_html__( 'Pinterest', 'wapu' ),
+			'share_url' => 'http://pinterest.com/pin/create/button/?url=%3$s&description=%4$s'
 		),
 	) );
 
@@ -109,9 +121,13 @@ function wapu_share_buttons( $context = 'loop', $args = array(), $config = array
 
 	endforeach;
 
-	printf(
+	$content = sprintf(
 		'<div class="share-btns__list %1$s">%2$s</div>',
 		esc_attr( $config['custom_class'] ),
 		$share_buttons
 	);
+
+	update_post_meta( get_the_ID(), '_post_' . $context . '_sharing', $content );
+
+	echo $content;
 }

@@ -1,0 +1,99 @@
+.single-download {
+	.site-header {
+		background: #fff;
+	}
+	.breadcrumbs {
+		padding: 12px 0 7px;
+	}
+	.download-title {
+		font-size: 28px;
+		line-height: 34px;
+		margin: 0 0 25px;
+	}
+	#primary {
+		margin: 0;
+	}
+	.site-main {
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.download-header {
+	padding-bottom: 30px;
+	background: #fff;
+}
+
+.download-nav {
+	&__item {
+		display: inline-block;
+		margin-right: 10px;
+		&-link {
+			display: block;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 9px 20px 10px;
+			color: $edd_titles_color;
+			border: 1px solid $edd_border_color;
+			background: #fff;
+			text-decoration: none;
+			border-radius: 5px;
+			&:hover,
+			&.link-active {
+				background: $edd_body_bg;
+				color: $edd_primary;
+			}
+		}
+	}
+}
+
+.download-content {
+	background: $edd_body_bg;
+	padding: 50px 0 30px;
+}
+
+.downloads-content-box {
+	background: $edd_box_bg;
+	padding: 20px;
+	margin: 0 0 20px;
+}
+
+.download-single-preview {
+	text-align: center;
+}
+
+.download-single-thumb {
+	display: block;
+	margin-bottom: 30px;
+}
+
+.download-single-actions {
+	a {
+		display: inline-flex;
+		margin: 2px 5px;
+		line-height: 22px;
+		padding: 9px 30px 10px;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		color: $edd_titles_color;
+		border: 2px solid $edd_border_color;
+		width: 196px;
+		align-items: center;
+		justify-content: center;
+		.nc-icon-mini {
+			font-size: 14px;
+			color: $edd_secondary;
+			margin: 0 10px 0 0;
+		}
+		&:hover {
+			color: #fff;
+			border-color: $edd_primary;
+			background: $edd_primary;
+			.nc-icon-mini {
+				color: #fff;
+			}
+		}
+	}
+}
