@@ -24,7 +24,11 @@
 					<aside class="downloads-content-box">
 						<div class="download-single-price">
 							<?php wapu_core()->edd->single->price_label(); ?>
-							<?php edd_price( get_the_ID(), true ); ?>
+							<?php
+								add_filter( 'edd_currency_decimal_count', '__return_zero' );
+								edd_price( get_the_ID(), true );
+								remove_filter( 'edd_currency_decimal_count', '__return_zero' );
+							?>
 							<div class="download-single-price__features"><?php
 								wapu_core()->edd->single->price_features( 'download-single-price__features-item' );
 							?></div>
@@ -35,7 +39,7 @@
 						<?php wapu_core()->edd->single->price_notes(); ?>
 					</aside>
 					<aside class="downloads-content-box">
-						<div class="downloads-single-sales"><?php
+						<div class="downloads-single-sales downloads-single-stats-row"><?php
 							wapu_core()->edd->single->sales(
 								'<i class="nc-icon-mini shopping_cart-simple"></i> <span>%s</span> Sales'
 							);
@@ -43,6 +47,13 @@
 						<div class="downloads-single-rating"><?php
 							wapu_core()->edd->single->rating();
 						?></div>
+					</aside>
+					<aside class="downloads-content-box">
+						<div class="download-terms-row">
+							<div class="download-terms-row__title">Created</div>
+							<div class="download-terms-row__items"><time><?php the_date( 'd F y' ); ?></time></div>
+						</div>
+						<?php wapu_core()->edd->single->terms(); ?>
 					</aside>
 				</div>
 			</div><!-- .row -->

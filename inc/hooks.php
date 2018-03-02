@@ -338,6 +338,6 @@ function wapu_excerpt_more( $more ) {
 add_action( 'wapu-core/single-download/sharing', 'wapu_download_sharing' );
 
 function wapu_download_sharing() {
-	echo 'Share:';
+	echo '<div class="download-single-sharing__label">Share:</div>';
 	wapu_share_buttons();
 }
