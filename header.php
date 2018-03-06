@@ -49,6 +49,7 @@
 						);
 					?>
 				<?php endif; ?>
+				<?php do_action( 'wapu_header_cart' ); ?>
 			</div>
 		</div>
 	</header><!-- #masthead -->

@@ -1,0 +1,240 @@
+// default modal styling
+#edd-wl-modal {
+	z-index: 10000; // twenty eleven's #branding div is set to 9999 so modal appears behind.
+
+	h2 {
+		font-size: 32px;
+		letter-spacing: -1px;
+		margin: 0;
+	}
+
+	.modal-header {
+		padding: 24px;
+		border-bottom: 1px solid $edd_border_color;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		margin-bottom: 24px;
+	}
+
+	a {
+		margin-bottom: 0;
+	}
+
+	select, input {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.modal-body {
+		position: relative;
+		padding: 24px;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.modal-footer {
+		padding: 24px;
+		text-align: right;
+		border-top: 1px solid $edd_border_color;
+	}
+
+	select {
+		margin-top: 10px;
+	}
+
+	label.edd_errors {
+		padding: 12px;
+		margin-top: 5px;
+	}
+
+	input[type="radio"] {
+		padding: 0;
+		margin: 0 5px 0 0;
+	}
+
+	input[type="text"],
+	select {
+		display: block;
+	}
+
+	textarea {
+		width: 100%;
+	}
+
+	input[type="email"],
+	input[type="text"] {
+		width: 100%;
+		padding: 12px;
+		background: #fff;
+		display: block;
+		margin-top: 10px;
+	}
+
+	.edd-description {
+		font-size: 80%;
+		display: block;
+		margin: 0 0 5px 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	// close button
+	a.edd-wl-close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		color: $edd_texts;
+
+		&:hover {
+			color: $edd_titles_color;
+		}
+	}
+
+	.edd-wl-save,
+	.edd-wl-success {
+		display: inline-flex;
+		line-height: 22px;
+		padding: 9px 30px 10px;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		color: $edd_titles_color;
+		border: 2px solid $edd_border_color;
+		width: 196px;
+		align-items: center;
+		justify-content: center;
+		.nc-icon-mini {
+			font-size: 14px;
+			color: $edd_secondary;
+			margin: 0 10px 0 0;
+		}
+		&:hover {
+			color: #fff;
+			border-color: $edd_primary;
+			background: $edd_primary;
+			.nc-icon-mini {
+				color: #fff;
+			}
+		}
+		&[data-edd-loading] {
+			justify-content: center;
+			> * {
+				display: none;
+			}
+			&:before {
+				content: '\eea3';
+				font-family: 'Nucleo Mini';
+				animation: nc-icon-spin 2s infinite linear;
+				display: block;
+				text-align: center;
+				font-weight: normal;
+			}
+		}
+	}
+	.edd-wl-close {
+		&:before {
+			content: '\ea5c';
+			font-family: 'Nucleo Mini';
+		}
+		.hide-text {
+			display: none;
+		}
+	}
+
+}
+
+// bootstrap default styling
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+}
+
+.fade.in {
+	opacity: 1;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	overflow: auto;
+	overflow-y: scroll;
+	position: fixed;
+	padding-top: 10%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+}
+.modal.fade .modal-dialog {
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	-moz-transition: -moz-transform 0.3s ease-out;
+	-o-transition: -o-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+	z-index: 1050;
+}
+.modal-content {
+	position: relative;
+	background-color: #ffffff;
+	border: 1px solid #999999;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+	background-clip: padding-box;
+	outline: none;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1030;
+	background-color: #000000;
+}
+.modal-backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+@media screen and (min-width: 768px) {
+	.modal-dialog {
+		width: 600px;
+		margin: 30px auto;
+	}
+	.modal-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+}

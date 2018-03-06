@@ -95,6 +95,20 @@
 				color: #fff;
 			}
 		}
+		&[data-edd-loading] {
+			justify-content: center;
+			> * {
+				display: none;
+			}
+			&:before {
+				content: '\eea3';
+				font-family: 'Nucleo Mini';
+				animation: nc-icon-spin 2s infinite linear;
+				display: block;
+				text-align: center;
+				font-weight: normal;
+			}
+		}
 	}
 }
 
