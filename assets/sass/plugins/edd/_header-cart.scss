@@ -6,10 +6,12 @@
 		margin-left: 15px;
 		font-size: 14px;
 		color: $edd_titles_color;
+		display: inline-flex;
+		align-items: center;
 		i {
 			font-size: 14px;
 			color: $edd_titles_color;
-			margin-right: 3px;
+			margin-right: 8px;
 		}
 		&:hover {
 			color: $edd_primary;
@@ -27,6 +29,7 @@
 		border-radius: 13px;
 		background: $edd_primary;
 		text-align: center;
+		margin-left: 5px;
 	}
 }
 
@@ -42,9 +45,156 @@
 	right: -350px;
 	opacity: 0;
 	visibility: hidden;
+	z-index: 999;
+	transform: translateX( 20px );
+	transition: opacity 200ms linear, transform 200ms linear;
+
+	::-webkit-scrollbar {
+		width: 4px;
+		height: 0;
+	}
+	::-webkit-scrollbar-button {
+		width: 0px;
+		height: 0px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: $edd_secondary;
+		border: 0px none #fff;
+		border-radius: 2px;
+	}
+	::-webkit-scrollbar-track {
+		border: 0px none #fff;
+		border-radius: 0;
+	}
+	::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+
+	.logged-in & {
+		top: 32px;
+	}
+
 	&.cart-popup-active {
+		transform: translateX( 0 );
 		right: 0;
 		opacity: 1;
 		visibility: visible;
+	}
+	.cart-close {
+		position: absolute;
+		font-size: 14px;
+		top: 20px;
+		right: 20px;
+		z-index: 1000;
+		i {
+			color: $edd_secondary;
+		}
+		&:hover {
+			i {
+				color: $edd_titles_color;
+			}
+		}
+	}
+}
+
+.edd-cart {
+	margin: 0;
+	.edd_total {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 0 20px;
+		font-size: 20px;
+		font-weight: 600;
+		align-items: baseline;
+		.cart-total {
+			font-size: 30px;
+			color: $edd_primary;
+		}
+	}
+	.edd_checkout {
+		a {
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 21px;
+			padding: 12px 15px;
+			background: $edd_purchase;
+			text-align: center;
+			border-radius: 5px;
+			box-shadow: none;
+			border: none;
+			color: #fff;
+			&:hover {
+				background: darken( $edd_purchase, 5% );
+			}
+		}
+	}
+}
+
+.cart-content {
+	overflow: auto;
+	height: 100%;
+}
+
+.edd-cart-item {
+	margin: 0 0 20px;
+	&__link {
+		display: block;
+		overflow: hidden;
+		color: $edd_titles_color;
+		img {
+			float: left;
+			margin-right: 15px;
+		}
+		&:hover {
+			color: $edd_primary;
+			text-decoration: underline;
+		}
+	}
+	&__data {
+		display: block;
+		overflow: hidden;
+		margin: -5px 0 0 0;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	&__price {
+		font-weight: bold;
+		display: block;
+		color: $edd_primary;
+	}
+}
+
+.cart-title {
+	font-size: 20px;
+	line-height: 28px;
+	color: $edd_titles_color;
+	font-weight: 500;
+	margin: 0 0 20px;
+	&__count {
+		color: $edd_primary;
+	}
+	a {
+		color: $edd_primary;
+	}
+}
+
+.account-menu {
+	&__item {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 4px 10px;
+		color: $edd_titles_color;
+		margin: 0 0 2px;
+		border-radius: 3px;
+		&:hover {
+			background: $edd_primary;
+			color: #fff;
+		}
 	}
 }
