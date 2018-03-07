@@ -61,11 +61,14 @@
 		}
 		ul {
 			text-align: left;
-			padding: 18px 0;
 			@include media-breakpoint-down(xs) {
 				padding: 0;
 			}
-			background-color: $color__background-sub-menu;
+			padding: 15px 20px;
+			border-radius: $border__radius;
+			background-color: $color__invert-main;
+			-webkit-box-shadow: 0 0 59px 0 rgba(80,106,172,0.19);
+			box-shadow: 0 0 59px 0 rgba(80,106,172,0.19);
 			ul {
 				&:before {
 					display: none;
@@ -113,10 +116,11 @@
 				}
 			}
 			a {
-				text-indent: 2rem;
-				color: $color__invert-main;
+				text-indent: 10px;
+				color: $color__link;
 				&:hover {
-					color: $color__link-hover;
+					color: $color__invert-main;
+					background-color: $color__link-hover;
 				}
 			}
 			ul {
@@ -258,6 +262,12 @@
 }
 
 /* Skin Styles */
+.main-navigation > li > a {
+	color: $color___main_menu_link;
+	&:hover {
+		color: $color__link-hover;
+	}
+}
 .main-navigation,
 .support-navigation {
 	a {
@@ -334,8 +344,9 @@
 			a {
 				@include font-size(0.875);
 				padding: 3px 0;
+				border-radius: $border__radius;
 				@include media-breakpoint-up(sm) {
-					width: 14.35em;
+					width: 11.35em;
 				}
 			}
 			@include media-breakpoint-up(sm) {
@@ -360,14 +371,17 @@
 			> a,
 			> .menu-link-wrapper > a {
 				/* Active and hover state (level 2, 3, ..., N) */
-				color: $color__link-hover;
 			}
 		}
 	}
 }
 
+.support-navigation .sub-menu li a {
+	width: 100%;
+}
+
 .support-navigation ul ul a {
-	text-indent: 1.5rem;
+	text-indent: 10px;
 }
 
 .main-navigation.mobile-menu {
@@ -404,7 +418,12 @@
 	.sub-menu {
 		max-height: 0;
 		overflow: hidden;
+		margin: 10px 10px 10px 0;
+		padding: 0;
 		transition: max-height 0.4s cubic-bezier(.16,.57,.32,.94);
+		.menu-link-wrapper {
+				padding: 4px; 
+		}
 	}
 }
 
