@@ -7241,11 +7241,17 @@ ul.edd_purchase_receipt_files {
   .header-cart__item {
     margin-left: 15px;
     font-size: 14px;
-    color: #42527b; }
+    color: #42527b;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .header-cart__item i {
       font-size: 14px;
       color: #42527b;
-      margin-right: 3px; }
+      margin-right: 8px; }
     .header-cart__item:hover {
       color: #304fff; }
       .header-cart__item:hover i {
@@ -7258,7 +7264,8 @@ ul.edd_purchase_receipt_files {
     color: #fff;
     border-radius: 13px;
     background: #304fff;
-    text-align: center; }
+    text-align: center;
+    margin-left: 5px; }
 
 .cart-popup {
   position: fixed;
@@ -7272,11 +7279,134 @@ ul.edd_purchase_receipt_files {
   padding: 35px 40px;
   right: -350px;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 999;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: opacity 200ms linear, -webkit-transform 200ms linear;
+  transition: opacity 200ms linear, -webkit-transform 200ms linear;
+  transition: opacity 200ms linear, transform 200ms linear;
+  transition: opacity 200ms linear, transform 200ms linear, -webkit-transform 200ms linear; }
+  .cart-popup ::-webkit-scrollbar {
+    width: 4px;
+    height: 0; }
+  .cart-popup ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px; }
+  .cart-popup ::-webkit-scrollbar-thumb {
+    background-color: #cbcdd9;
+    border: 0px none #fff;
+    border-radius: 2px; }
+  .cart-popup ::-webkit-scrollbar-track {
+    border: 0px none #fff;
+    border-radius: 0; }
+  .cart-popup ::-webkit-scrollbar-corner {
+    background: transparent; }
+  .logged-in .cart-popup {
+    top: 32px; }
   .cart-popup.cart-popup-active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     right: 0;
     opacity: 1;
     visibility: visible; }
+  .cart-popup .cart-close {
+    position: absolute;
+    font-size: 14px;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; }
+    .cart-popup .cart-close i {
+      color: #cbcdd9; }
+    .cart-popup .cart-close:hover i {
+      color: #42527b; }
+
+.edd-cart {
+  margin: 0; }
+  .edd-cart .edd_total {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+    .edd-cart .edd_total .cart-total {
+      font-size: 30px;
+      color: #304fff; }
+  .edd-cart .edd_checkout a {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 12px 15px;
+    background: #01c854;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    color: #fff; }
+    .edd-cart .edd_checkout a:hover {
+      background: #01af49; }
+
+.cart-content {
+  overflow: auto;
+  height: 100%; }
+
+.edd-cart-item {
+  margin: 0 0 20px; }
+  .edd-cart-item__link {
+    display: block;
+    overflow: hidden;
+    color: #42527b; }
+    .edd-cart-item__link img {
+      float: left;
+      margin-right: 15px; }
+    .edd-cart-item__link:hover {
+      color: #304fff;
+      text-decoration: underline; }
+  .edd-cart-item__data {
+    display: block;
+    overflow: hidden;
+    margin: -5px 0 0 0; }
+  .edd-cart-item__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px; }
+  .edd-cart-item__price {
+    font-weight: bold;
+    display: block;
+    color: #304fff; }
+
+.cart-title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #42527b;
+  font-weight: 500;
+  margin: 0 0 20px; }
+  .cart-title__count {
+    color: #304fff; }
+  .cart-title a {
+    color: #304fff; }
+
+.account-menu__item {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 4px 10px;
+  color: #42527b;
+  margin: 0 0 2px;
+  border-radius: 3px; }
+  .account-menu__item:hover {
+    background: #304fff;
+    color: #fff; }
 
 /*--------------------------------------------------------------
 # Plugin contact form 7
