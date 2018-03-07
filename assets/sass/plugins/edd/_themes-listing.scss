@@ -1,0 +1,134 @@
+.site-content {
+	//background: $edd_body_bg;
+}
+.themes-listing {
+	display: flex;
+	margin: 0 -25px;
+	&__item {
+		flex: 0 0 33.3333%;
+		max-width: 33.3333%;
+		padding: 35px 25px;
+		&-inner {
+			background: #fff;
+			transition: box-shadow 150ms linear;
+			&:hover {
+				box-shadow: 0 5px 35px rgba( 80, 106, 172, .19 );
+			}
+		}
+		&-content {
+			padding: 20px;
+		}
+		&-thumb {
+			position: relative;
+			&:after {
+				content: '';
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				position: absolute;
+				background: rgba( 255, 255, 255, 0 );
+				transition: all 100ms linear;
+			}
+			&:hover {
+				&:after {
+					background: rgba( 255, 255, 255, .8 );
+				}
+				a {
+					opacity: 1;
+				}
+			}
+			a {
+				position: absolute;
+				width: 142px;
+				font-size: 14px;
+				line-height: 21px;
+				padding: 12px 10px;
+				text-align: center;
+				font-weight: bold;
+				background: $edd_primary;
+				color: #fff;
+				border-radius: 6px;
+				top: 50%;
+				left: 50%;
+				margin: -22px 0 0 -71px;
+				opacity: 0;
+				z-index: 99;
+				transition: color 150ms linear;
+				i {
+					color: #fff;
+					font-size: 14px;
+					margin: 0 4px 0 0;
+				}
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+		&-title {
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 500;
+			padding: 0 0 5px;
+			a {
+				color: $edd_titles_color;
+				&:hover {
+					color: $edd_primary;
+				}
+			}
+		}
+		&-footer {
+			display: flex;
+			justify-content: space-between;
+			padding: 15px 0 0 0;
+		}
+		&-meta {
+			display: flex;
+			align-items: center;
+		}
+		&-sales {
+			font-size: 14px;
+			line-height: 15px;
+			color: $edd_texts;
+			border-left: 1px solid $edd_border_color;
+			padding: 0 0 0 15px;
+			margin: 0 0 0 15px;
+		}
+		&-price {
+			color: $edd_primary;
+			font-weight: 600;
+			font-size: 16px;
+			ins {
+				background: none;
+			}
+			del {
+				display: inline-block;
+				font-size: 14px;
+				color: $edd_sale;
+				font-weight: normal;
+			}
+		}
+		&-actions {
+			button {
+				background: none;
+				color: $edd_secondary;
+				padding: 0;
+				border: none;
+				margin-left: 20px;
+				transition: color 150ms linear;
+				&:first-child {
+					margin-left: 0;
+				}
+				i {
+					transition: color 150ms linear;
+					color: $edd_secondary;
+				}
+				&:hover {
+					i {
+						color: $edd_titles_color;
+					}
+				}
+			}
+		}
+	}
+}
