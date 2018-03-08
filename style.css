@@ -2954,7 +2954,9 @@ body.admin-bar .mobile-menu .menu {
         font-size: 11px;
         font-size: 0.6875rem; }
 .support-navigation .sub-menu {
-  width: 100%; }
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
 
 /*--------------------------------------------------------------
 ## Breadcrumbs
@@ -4445,10 +4447,11 @@ body .wapu-popup {
 
 .title-box {
   position: relative;
-  padding: 36px 20px 36px 47px; }
+  padding: 16px 20px 10px 47px;
+  margin-bottom: 12px; }
   @media (max-width: 767px) {
     .title-box {
-      padding: 25px 20px 26px 30px; } }
+      padding: 15px 20px 16px 30px; } }
   .title-box i {
     font-size: 36px;
     font-size: 2.25rem;
@@ -4466,6 +4469,8 @@ body .wapu-popup {
       -webkit-text-fill-color: transparent;
       color: #304fff;
       background-image: -webkit-linear-gradient(45deg, #304fff 0%, #304fff 30%, #304fff 87%); }
+  .title-box h3 {
+    margin: 20px 0; }
   .title-box h1 {
     margin: 0;
     white-space: nowrap;
@@ -5189,7 +5194,10 @@ h1.entry-title {
   background-color: #f7f7fb; }
   .page-template-themes .header-area-wrap {
     overflow: hidden;
-    background-color: #1d2842; }
+    background-color: #fff;
+    border: 1px solid #e8e8f6;
+    border-right: none;
+    border-left: none; }
 
 .page-template-themes .header-themes-area aside {
   margin-bottom: 0; }
@@ -7408,6 +7416,130 @@ ul.edd_purchase_receipt_files {
     background: #304fff;
     color: #fff; }
 
+.site-content {
+  background: #f5f5fa; }
+
+.themes-listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -25px; }
+  .themes-listing__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 35px 25px; }
+    .themes-listing__item-inner {
+      background: #fff;
+      -webkit-transition: -webkit-box-shadow 150ms linear;
+      transition: -webkit-box-shadow 150ms linear;
+      transition: box-shadow 150ms linear;
+      transition: box-shadow 150ms linear, -webkit-box-shadow 150ms linear; }
+      .themes-listing__item-inner:hover {
+        -webkit-box-shadow: 0 5px 35px rgba(80, 106, 172, 0.19);
+                box-shadow: 0 5px 35px rgba(80, 106, 172, 0.19); }
+    .themes-listing__item-content {
+      padding: 20px; }
+    .themes-listing__item-thumb {
+      position: relative; }
+      .themes-listing__item-thumb:after {
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background: rgba(255, 255, 255, 0);
+        -webkit-transition: all 100ms linear;
+        transition: all 100ms linear; }
+      .themes-listing__item-thumb:hover:after {
+        background: rgba(255, 255, 255, 0.8); }
+      .themes-listing__item-thumb:hover a {
+        opacity: 1; }
+      .themes-listing__item-thumb a {
+        position: absolute;
+        width: 142px;
+        font-size: 14px;
+        line-height: 21px;
+        padding: 12px 10px;
+        text-align: center;
+        font-weight: bold;
+        background: #304fff;
+        color: #fff;
+        border-radius: 6px;
+        top: 50%;
+        left: 50%;
+        margin: -22px 0 0 -71px;
+        opacity: 0;
+        z-index: 99;
+        -webkit-transition: color 150ms linear;
+        transition: color 150ms linear; }
+        .themes-listing__item-thumb a i {
+          color: #fff;
+          font-size: 14px;
+          margin: 0 4px 0 0; }
+        .themes-listing__item-thumb a:hover {
+          color: #fff; }
+    .themes-listing__item-title {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 500;
+      padding: 0 0 5px; }
+      .themes-listing__item-title a {
+        color: #42527b; }
+        .themes-listing__item-title a:hover {
+          color: #304fff; }
+    .themes-listing__item-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 15px 0 0 0; }
+    .themes-listing__item-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .themes-listing__item-sales {
+      font-size: 14px;
+      line-height: 15px;
+      color: #9c9fb1;
+      border-left: 1px solid #e4e4f1;
+      padding: 0 0 0 15px;
+      margin: 0 0 0 15px; }
+    .themes-listing__item-price {
+      color: #304fff;
+      font-weight: 600;
+      font-size: 16px; }
+      .themes-listing__item-price ins {
+        background: none; }
+      .themes-listing__item-price del {
+        display: inline-block;
+        font-size: 14px;
+        color: #fc3448;
+        font-weight: normal; }
+    .themes-listing__item-actions button {
+      background: none;
+      color: #cbcdd9;
+      padding: 0;
+      border: none;
+      margin-left: 20px;
+      -webkit-transition: color 150ms linear;
+      transition: color 150ms linear; }
+      .themes-listing__item-actions button:first-child {
+        margin-left: 0; }
+      .themes-listing__item-actions button i {
+        -webkit-transition: color 150ms linear;
+        transition: color 150ms linear;
+        color: #cbcdd9; }
+      .themes-listing__item-actions button:hover i {
+        color: #42527b; }
+
 /*--------------------------------------------------------------
 # Plugin contact form 7
 --------------------------------------------------------------*/
@@ -7667,19 +7799,24 @@ form.mc4wp-form {
     .rev_slider .btn.btn-primary {
       padding: 7px 14px 11px; } }
   .rev_slider .btn.btn-primary i {
-    color: #fff;
+    color: #304fff;
     font-size: 14px;
     font-size: 0.875rem;
     margin: 0 10px 0 0;
     top: 1px;
-    position: relative; }
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     @media (max-width: 767px) {
       .rev_slider .btn.btn-primary i {
         display: none; } }
   .rev_slider .btn.btn-primary.btn-secondary {
     padding: 10px 20px 15px;
     background: transparent;
-    border: 2px solid #304fff; }
+    border: 2px solid #304fff;
+    color: #304fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     @media (max-width: 1300px) {
       .rev_slider .btn.btn-primary.btn-secondary {
         padding: 5px 14px 9px; } }
@@ -7694,6 +7831,10 @@ form.mc4wp-form {
     transition: all 440ms cubic-bezier(0.275, 0.17, 0.145, 0.975) !important; }
     .rev_slider .btn.btn-primary:hover.btn-secondary {
       background: #304fff; }
+      .rev_slider .btn.btn-primary:hover.btn-secondary i {
+        color: #fff;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
 
 /*--------------------------------------------------------------
 # Advanced carousel plugin
@@ -7741,8 +7882,7 @@ form.mc4wp-form {
 .elementor-element .plugins_carousel.elementor-widget-jet-carousel .elementor-jet-carousel .jet-carousel__item-text {
   margin-top: 10px;
   font-size: 14px;
-  color: #42527b;
-  opacity: 0.6; }
+  color: #9c9fb1; }
 
 .banners_carousel .elementor-jet-carousel .jet-carousel-wrap {
   max-width: 1920px;

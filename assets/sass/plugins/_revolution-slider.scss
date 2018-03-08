@@ -48,11 +48,12 @@
 		padding: 7px 14px 11px;
 	}
 	i {
-		color: $color__invert-main;
+		color: $color__link-hover;
 		@include font-size(0.875);
 		margin: 0 10px 0 0;
 		top: 1px;
 		position: relative;
+		@include transition(all 0.3s ease);
 		@include media-breakpoint-down(sm) {
 			display: none;
 		}
@@ -64,7 +65,8 @@
 		padding: 10px 20px 15px;
 		background: transparent;
 		border: 2px solid $color__link-hover;
-
+		color: $color__link-hover;
+		@include transition(all 0.3s ease);
 		@include media-breakpoint-down(sm) {
 			padding: 4px 6px !important;
 			border: 1px solid $color__link-hover !important;
@@ -76,6 +78,10 @@
 		transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975) !important;
 		&.btn-secondary {
 			background: $color__link-hover;
+			i {
+				color: $color__invert-main;
+				@include transition(all 0.3s ease);
+			}
 		}
 	}
 }

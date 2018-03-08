@@ -422,7 +422,7 @@
 		padding: 0;
 		transition: max-height 0.4s cubic-bezier(.16,.57,.32,.94);
 		.menu-link-wrapper {
-				padding: 4px; 
+			padding: 4px; 
 		}
 	}
 }
@@ -724,5 +724,7 @@ body.admin-bar {
 	}
 	.sub-menu {
 		width: 100%;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 	}
 }

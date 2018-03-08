@@ -132,7 +132,10 @@
 	background-color: $color__background-pre;
 	.page-template-themes & {
 		overflow: hidden;
-		background-color: $color__background-footer;
+		background-color: $color__invert-main;
+		border: 1px solid $color__separator;
+		border-right: none;
+		border-left: none;
 	}
 }
 

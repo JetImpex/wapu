@@ -47,17 +47,16 @@
 			word-spacing: -1px;
 			line-height: 26px;
 			a {
-				color: $color__text-main;
+				color: $color__link;
 				&:hover {
-					color: $color__link-hover
+					color: $color__link-hover;
 				}
 			}
 		}
 		&__item-text {
 			margin-top: 10px;
 			font-size: 14px;
-			color: $color__link;
-			opacity: 0.6;
+			color: $color__text-light;
 		}
 	}
 }

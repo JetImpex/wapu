@@ -8,9 +8,11 @@ $edd_box_bg: #fafafd;
 $edd_box_bg_alt: $color__tooltip-bg;
 $edd_titles_color: $color__link;
 $edd_texts: #9c9fb1;
+$edd_sale: #fc3448;
 
 @import "edd/account";
 @import "edd/forms";
 @import "edd/single";
 @import "edd/wishlist-modal";
 @import "edd/header-cart";
+@import "edd/themes-listing";

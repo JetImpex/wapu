@@ -224,9 +224,10 @@
 
 .title-box {
 	position: relative;
-	padding: 36px 20px 36px 47px;
+	padding: 16px 20px 10px 47px;
+	margin-bottom: 12px;
 	@include media-breakpoint-down(sm) {
-		padding: 25px 20px 26px 30px;
+		padding: 15px 20px 16px 30px;
 	}
 	i {
 		@include font-size(2.25);
@@ -243,6 +244,9 @@
 			color: $color_gradient_1;
 			background-image: -webkit-linear-gradient(45deg, $color_gradient_1 0%,$color_gradient_1 30%,$color_gradient_2 87%);
 		}
+	}
+	h3 {
+		margin: 20px 0;
 	}
 	h1 {
 		margin: 0;
