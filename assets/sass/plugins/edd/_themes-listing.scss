@@ -132,3 +132,75 @@
 		}
 	}
 }
+
+.listing-cart {
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 0 0 30px;
+		margin: 0 0 30px;
+		border-bottom: 1px solid $edd_border_color;
+	}
+	&__thumb {
+		flex: 0 0 20%;
+		max-width: 20%;
+		margin-right: 20px;
+	}
+	&__content {
+		text-align: left;
+	}
+	&__title {
+		a {
+			color: $edd_titles_color;
+			&:hover {
+				color: $edd_primary;
+			}
+		}
+	}
+	&__price {
+		color: $edd_primary;
+		font-weight: 600;
+		font-size: 16px;
+		ins {
+			background: none;
+		}
+		del {
+			display: inline-block;
+			font-size: 14px;
+			color: $edd_sale;
+			font-weight: normal;
+		}
+	}
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__cancel {
+		display: inline-block;
+		line-height: 22px;
+		padding: 9px 30px 10px;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: bold;
+		color: $edd_titles_color !important;
+		border: 2px solid $edd_border_color;
+		background: none;
+		&:hover {
+			color: #fff !important;
+			border-color: $edd_primary;
+			background: $edd_primary;
+		}
+	}
+	&__submit {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		padding: 12px 15px;
+		background: $edd_purchase;
+		text-align: center;
+		&:hover {
+			background: darken( $edd_purchase, 5% );
+		}
+	}
+}
