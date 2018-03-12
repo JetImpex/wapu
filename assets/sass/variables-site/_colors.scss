@@ -5,31 +5,34 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #f7f7fb;
 $color__background-ins: #fff9c0;
 $color__background-footer-area-wrap: #0e1628;
-$color__background-sub-menu: #42527b;
+$color__background-sub-menu: #2a344f;
 
 
 $color__text-screen: #21759b;
 $color__text-input: #42527b;
 $color__text-input-focus: $color__text-input;
 $color__link: #42527b;
+$color___main_menu_link: #324571;
 $color__link-visited: $color__link;
-$color__link-hover: #00b4ff;
+$color__link-hover: #304fff;
+$color__link-hover-light: #00b4ff;
+$color__text-light: #9c9fb1;
 $color__text-main: #42527b;
 
 $color__border-abbr: #666;
 
 $button_text_color: #fff;
 $button_pagination-bg: #e3e3f0;
-$color_gradient_1: #7389f6;
-$color_gradient_2: #00d0ff;
+$color_gradient_1: #304fff;
+$color_gradient_2: #304fff;
 
 $color__separator: #e8e8f6;
 
 $color__background-footer: #1d2842;
-$color__link-footer: #00b4ff;
+$color__link-footer: #304fff;
 $color__text-footer: #7d8aa9;
 
-$color_icon: #00b4ff;
+$color_icon: #304fff;
 $color__points: #d9dce5;
 
 //forms fields
@@ -50,7 +53,7 @@ $color__hover-jet-themes: #2a344f;
 
 //cherry search
 $color__border_cherry_search: #e4e4f1;
-$color_icon-search: #00d0ff;
+$color_icon-search: $color__link-hover;
 
 //docs search
 $color__error_border_docs: $color__error;

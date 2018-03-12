@@ -97,7 +97,7 @@ return apply_filters( 'wapu_widget_area_default_settings', array(
 	'footer-main' => array(
 		'name'            => esc_html__( 'Footer Area (main page)', 'wapu' ),
 		'description'     => '',
-		'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">',
+		'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">',
 		'after_widget'    => '</aside>',
 		'before_title'    => '<h6 class="widget-title">',
 		'after_title'     => '</h6>',

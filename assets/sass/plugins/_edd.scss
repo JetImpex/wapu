@@ -1,12 +1,12 @@
 // Variables
-$edd_primary: #304fff;
+$edd_primary: $color__link-hover;
 $edd_secondary: #cbcdd9;
 $edd_purchase: #01c854;
 $edd_body_bg: #f5f5fa;
-$edd_border_color: #e4e4f1;
+$edd_border_color: $color__border_cherry_search;
 $edd_box_bg: #fafafd;
-$edd_box_bg_alt: #7a87a7;
-$edd_titles_color: #42527b;
+$edd_box_bg_alt: $color__tooltip-bg;
+$edd_titles_color: $color__link;
 $edd_texts: #9c9fb1;
 $edd_sale: #fc3448;
 

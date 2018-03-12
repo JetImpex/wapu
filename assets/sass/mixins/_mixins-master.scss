@@ -68,17 +68,16 @@
 	box-shadow: none;
 	border: none;
 	color: $button_text_color; 
-	background-size: 200% auto;
-	background-image: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 51%, $color_gradient_1 100%);
-	transition: all 520ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+	background-color: $color__link-hover;
+	transition: all 420ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 	.invert & {
-		background: $color__background-invert-btn;
-		border: 2px solid $color__background-invert-btn;
+		background: $color__link-hover;
+		border: 2px solid $color__link-hover;
 	}
 	&:hover {
 		color: white;
-		background-position: right center; 
-		transition: all 440ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+		background-color: darken( $color__link-hover, 20% );
+		transition: all 340ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 		.invert & {
 			background: transparent;
 		}

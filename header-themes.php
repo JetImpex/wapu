@@ -62,7 +62,7 @@
 			</div>
 		</div>
 	</header><!-- #masthead -->
-	<div class="header-area-wrap invert">
+	<div class="header-area-wrap">
 		<div class="container"><?php
 			do_action( 'wapu_render_widget_area', 'header-themes' );
 		?></div>

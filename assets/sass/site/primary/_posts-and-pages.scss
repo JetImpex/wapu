@@ -319,10 +319,6 @@ h1.entry-title {
 			@include media-breakpoint-down(xs) {
 				display: block;
 			}
-
-			.share-btns__list {
-				opacity: 0.7;
-			}
 		}
 		.post__cats {
 			margin-bottom: 1.35em;

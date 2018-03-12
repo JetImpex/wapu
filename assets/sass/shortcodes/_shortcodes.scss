@@ -162,7 +162,7 @@
 				right: 0;
 				bottom: 0;
 				border-radius: 50%;
-				transform: scale(0.94);
+				transform: scale(0.98);
 				background-color: $color__invert-main;
 				z-index: -1;
 				transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -179,7 +179,10 @@
 	&-large {
 		margin: 1em 0;
 		i {
-			margin: 12px 29px 11px 10px;
+			margin: 12px 10px 11px 10px;
+			@include media-breakpoint-up(lg) {
+				margin: 12px 29px 11px 10px;
+			}
 		}
 	}
 	&-boxed {
@@ -200,6 +203,11 @@
 			align-items: center;
 			color: $color__text-main;
 			@include transition(all 0.45s ease);
+			&:hover {
+				.blurb__title {
+					color: $color__link-hover;
+				}
+			}
 		}
 		img {
 			margin-bottom: 32px;
@@ -402,6 +410,7 @@
 			align-content: stretch;
 			align-items: center;
 			color: $color__text-main;
+			background-color: $color__invert-main;
 			@include transition(all 0.45s ease);
 			i {
 				margin-bottom: 16px;
@@ -409,24 +418,23 @@
 				&:before {
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
-					color: $color_gradient_1;
-					background-size: 200% auto;
-					background-image: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 51%, $color_gradient_1 100%);
-					transition: all 580ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+					color: $color__link-hover;
+					background-color: $color__link-hover;
+					transition: all 380ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 				}
 			}
 			&:hover {
-				color: $color__link-hover;
+				color: $color__invert-main;
 				border-color: transparent;
+				background-color: $color__link-hover;
 				-webkit-box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
 				box-shadow: 0 10px 59px 0 rgba(80,106,172,0.15);
 				@include transition(all 0.32s ease);
 				i {
 					@include transition(all 0.3s ease);
 					&:before {
-						background-size: 200% auto;
-						background-position: right center; 
-						transition: all 470ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
+						background-color: $color__invert-main;
+						transition: all 370ms cubic-bezier(0.275, 0.170, 0.145, 0.975);
 					}
 					&:after {
 						opacity: 0.1;
@@ -606,8 +614,8 @@
 			&:before {
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
-				color: $color_gradient_1;
-				background-image: -webkit-linear-gradient(45deg, $color_gradient_1 0%,$color_gradient_1 30%,$color_gradient_2 87%);
+				color: $color__link-hover;
+				background-color: $color__link-hover;
 			}
 		}
 	}
@@ -623,7 +631,7 @@
 	}
 }
 // main page blurbs 5 columns
-.page-template-main .col-xl-3 {
+.page-template-main .site-content_wrap .col-xl-3 {
 	@include media-breakpoint-up(xl) {
 		flex: 0 0 20%;
 		max-width: 20%;
