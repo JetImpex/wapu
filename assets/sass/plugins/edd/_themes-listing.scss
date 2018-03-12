@@ -196,7 +196,7 @@
 		font-size: 14px;
 		font-weight: bold;
 		line-height: 21px;
-		padding: 12px 15px;
+		padding: 12px 20px;
 		background: $edd_purchase;
 		text-align: center;
 		&:hover {
@@ -205,8 +205,99 @@
 	}
 }
 
+.listing-wl {
+	text-align: left;
+	&-loading {
+		width: 700px;
+		max-width: 100%;
+		text-align: center;
+		&:after {
+			content: "";
+			display: inline-block;
+			animation: pointsLoad 1s infinite;
+			width: 30px;
+			text-align: left;
+		}
+	}
+	.modal-header {
+		h2 {
+			margin: 0 0 10px;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: normal;
+		}
+		p {
+			font-size: 30px;
+			line-height: 36px;
+			margin: 0 0 20px;
+			font-weight: 600;
+			color: $edd_primary;
+		}
+	}
+	.edd-wl-close {
+		display: none;
+	}
+	input[type="text"],
+	select {
+		margin: 10px 0 0 0;
+	}
+	.modal-footer {
+		text-align: right;
+	}
+	.edd-wl-save {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		padding: 12px 20px;
+		background: $edd_purchase;
+		text-align: center;
+		border-radius: 5px;
+		color: #fff;
+		&:hover {
+			background: darken( $edd_purchase, 5% );
+			color: #fff;
+		}
+	}
+	#existing-list {
+		~ select[name="user-lists"] {
+			display: none;
+		}
+		&:checked {
+			~ select[name="user-lists"] {
+				display: block;
+			}
+		}
+	}
+	#new-list {
+		~ input[name="list-name"] {
+			display: none;
+			+ select {
+				display: none;
+			}
+		}
+		&:checked {
+			~ input[name="list-name"] {
+				display: block;
+				+ select {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
 .wapu-popup.listing-popup {
 	.wapu-popup__content {
 		max-width: 680px;
 	}
+}
+
+@keyframes pointsLoad {
+	0%   { content: '.'; }
+	20%  { content: '..'; }
+	40%  { content: '...'; }
+	60%  { content: '....'; }
+	80%  { content: '...'; }
+	100% { content: '..'; }
 }
