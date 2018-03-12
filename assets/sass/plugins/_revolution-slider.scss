@@ -16,6 +16,33 @@
 	}
 }
 .rev_slider {
+	.tparrows {
+		width: 44px;
+		height: 44px;
+		background: $color__background-footer !important;
+		@include transition(all 0.3s ease);
+		&.tp-leftarrow:before  {
+			line-height: 44px;
+			font-size: 12px; 
+			font-family: 'Nucleo Mini';
+			content: '\e903' !important;
+			@include media-breakpoint-down(xs) {
+				line-height: 30px;
+			}
+		}
+		&.tp-rightarrow:before  {
+			line-height: 44px;
+			font-size: 12px; 
+			font-family: 'Nucleo Mini';
+			content: '\e904' !important;
+			@include media-breakpoint-down(xs) {
+				line-height: 30px;
+			}
+		}
+		&:hover {
+			background: $color__link-hover !important;
+		}
+	}
 	@include media-breakpoint-down(xs) {
 		.tparrows {
 			top: auto !important;
@@ -23,10 +50,6 @@
 			left: auto !important;
 			width: 30px;
 			height: 30px;
-			&:before {
-				font-size: 15px;
-				line-height: 30px;
-			}
 			&.tp-leftarrow {
 				right: 73px !important;
 			}
