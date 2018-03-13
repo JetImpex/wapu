@@ -85,3 +85,29 @@
 		}
 	}
 }
+
+ul.edd_purchase_receipt_files {
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 3px 0;
+		&:before {
+			display: none;
+		}
+		a {
+			display: inline-flex;
+			align-items: center;
+			&:before {
+				content: '\e992';
+				font-size: 14px;
+				padding: 0 8px 0 0;
+				display: inline-block;
+				speak: none;
+				font-family: 'Nucleo Mini';
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+	}
+}

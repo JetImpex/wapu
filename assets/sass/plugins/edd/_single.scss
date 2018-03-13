@@ -316,6 +316,9 @@
 	.review__stars {
 		margin-left: 8px;
 	}
+	&__no-reviews {
+		color: $edd_texts;
+	}
 }
 
 .review {
