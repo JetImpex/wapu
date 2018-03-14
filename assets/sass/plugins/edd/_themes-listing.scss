@@ -9,7 +9,7 @@
 		max-width: 33.3333%;
 		padding: 35px 25px;
 		&-inner {
-			background: #fff;
+			background: $edd_box_bg;
 			transition: box-shadow 150ms linear;
 			&:hover {
 				box-shadow: 0 5px 35px rgba( 80, 106, 172, .19 );

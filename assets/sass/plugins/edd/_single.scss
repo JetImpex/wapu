@@ -340,7 +340,7 @@
 			top: 0;
 			left: 0;
 			i {
-				color: #f59c28;
+				color: $edd_stars;
 			}
 		}
 		&-empty {
@@ -391,6 +391,141 @@
 		color: $edd_primary;
 		&:hover {
 			color: $edd_titles_color;
+		}
+	}
+}
+
+.single-reviews-title {
+	font-size: 20px;
+	line-height: 24px;
+	color: $edd_titles_color;
+	font-weight: 500;
+	margin: 0 0 20px;
+}
+
+.edd-review {
+	&-meta {
+		display: flex;
+		align-items: center;
+		color: $edd_texts;
+		border-bottom: 1px solid $edd_border_color;
+		padding: 0 0 12px;
+		margin: 0 0 12px;
+		justify-content: space-between;
+		.children & {
+			border-bottom: none;
+			padding: 0 0 12px;
+			margin: 0;
+		}
+	}
+
+	&-metadata {
+		font-size: 14px;
+	}
+	&-title {
+		color: $edd_titles_color;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 6px;
+	}
+	&-content {
+		font-size: 14px;
+		p {
+			margin: 0 0 15px;
+		}
+	}
+	&-body {
+		.reply {
+			text-align: right;
+			a {
+				display: inline-block;
+				font-size: 12px;
+				color: $edd_texts;
+				&:before {
+					content: '\ea55';
+					font-family: 'Nucleo Mini';
+					display: inline-block;
+					padding: 0 4px 0 0;
+				}
+			}
+		}
+	}
+	&-list {
+		.children {
+			margin: 15px 0 0 0;
+			.edd_review {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.edd-reviews-form {
+	.edd-reviews-not-allowed {
+		background: none;
+		margin: 0 0 25px;
+		font-size: 14px;
+		line-height: 23px;
+		border: 1px solid $edd_secondary;
+		border-radius: 2px;
+		padding: 10px 15px 10px 40px;
+		position: relative;
+		color: $edd_texts;
+		&:before {
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			height: 20px;
+			line-height: 20px;
+			font-size: 16px;
+			color: $edd_secondary;
+			content: '\eab2';
+			font-family: 'Nucleo Mini';
+			margin: -10px 0 0 0;
+		}
+	}
+	form {
+		p {
+			margin: 0 0 15px;
+		}
+		label {
+			display: block;
+			margin: 0 0 5px;
+		}
+		textarea {
+			resize: vertical;
+		}
+	}
+	.edd-reviews-heading {
+		margin: 0 0 15px;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.logged-in-as {
+		color: $edd_texts;
+		font-size: 14px;
+		margin: 0 4px 17px;
+	}
+	.edd-reviews-review-form-rating {
+		display: flex;
+		align-items: center;
+		padding: 5px 0 0;
+		.edd-reviews-star-rating-container {
+			margin: 0 0 0 10px;
+			font-size: 0;
+			.dashicons {
+				font-size: 16px;
+				&:before {
+					content: '\ea85';
+					font-family: 'Nucleo Mini';
+				}
+			}
+		}
+		.edd-reviews-star-rating {
+			color: $edd_secondary;
+			&.dashicons-star-filled {
+				color: $edd_stars;
+			}
 		}
 	}
 }

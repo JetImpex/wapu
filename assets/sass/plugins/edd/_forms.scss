@@ -1,23 +1,19 @@
 .edd_form {
-	border-radius: $border__radius;
-	border: 1px solid $color__border_cherry_search;
+	padding: 20px;
 	overflow: hidden;
+	background-color: $edd_box_bg;
+	margin: 0 0 30px;
 	legend {
 		display: block;
-		width: calc( 100% + 60px );
-		color: $color__link;
-		background-color: $color__background-pre;
-		font-weight: bold;
-		padding: 10px 15px;
-		border-top: 1px solid $color__border_cherry_search;
-		border-bottom: 1px solid $color__border_cherry_search;
-		margin: 0 -30px;
+		width: 100%;
+		color: $edd_titles_color;
+		font-weight: 600;
+		font-size: 20px;
+		padding: 0 0 12px;
+		border-bottom: 1px solid $edd_border_color;
 	}
 	fieldset {
-		padding: 30px;
-		fieldset {
-			margin: 0 -30px;
-		}
+		padding: 20px 0;
 		p {
 			display: flex;
 			justify-content: space-between;
@@ -34,14 +30,9 @@
 		}
 	}
 	#edd_profile_name_label {
-		border-radius: $border__radius $border__radius 0 0;
 		border-top: none;
 	}
 	#edd_profile_submit_fieldset {
-		padding: 30px;
-		border-top: 1px solid $color__border_cherry_search;
-		border-radius: 0 0 $border__radius $border__radius;
-		background-color: $color__background-pre;
 		p {
 			margin: 0;
 		}
@@ -50,22 +41,21 @@
 
 .edd-alert {
 	border: 1px solid;
-	padding: 15px 30px;
+	padding: 12px 20px;
 	margin-bottom: 30px;
-	border-radius: $border__radius;
 	p {
 		margin: 0;
 	}
 }
 .edd_success {
-	border-color: $color__success;
-	background-color: #e6f7fe;
-	color: $color__success;
+	border-color: $edd_primary;
+	background-color: none;
+	color: $edd_primary;
 }
 
 .edd_errors {
 	border-color: $color__error;
-	background-color: #fef4f5;
+	background-color: none;
 	color: $color__error;
 }
 
@@ -79,32 +69,149 @@ fieldset {
 
 table.edd-table,
 #edd_checkout_cart {
-	border-radius: $border__radius;
-	border-style: hidden;
-	box-shadow: 0 0 0 1px $color__border_cherry_search;
-	border-collapse: collapse;
+	background-color: $edd_box_bg;
+	display: block;
+	padding: 20px;
+	thead,
+	tbody,
+	tfoot {
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+	}
 	td,
 	th {
-		padding: 7px 15px 8px;
+		padding: 9px 15px 9px;
 		text-align: left;
 	}
 	th {
-		background-color: $color__background-pre;
-		&:first-child {
-			border-radius: $border__radius 0 0 0;
-			border-radius: 0 $border__radius 0 0;
-		}
+		font-weight: 600;
 	}
-	tbody {
+	tbody,
+	tfoot {
 		tr {
-			border: 1px solid $color__border_cherry_search;
+			border-top: 1px solid $edd_border_color;
 			a {
-				color: $color__link-hover;
+				color: $edd_primary;
 				&:hover {
-					color: $color__link;
+					color: $edd_titles_color;
 				}
 			}
 		}
+	}
+}
+
+table.edd-table {
+	padding-top: 7px;
+	padding-bottom: 12px;
+}
+
+#edd_purchase_receipt,
+#edd_purchase_receipt_products,
+#edd_sl_license_keys {
+	td,
+	th {
+		width: 50%;
+		strong {
+			font-weight: 600;
+		}
+		&:first-child {
+			padding-left: 0;
+			+ td {
+				color: $edd_texts;
+			}
+		}
+	}
+	tr.edd_license_key {
+		border-top: none;
+		td {
+			padding-top: 0;
+		}
+	}
+	td {
+		font-size: 14px;
+	}
+	+ h3 {
+		font-size: 20px;
+		margin: 25px 0;
+	}
+}
+
+#edd_checkout_cart {
+	td,
+	th {
+		width: 15%;
+		&:first-child {
+			width: 70%;
+			padding-left: 0;
+		}
+	}
+	.edd_cart_remove_item_btn {
+		color: $color__error;
+		font-size: 14px;
+		&:before {
+			content: '\ea28';
+			font-family: 'Nucleo Mini';
+			display: inline-block;
+			padding-right: 5px;
+			font-size: 12px;
+		}
+	}
+	.edd_cart_item_image {
+		margin: 0 10px 0 0;
+	}
+	.edd_cart_item_info {
+		display: flex;
+		align-items: center;
+		img {
+			display: block;
+		}
+	}
+}
+
+#edd_user_history {
+	td,
+	th {
+		width: 20%;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			width: 40%;
+		}
+	}
+	td {
+		font-size: 14px;
+	}
+	.edd_download_history_row {
+		td,
+		th {
+			width: 50%;
+		}
+		.edd_download_file {
+			a {
+				display: inline-flex;
+				align-items: center;
+				&:before {
+					content: '\e992';
+					font-size: 14px;
+					padding: 0 8px 0 0;
+					display: inline-block;
+					speak: none;
+					font-family: 'Nucleo Mini';
+					text-transform: none;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+			}
+		}
+	}
+}
+
+input[name="edd-purchase"] {
+	background-color: $edd_purchase;
+	&:hover {
+		background: darken( $edd_purchase, 5% );
 	}
 }
 
@@ -138,12 +245,28 @@ table.edd-table,
 }
 
 #edd_checkout_wrap {
-	max-width: 700px;
+	//max-width: 800px;
 	margin: 0 auto;
+	.edd_empty_cart {
+		display: block;
+		padding: 25px;
+		text-align: center;
+		background: $edd_box_bg;
+		color: $edd_texts;
+		&:before {
+			content: '\ebb7';
+			font-family: 'Nucleo Mini';
+			font-size: 30px;
+			display: block;
+			margin: 0 0 5px;
+			color: $edd_secondary;
+		}
+	}
 	#edd_checkout_form_wrap {
 		p {
 			display: block;
 			.edd-description {
+				color: $edd_texts;
 				font-size: 12px;
 				display: block;
 				margin: -5px 0 10px;
@@ -175,5 +298,5 @@ table.edd-table,
 }
 
 ul.edd_purchase_receipt_files {
-	margin: 0;
+	margin: -10px 0 0;
 }

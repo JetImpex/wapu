@@ -389,10 +389,15 @@
 	right: -70%;
 	z-index: 998;
 	max-width: 70%;
+	width: 100%;
 	height: 100vh;
 	margin: 0 !important;
 	background-color: $color__background-sub-menu;
 	transition: all .3s cubic-bezier(.35,.19,.45,.91);
+
+	.admin-bar & {
+		padding-top: 32px;
+	}
 
 	.main-navigation-inner{
 		overflow-y: scroll;
@@ -411,13 +416,16 @@
 				max-height: 500px;
 				transition: max-height 0.4s cubic-bezier(.76,.09,.29,.97);
 			}
+			.sub-menu {
+				margin: 5px 15px 10px 0;
+			}
 		}
 	}
 
 	.sub-menu {
 		max-height: 0;
 		overflow: hidden;
-		margin: 10px 10px 10px 0;
+		margin: 0;
 		padding: 0;
 		transition: max-height 0.4s cubic-bezier(.16,.57,.32,.94);
 		.menu-link-wrapper {
