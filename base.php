@@ -11,7 +11,9 @@
 		<div class="row">
 			<div id="primary" class="<?php echo wapu_layout_class( 'content' ); ?>">
 				<main id="main" class="site-main" role="main">
-					<?php include wapu_template_path(); ?>
+					<?php
+						include wapu_template_path();
+					?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
 			<?php get_sidebar(); // Loads the sidebar.php template.  ?>

@@ -1,0 +1,301 @@
+.edd-wl-heading {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.edd-wl-wish-lists {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: ceter;
+	justify-content: space-between;
+
+	.edd-create-wl {
+		margin: 0;
+		font-size: 14px;
+		order: 2;
+		&:before {
+			content: '\eab7';
+			font-family: 'Nucleo Mini';
+			display: inline-block;
+			padding: 0 5px 0 0;
+		}
+	}
+	.edd-wish-list {
+		margin: 20px 0 0 0;
+		padding: 0;
+		width: 100%;
+		flex: 0 0 100%;
+		order: 3;
+		li {
+			padding: 15px 20px;
+			background: $edd_box_bg;
+			margin: 0 0 10px;
+			display: flex;
+			align-items: center;
+			transition: all 200ms linear;
+			justify-content: space-between;
+			&:before {
+				display: none;
+			}
+			&:hover {
+				box-shadow: 0 5px 35px rgba( 80, 106, 172, .19 );
+			}
+			.edd-wl-item-title {
+				a {
+					color: $edd_titles_color;
+					&:hover {
+						color: $edd_primary;
+					}
+				}
+			}
+			.edd-wl-item-data {
+				display: flex;
+				align-items: center;
+			}
+			.edd-wl-item-count {
+				display: flex;
+				align-items: center;
+				margin: 0 15px 0 0;
+				&:before {
+					content: 'Products: ';
+					color: $edd_texts;
+					font-size: 14px;
+					display: inline-block;
+					padding: 0 5px 0 0;
+				}
+			}
+			.edd-wl-edit {
+				border-left: 1px solid $edd_border_color;
+				padding: 0 0 0 15px;
+				a {
+					color: $edd_texts;
+					font-size: 14px;
+					transition: all 200ms linear;
+					&:before {
+						font-size: 12px;
+						color: $edd_secondary;
+						content: '\ea35';
+						font-family: 'Nucleo Mini';
+						display: inline-block;
+						padding: 0 8px 0 0;
+						transition: all 200ms linear;
+					}
+					&:hover {
+						color: $edd_primary;
+						&:before {
+							color: $edd_primary;
+						}
+					}
+				}
+			}
+		}
+		+ .edd-wl-heading {
+			padding-top: 25px;
+			width: 100%;
+			flex: 0 0 100%;
+			order: 4;
+			+ .edd-wish-list {
+				order: 5;
+			}
+		}
+	}
+}
+
+.edd-wl-edit,
+.edd-wl-create,
+.edd-wl-view {
+	padding: 20px;
+	background: $edd_box_bg;
+}
+
+.edd-wl-edit {
+	form {
+		padding: 0 0 5px;
+		border-bottom: 1px solid $edd_border_color;
+		margin-bottom: 15px;
+	}
+	.edd-wl-delete-list {
+		color: $color__error;
+		font-size: 14px;
+		&:before {
+			content: '\ea28';
+			font-family: 'Nucleo Mini';
+			display: inline-block;
+			padding-right: 5px;
+			font-size: 12px;
+		}
+	}
+}
+
+.edd-wl-create,
+.edd-wl-edit {
+	.edd-wl-heading {
+		padding: 0 0 15px;
+		border-bottom: 1px solid $edd_border_color;
+		margin-bottom: 20px;
+	}
+	p {
+		margin: 0 0 20px;
+	}
+	label {
+		display: block;
+		margin: 0 0 4px;
+	}
+}
+
+.edd-wl-view {
+	.edd-wl-msgs.edd_errors {
+		border: 1px solid $color__error;
+		padding: 20px 20px 20px 60px;
+		margin: 0 0 25px;
+		position: relative;
+		&:before {
+			content: '\ee96';
+			font-family: 'Nucleo Mini';
+			position: absolute;
+			font-size: 36px;
+			line-height: 40px;
+			height: 40px;
+			top: 50%;
+			left: 13px;
+			margin: -20px 0 0 0;
+			opacity: .5;
+		}
+		.edd-wl-msg {
+			margin: 0;
+			font-size: 14px;
+			color: $color__error;
+		}
+	}
+	p {
+		margin: 0 0 20px;
+	}
+	.edd-edit-wl {
+		color: $edd_texts;
+		font-size: 14px;
+		transition: all 200ms linear;
+		&:before {
+			font-size: 12px;
+			color: $edd_secondary;
+			content: '\ea35';
+			font-family: 'Nucleo Mini';
+			display: inline-block;
+			padding: 0 8px 0 0;
+			transition: all 200ms linear;
+		}
+		&:hover {
+			color: $edd_primary;
+			&:before {
+				color: $edd_primary;
+			}
+		}
+	}
+
+	.edd-wish-list {
+		margin: 0;
+		li {
+			padding: 20px 0;
+			margin: 0;
+			border-top: 1px solid $edd_border_color;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&:before {
+				display: none;
+			}
+			&:first-child {
+				border-top: none;
+			}
+			.edd-wl-item-title {
+				display: flex;
+				margin: 0 20px 0 0;
+				align-items: center;
+				flex: 0 0 60%;
+			}
+			.edd-wl-item-image {
+				order:-1;
+				margin: 0 20px 0 0;
+				img {
+					display: block;
+				}
+			}
+		}
+	}
+	.edd-wl-item-purchase {
+		flex: 0 0 120px;
+	}
+	.edd-add-to-cart-from-wish-list,
+	.edd-go-to-checkout-from-wish-list {
+		width: 100%;
+		display: block;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		padding: 12px 15px;
+		background: $edd_purchase;
+		text-align: center;
+		border-radius: $button__radius;
+		&:hover {
+			color: #fff;
+			background: darken( $edd_purchase, 5% );
+		}
+	}
+	.edd-wl-item-remove {
+		a {
+			color: $color__error;
+			font-size: 14px;
+			&:before {
+				content: '\ea28';
+				font-family: 'Nucleo Mini';
+				display: inline-block;
+				padding-right: 5px;
+				font-size: 12px;
+			}
+		}
+	}
+	.edd-wl-item-price {
+		font-size: 20px;
+		color: $edd_titles_color;
+		font-weight: 600;
+		flex: 0 0 150px;
+		text-align: center;
+	}
+	.edd-wl-item-purchased {
+		display: block;
+		font-size: 14px;
+		color: $edd_texts;
+	}
+
+	.edd-wl-add-all-to-cart {
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		padding: 12px 15px;
+		background: $edd_purchase;
+		text-align: center;
+		border-radius: $button__radius;
+		&:hover {
+			color: #fff;
+			background: darken( $edd_purchase, 5% );
+		}
+		&:before {
+			font-weight: normal;
+			display: inline-block;
+			padding: 0 8px 0 0;
+			content: '\ebb3';
+			font-family: 'Nucleo Mini';
+		}
+	}
+	> p:last-child {
+		margin: 0;
+	}
+}
+
+.edd-wl-sharing {
+	p {
+		font-size: 14px;
+	}
+}

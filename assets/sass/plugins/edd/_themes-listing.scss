@@ -3,6 +3,7 @@
 }
 .themes-listing {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0 -25px;
 	&__item {
 		flex: 0 0 33.3333%;
@@ -292,6 +293,10 @@
 			}
 		}
 	}
+}
+
+.themes-listing-more {
+	text-align: center;
 }
 
 .wapu-popup.listing-popup {
