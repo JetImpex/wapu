@@ -57,6 +57,50 @@
 	background: $edd_box_bg;
 	padding: 20px;
 	margin: 0 0 20px;
+	&__inner {
+		@media ( max-width: 767px ) {
+			height: 250px;
+			overflow: hidden;
+		}
+		&.content-expanded {
+			height: auto;
+		}
+	}
+}
+
+.content-trigger {
+	display: none;
+	@media ( max-width: 767px ) {
+		display: block;
+	}
+	&__expand {
+		display: none;
+		.downloads-content-box__inner:not(.content-expanded) + .content-trigger & {
+			display: flex;
+		}
+	}
+	&__collapse {
+		display: none;
+		.downloads-content-box__inner.content-expanded + .content-trigger & {
+			display: flex;
+		}
+	}
+	&__expand,
+	&__collapse {
+		background: $edd_primary;
+		color: #fff;
+		text-align: center;
+		padding: 10px 20px;
+		align-items: center;
+		justify-content: center;
+		i {
+			color: #fff;
+			margin: 0 0 0 10px;
+		}
+		&:hover {
+			background: $edd_titles_color;
+		}
+	}
 }
 
 .download-single-preview {
@@ -312,6 +356,12 @@
 		align-items: baseline;
 		font-weight: 600;
 		margin-bottom: 6px;
+		flex-wrap: wrap;
+		@media ( min-width: 768px ) and ( max-width: 991px ) {
+			.review__stars {
+				margin: 10px 0 0 !important;
+			}
+		}
 	}
 	.review__stars {
 		margin-left: 8px;
@@ -364,13 +414,23 @@
 	font-size: 14px;
 	line-height: 23px;
 	padding: 6px 0;
+	@media ( min-width: 768px ) and ( max-width: 991px ) {
+		flex-wrap: wrap;
+	}
 	&__title {
 		flex: 0 0 47%;
 		color: $edd_titles_color;
+		@media ( min-width: 768px ) and ( max-width: 991px ) {
+			flex: 0 0 100%;
+			font-size: 12px;
+		}
 	}
 	&__items {
 		flex: 0 0 51%;
 		color: $edd_texts;
+		@media ( min-width: 768px ) and ( max-width: 991px ) {
+			flex: 0 0 100%;
+		}
 		time {
 			color: $edd_texts;
 		}

@@ -9,6 +9,15 @@
 		flex: 0 0 33.3333%;
 		max-width: 33.3333%;
 		padding: 35px 25px;
+		@media ( max-width: 1199px ) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+		@media ( max-width: 767px ) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 20px 25px;
+		}
 		&-inner {
 			background: $edd_box_bg;
 			transition: box-shadow 150ms linear;
@@ -23,6 +32,8 @@
 			position: relative;
 			img {
 				display: block;
+				width: 100%;
+				height: auto;
 			}
 			&:after {
 				content: '';
@@ -76,6 +87,7 @@
 		&-title {
 			font-size: 16px;
 			line-height: 26px;
+			min-height: 52px;
 			font-weight: 600;
 			padding: 0 0 5px;
 			a {
@@ -84,6 +96,9 @@
 					color: $edd_primary;
 				}
 			}
+		}
+		&-rating {
+			min-height: 26px;
 		}
 		&-footer {
 			display: flex;
@@ -124,6 +139,7 @@
 				border: none;
 				margin-left: 20px;
 				transition: color 150ms linear;
+				position: relative;
 				&:first-child {
 					margin-left: 0;
 				}
@@ -135,13 +151,48 @@
 					i {
 						color: $edd_titles_color;
 					}
+					.themes-listing__tooltip {
+						opacity: 1;
+						transform: translateY( 0 );
+						bottom: 100%;
+					}
 				}
 			}
+		}
+	}
+	&__tooltip {
+		position: absolute;
+		color: #fff;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 5px;
+		width: 110px;
+		left: 50%;
+		bottom: 999em;
+		margin-left: -55px;
+		margin-bottom: 8px;
+		background: $edd_box_bg_alt;
+		opacity: 0;
+		transform: translateY( -10px );
+		transition: opacity 200ms linear, transform 200ms linear;
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 4px 0 4px;
+			border-color: $edd_box_bg_alt transparent transparent transparent;
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			margin-left: -4px;
 		}
 	}
 }
 
 .listing-cart {
+	width: 620px;
+	max-width: 100%;
 	&__item {
 		display: flex;
 		align-items: center;
@@ -215,10 +266,12 @@
 
 .listing-wl {
 	text-align: left;
+	width: 700px;
+	max-width: 100%;
 	&-loading {
+		text-align: center;
 		width: 700px;
 		max-width: 100%;
-		text-align: center;
 		&:after {
 			content: "";
 			display: inline-block;

@@ -2,6 +2,10 @@
 	align-self: center;
 	flex: 1 1 auto;
 	text-align: right;
+	padding: 15px 0;
+	@media ( max-width: 767px ) {
+		text-align: center;
+	}
 	&__item {
 		margin-left: 15px;
 		font-size: 14px;

@@ -3,17 +3,36 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	padding: 30px 0 0 0;
+	flex-wrap: wrap;
+	width: 100%;
 	&__nav {
 		flex: 0 0 20%;
 		padding: 10px 20px;
 		position: relative;
 		background-color: $edd_box_bg;
+		@media ( max-width: 767px ) {
+			flex: 0 0 100%;
+			display: flex;
+			margin: 0 0 20px;
+			padding: 10px;
+		}
 		&-item {
 			position: relative;
 			margin: 0;
 			border-top: 1px solid $edd_border_color;
+			@media ( max-width: 767px ) {
+				border-top: none;
+				border-left: 1px solid $edd_border_color;
+			}
 			&:first-child {
 				border-top: none;
+				@media ( max-width: 767px ) {
+					border-left: none;
+				}
+			}
+
+			&-text {
+				display: none;
 			}
 
 			a {
@@ -22,6 +41,11 @@
 				width: 100%;
 				color: $edd_primary;
 				padding: 7px 8px 8px 28px;
+				@media ( max-width: 767px ) {
+					padding: 5px;
+					width: 50px;
+					text-align: center;
+				}
 				@include transition(all 0.89s ease);
 				&:hover {
 					color: $edd_texts;
@@ -36,6 +60,9 @@
 					@include nucleo-icon();
 					color: inherit;
 					font-size: 15px;
+					@media ( max-width: 767px ) {
+						position: static;
+					}
 				}
 				&[href="#settings"]:before {
 					content: '\ea58';
@@ -62,6 +89,9 @@
 	}
 	&__content {
 		flex: 0 0 77%;
+		@media ( max-width: 767px ) {
+			flex: 0 0 100%;
+		}
 		&-item {
 			display: none;
 			&.active-item {

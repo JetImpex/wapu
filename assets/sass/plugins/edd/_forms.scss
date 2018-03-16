@@ -19,14 +19,21 @@
 			justify-content: space-between;
 			align-items: center;
 			margin-bottom: 15px;
+			flex-wrap: wrap;
 		}
 		label {
 			flex: 0 0 23%;
 			font-size: 14px;
+			@media ( max-width: 767px ) {
+				flex: 0 0 100%;
+			}
 		}
 		input:not([type="submit"]),
 		select {
 			flex: 0 0 75%;
+			@media ( max-width: 767px ) {
+				flex: 0 0 100%;
+			}
 		}
 	}
 	#edd_profile_name_label {
@@ -136,6 +143,16 @@ table.edd-table {
 		margin: 25px 0;
 	}
 }
+
+#edd_sl_license_keys {
+	@media ( max-width: 767px ) {
+		td {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
 
 #edd_checkout_cart {
 	td,
