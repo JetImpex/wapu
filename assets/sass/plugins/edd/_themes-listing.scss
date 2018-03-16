@@ -295,6 +295,65 @@
 	}
 }
 
+.themes-listing-sortby {
+	display: inline-flex;
+	align-items: center;
+	color: $edd_titles_color;
+	position: relative;
+	&__label {
+		padding: 0 5px 0 0;
+	}
+	&__current {
+		text-transform: uppercase;
+		display: block;
+		transition: all 150ms ease-in;
+		cursor: pointer;
+		&:after {
+			font-family: 'Nucleo Mini';
+			content: '\e93b';
+			display: inline-block;
+			padding: 0 0 0 6px;
+		}
+		&:hover {
+			color: $edd_primary;
+		}
+	}
+	&__list {
+		position: absolute;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 7px 35px rgba( 80,106,172,.19 );
+		left: 0;
+		top: 100%;
+		z-index: 999;
+		font-size: 14px;
+		color: $edd_titles_color;
+		padding: 20px;
+		width: 230px;
+		box-sizing: border-box;
+		&-item {
+			transition: all 150ms ease-in;
+			padding: 5px 10px;
+			line-height: 18px;
+			cursor: pointer;
+			border-radius: 3px;
+			&:hover {
+				color: #fff;
+				background: $edd_primary;
+			}
+		}
+	}
+}
+
+.sortby-enter-active, .sortby-leave-active {
+	transition: opacity 150ms ease-in;
+	transition-property: opacity, transform;
+}
+.sortby-enter, .sortby-leave-to {
+	opacity: 0;
+	transform: translateY( 20px );
+}
+
 .themes-listing-more {
 	text-align: center;
 }
