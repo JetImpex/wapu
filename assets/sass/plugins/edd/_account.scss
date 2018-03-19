@@ -3,50 +3,66 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	padding: 30px 0 0 0;
+	flex-wrap: wrap;
+	width: 100%;
 	&__nav {
 		flex: 0 0 20%;
+		padding: 10px 20px;
 		position: relative;
-		border-radius: $border__radius;
-		border: 1px solid $color__border_cherry_search;
+		background-color: $edd_box_bg;
+		@media ( max-width: 767px ) {
+			flex: 0 0 100%;
+			display: flex;
+			margin: 0 0 20px;
+			padding: 10px;
+		}
 		&-item {
 			position: relative;
 			margin: 0;
-			border-top: 1px solid $color__border_cherry_search;
+			border-top: 1px solid $edd_border_color;
+			@media ( max-width: 767px ) {
+				border-top: none;
+				border-left: 1px solid $edd_border_color;
+			}
 			&:first-child {
 				border-top: none;
-				a {
-					border-top-right-radius: $border__radius;
-					border-top-left-radius: $border__radius;
+				@media ( max-width: 767px ) {
+					border-left: none;
 				}
 			}
-			&:last-child {
-				a {
-					border-bottom-right-radius: $border__radius;
-					border-bottom-left-radius: $border__radius;
-				}
+
+			&-text {
+				display: none;
 			}
 
 			a {
 				position: relative;
 				display: block;
 				width: 100%;
-				color: $color__link-hover;
-				padding: 7px 8px 8px 36px;
+				color: $edd_primary;
+				padding: 7px 8px 8px 28px;
+				@media ( max-width: 767px ) {
+					padding: 5px;
+					width: 50px;
+					text-align: center;
+				}
 				@include transition(all 0.89s ease);
 				&:hover {
-					color: $color__link;
-					background-color: $color__background-pre;
+					color: $edd_texts;
 					@include transition( all 0.35s ease );
 				}
 				&:before {
 					position: absolute;
 					content: "\e928";
-					left: 16px;
-					top: 16px;
+					left: 0;
+					top: 12px;
 					display: block;
 					@include nucleo-icon();
 					color: inherit;
-					@include font-size(0.625);
+					font-size: 15px;
+					@media ( max-width: 767px ) {
+						position: static;
+					}
 				}
 				&[href="#settings"]:before {
 					content: '\ea58';
@@ -66,14 +82,16 @@
 			}
 
 			&.active-item a {
-				color: $color__link;
-				background-color: $color__background-pre;
+				color: $edd_texts;
 				cursor: default;
 			}
 		}
 	}
 	&__content {
 		flex: 0 0 77%;
+		@media ( max-width: 767px ) {
+			flex: 0 0 100%;
+		}
 		&-item {
 			display: none;
 			&.active-item {
@@ -81,7 +99,38 @@
 			}
 		}
 		h4 {
-			margin-top: 0;
+			margin-top: 8px;
+			margin-bottom: 20px;
+			font-size: 20px;
+			+ p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+ul.edd_purchase_receipt_files {
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 3px 0;
+		&:before {
+			display: none;
+		}
+		a {
+			display: inline-flex;
+			align-items: center;
+			&:before {
+				content: '\e992';
+				font-size: 14px;
+				padding: 0 8px 0 0;
+				display: inline-block;
+				speak: none;
+				font-family: 'Nucleo Mini';
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
 		}
 	}
 }

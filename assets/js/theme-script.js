@@ -113,7 +113,7 @@
 
 			$( '.main-navigation' ).cherryResponsiveMenu({
 				moreMenuContent: moreMenuContent,
-				clotting:        clotting
+				clotting:        false
 			});
 
 		},

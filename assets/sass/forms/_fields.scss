@@ -50,6 +50,7 @@ select {
 
 textarea {
 	width: 100%;
+	resize: vertical;
 }
 
 ::-webkit-input-placeholder {color:$color__text-main;opacity: 1; }
