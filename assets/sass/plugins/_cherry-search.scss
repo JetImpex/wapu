@@ -321,7 +321,8 @@
 				color: #d4d4e7;
 			}
 			&:hover {
-				color: $color__link-hover;
+				color: darken( $color__link-hover, 20% );
+				background: transparent;
 			}
 			&:after {
 				line-height: 28px;
@@ -397,19 +398,19 @@
 	&__spinner {
 		opacity: 0.7;
 		.rect1 {
-			background-color: #7389f6;
+			background-color: darken( $color__link-hover, 7% );
 		}
 		.rect2 {
-			background-color: #6194f7;
+			background-color: darken( $color__link-hover, 4% );
 		}
 		.rect3 {
-			background-color: #3fa9fa;
+			background-color: $color__link-hover;
 		}
 		.rect4 {
-			background-color: #12c5fe;
+			background-color: lighten( $color__link-hover, 4% );
 		}
 		.rect5 {
-			background-color: #00d0ff;
+			background-color: lighten( $color__link-hover, 7% );
 		}
 	}
 }
