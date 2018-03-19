@@ -49,6 +49,7 @@
 						);
 					?>
 				<?php endif; ?>
+				<?php do_action( 'wapu_header_cart' ); ?>
 				<?php if ( has_nav_menu( 'support' ) ) : ?>
 					<?php
 						wapu_nav_menu(

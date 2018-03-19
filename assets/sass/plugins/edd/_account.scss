@@ -30,9 +30,10 @@
 					border-left: none;
 				}
 			}
-
-			&-text {
-				display: none;
+			@media ( max-width: 767px ) {
+				&-text {
+					display: none;
+				}
 			}
 
 			a {
