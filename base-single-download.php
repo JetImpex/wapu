@@ -1,4 +1,4 @@
-<?php get_header( 'themes' ); ?>
+<?php get_header(); ?>
 	<div class="download-header">
 		<?php wapu_breadcrumbs(); ?>
 		<div class="container">

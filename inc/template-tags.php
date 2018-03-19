@@ -371,11 +371,11 @@ add_action( 'save_post',     'wapu_category_transient_flusher' );
 
 function wapu_footer_logo() {
 
-	$logo   = get_template_directory_uri() . '/assets/images/footer-logo.png';
-	$logo2x = get_template_directory_uri() . '/assets/images/footer-logo-2x.png';
+	$logo   = get_template_directory_uri() . '/assets/images/logo-footer.png';
+	$logo2x = get_template_directory_uri() . '/assets/images/logo-footer-2x.png';
 
 	printf(
-		'<div class="footer-logo"><img src="%1$s" alt="%3$s" srcset="%2$s 2x" width="107" height="19"></div>',
+		'<div class="footer-logo"><img src="%1$s" alt="%3$s" srcset="%2$s 2x" width="116" height="21"></div>',
 		$logo, $logo2x, get_bloginfo( 'blogname' )
 	);
 
