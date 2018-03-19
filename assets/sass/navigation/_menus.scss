@@ -576,18 +576,10 @@ body.admin-bar {
 		border-radius: $button__radius;
 		border: 1px solid $color__separator;
 		background: #ffffff;
-		background: -moz-linear-gradient(top, #ffffff 0%, #f5f7fb 100%);
-		background: -webkit-linear-gradient(top, #ffffff 0%,#f5f7fb 100%);
-		background: linear-gradient(to bottom, #ffffff 0%,#f5f7fb 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f7fb',GradientType=0 );
 		@include transition(all 0.28s ease);
 		&.current, &:hover{
 			color: $color__link_hover;
 			background: #f5f7fb;
-			background: -moz-linear-gradient(top, #f5f7fb 0%, #ffffff 100%);
-			background: -webkit-linear-gradient(top, #f5f7fb 0%,#ffffff 100%);
-			background: linear-gradient(to bottom, #f5f7fb 0%,#ffffff 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fb', endColorstr='#ffffff',GradientType=0 );
 		}
 		&.next, &.prev {
 			width: auto;
