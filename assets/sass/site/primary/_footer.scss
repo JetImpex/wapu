@@ -97,6 +97,9 @@
 	}
 	@include media-breakpoint-up(md) {
 		padding-top: 184px;
+		.single-download & {
+			padding-top: 60px;
+		}
 	}
 }
 .footer-main-area {

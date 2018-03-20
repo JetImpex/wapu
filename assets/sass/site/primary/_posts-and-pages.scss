@@ -6,6 +6,17 @@
 	overflow: hidden;
 }
 
+.page-template-page-boxed {
+	.breadcrumbs {
+		padding: 30px 0 35px;
+		margin-bottom: 15px;
+		background: #fff;
+	}
+	.site-content {
+		background: $color__page-bg;
+	}
+}
+
 .page-template-themes,
 .page-template-main {
 	.footer-main-area aside {
