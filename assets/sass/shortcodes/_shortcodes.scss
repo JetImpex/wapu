@@ -396,6 +396,22 @@
 	&-boxed-main {
 		margin: 1.55em 0;
 		text-align: center;
+		&.custom-height .blurb__link {
+			@include media-breakpoint-down(xs) {
+				padding: 48px 15px 28px;
+				min-height: unset;
+			}
+			@include media-breakpoint-up(xs) {
+				padding: 48px 15px 27px;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: 48px 15px 42px;
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 48px 15px 18px;
+				min-height: 190px;
+			}
+		}
 		.blurb__link {
 			padding: 45px 15px 30px;
 			@include media-breakpoint-up(md) {

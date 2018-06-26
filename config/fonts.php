@@ -10,7 +10,7 @@ return array(
 	),
 	array(
 		'family'  => 'Muli',
-		'styles'  => '400,600,700',
+		'styles'  => '300,400,600,700,800',
 		'charset' => 'latin',
 	),
 );

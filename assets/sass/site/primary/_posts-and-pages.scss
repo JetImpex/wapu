@@ -26,13 +26,16 @@
 
 .site-content_wrap {
 	margin-bottom: 30px;
-	.page-template-main & {
+	.page-template-main &, .page-template-landing & {
 		margin-bottom: 0;
 	}
 	@include media-breakpoint-up(md) {
 		margin-bottom: 60px;
 		.page-template-themes & {
 			margin-bottom: 3px;
+		}
+		.page-template-landing & {
+			margin-bottom: 0;
 		}
 		.page-template-main & {
 			margin-bottom: 0;
@@ -178,6 +181,9 @@ h1.entry-title {
 		@include media-breakpoint-up(md) {
 			margin: 0 0 3.39em;
 		}
+	}
+	.page-template-landing & {
+		margin-bottom: 0;
 	}
 	a {
 		color: $color__link-hover;

@@ -40,6 +40,71 @@ function wapu_get_customizer_options() {
 				'field'    => 'checkbox',
 				'type'     => 'control',
 			),
+			/** landing panel */
+			'landing_options' => array(
+				'title'    => esc_html__( 'Landing options', 'wapu' ),
+				'priority' => 130,
+				'type'     => 'section',
+			),
+			'landing_first_image' => array(
+				'title'   => esc_html__( 'First landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+
+			'landing_first_image_retina' => array(
+				'title'   => esc_html__( 'First landing image retina', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+			'landing_second_image' => array(
+				'title'   => esc_html__( 'Second landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+
+			'landing_second_image_retina' => array(
+				'title'   => esc_html__( 'Second landing image retina', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+			'landing_third_image' => array(
+				'title'   => esc_html__( 'Third landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+
+			'landing_third_image_retina' => array(
+				'title'   => esc_html__( 'Third landing image retina', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+			'landing_fourth_image' => array(
+				'title'   => esc_html__( 'Fourth landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+
+			'landing_fifth_image' => array(
+				'title'   => esc_html__( 'Fifth landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
+
+			'landing_sixth_image' => array(
+				'title'   => esc_html__( 'Sixth landing image', 'wapu' ),
+				'section' => 'landing_options',
+				'field'   => 'image',
+				'type'    => 'control',
+			),
 		),
 	) );
 }
