@@ -5,7 +5,7 @@
 
 		this.defaultSettings = {
 			threshold: 544, // Minimal menu width, when this plugin activates
-			mainMenuSelector: '#primary-menu, #themes-menu',
+			mainMenuSelector: '#primary-menu, #themes-menu, #landing-menu',
 			supportMenuSelector: '#support-menu',
 			menuItemSelector: '.menu-item',
 			moreMenuContent:  '&middot;&middot;&middot;',

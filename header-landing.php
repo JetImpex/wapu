@@ -51,7 +51,7 @@
 					<?php if ( has_nav_menu( 'landing' ) ) : ?>
 						<?php
 						wapu_nav_menu(
-							'themes',
+							'landing',
 							'<nav id="site-navigation" class="main-navigation" role="navigation">%s</nav>',
 							true
 						);
