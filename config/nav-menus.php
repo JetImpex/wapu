@@ -9,4 +9,5 @@ return array(
 	'themes' => esc_html__( 'Themes', 'wapu' ),
 	'footer' => esc_html__( 'Footer', 'wapu' ),
 	'social'  => esc_html__( 'Social', 'wapu' ),
+	'landing'  => esc_html__( 'Landing', 'wapu' ),
 );
