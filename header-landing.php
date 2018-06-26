@@ -48,30 +48,11 @@
 							</a>
 						</div>
 					</div><!-- .site-branding -->
-					<?php if ( has_nav_menu( 'themes' ) ) : ?>
+					<?php if ( has_nav_menu( 'landing' ) ) : ?>
 						<?php
 						wapu_nav_menu(
 							'themes',
 							'<nav id="site-navigation" class="main-navigation" role="navigation">%s</nav>',
-							true
-						);
-						?>
-					<?php endif; ?>
-					<?php if ( has_nav_menu( 'social' ) ) : ?>
-						<?php
-						wapu_nav_menu(
-							'social',
-							'<div id="social-list" class="social-list social-list--header">%s</div>',
-							true
-						);
-						?>
-					<?php endif; ?>
-					<?php do_action( 'wapu_header_cart' ); ?>
-					<?php if ( has_nav_menu( 'support' ) ) : ?>
-						<?php
-						wapu_nav_menu(
-							'support',
-							'<nav class="main-navigation support-navigation">%s</nav>',
 							true
 						);
 						?>
