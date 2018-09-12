@@ -14,8 +14,10 @@
 	</header> <!-- .page-header -->
 	<div class="page-content">
 		<h2 class="page-title"><?php esc_html_e( 'Page Not Found', 'wapu' ); ?></h2>
-		<p><?php esc_html_e( 'Map where your photos were taken and discover local points of interest. 
+		<p><?php esc_html_e( 'Map where your photos were taken and discover local points of interest.
 There’s also a flip-out.', 'wapu' ); ?></p>
-		<a href="<?php echo esc_url( 'http://192.168.9.82/2017/4.April/wapu/' ); ?>" class="btn btn-primary large-button"> <?php esc_html_e( 'Go Home', 'wapu' ) ?></a>
+		<a href="<?php echo home_url( '/' ); ?>" class="btn btn-primary large-button"><?php
+			esc_html_e( 'Go Home', 'wapu' )
+		?></a>
 	</div><!-- .page-content -->
 </section><!-- .error-404 -->
