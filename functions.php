@@ -312,6 +312,10 @@ if ( ! class_exists( 'Wapu_Theme' ) ) {
 			require get_template_directory() . '/inc/classes/class-widget-area.php';
 			require get_template_directory() . '/inc/classes/class-wrapping.php';
 			require_once get_template_directory() . '/inc/widgets/about/class-about-widget.php';
+			
+			if ( class_exists( 'Elementor\Plugin' ) ) {
+				require_once get_template_directory() . '/inc/widgets/elementor-template/class-elementor-template-widget.php';
+			}
 
 		}
 
