@@ -17,8 +17,17 @@
 			this.stickyFooter( this );
 			this.cherrySearchInputIconHide( this );
 			this.to_top_init( this );
+			this.elementorAccordeonClosedDefault( this );
 			//this.wapuStickySidebar( this );
 
+		},
+
+		elementorAccordeonClosedDefault: function( self ) {
+			var delay = 100;
+			setTimeout(function() {
+				$('.quick_links .elementor-tab-title').removeClass('elementor-active');
+				$('.quick_links .elementor-tab-content').css('display', 'none');
+			}, delay);
 		},
 
 		/*
@@ -85,26 +94,26 @@
 
 		responsiveMenuInit: function( self ) {
 			var moreMenuContent = '&middot;&middot;&middot;',
-				imgurl,
-				srcset,
-				clotting = true;
+			imgurl,
+			srcset,
+			clotting = true;
 
 			if ( window.__tm && window.__tm.more_button_options && window.__tm.more_button_options.more_button_type ) {
 				switch ( window.__tm.more_button_options.more_button_type ) {
 					case 'image':
-						imgurl = window.__tm.more_button_options.more_button_image_url;
+					imgurl = window.__tm.more_button_options.more_button_image_url;
 
-						if ( window.__tm.more_button_options.retina_more_button_image_url ) {
-							srcset = ' srcset="' + window.__tm.more_button_options.retina_more_button_image_url + ' 2x"';
-						}
-						moreMenuContent = '<img src="' + imgurl + '"' + srcset + ' alt="' + moreMenuContent + '">';
+					if ( window.__tm.more_button_options.retina_more_button_image_url ) {
+						srcset = ' srcset="' + window.__tm.more_button_options.retina_more_button_image_url + ' 2x"';
+					}
+					moreMenuContent = '<img src="' + imgurl + '"' + srcset + ' alt="' + moreMenuContent + '">';
 					break;
 					case 'icon':
-						moreMenuContent = '<i class="fa ' + window.__tm.more_button_options.more_button_icon + '"></i>';
+					moreMenuContent = '<i class="fa ' + window.__tm.more_button_options.more_button_icon + '"></i>';
 					break;
 					case 'text':
 					default:
-						moreMenuContent = window.__tm.more_button_options.more_button_text || moreMenuContent;
+					moreMenuContent = window.__tm.more_button_options.more_button_text || moreMenuContent;
 					break;
 				}
 
